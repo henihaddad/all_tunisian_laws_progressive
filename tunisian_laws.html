@@ -1,0 +1,1420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tunisian Laws — Comprehensive Legal Reference</title>
+<style>
+  :root {
+    --primary: #c8102e;
+    --secondary: #e8192c;
+    --dark: #1a1a2e;
+    --mid: #16213e;
+    --accent: #e2b96f;
+    --text: #f0f0f0;
+    --muted: #aaa;
+    --border: #333;
+    --card: #1e2a3a;
+    --tag-civil: #2e7d32;
+    --tag-criminal: #b71c1c;
+    --tag-commercial: #1565c0;
+    --tag-labor: #e65100;
+    --tag-admin: #4a148c;
+    --tag-constitutional: #880e4f;
+    --tag-personal: #006064;
+    --tag-tax: #33691e;
+    --tag-ip: #4e342e;
+    --tag-env: #1b5e20;
+    --tag-financial: #0d47a1;
+    --tag-press: #37474f;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    background: var(--dark);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  header {
+    background: linear-gradient(135deg, var(--primary) 0%, #7b0018 100%);
+    padding: 40px 24px;
+    text-align: center;
+    border-bottom: 3px solid var(--accent);
+  }
+  header h1 { font-size: 2.2rem; font-weight: 700; letter-spacing: 1px; }
+  header p { color: rgba(255,255,255,0.85); margin-top: 8px; font-size: 1.05rem; }
+  header .meta { color: rgba(255,255,255,0.6); font-size: 0.85rem; margin-top: 12px; }
+  .crescent { font-size: 2rem; margin-bottom: 8px; }
+
+  nav#toc {
+    background: var(--mid);
+    padding: 24px;
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.5);
+  }
+  nav#toc h2 { font-size: 0.85rem; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); margin-bottom: 12px; }
+  nav#toc ul { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; }
+  nav#toc ul li a {
+    display: block;
+    padding: 5px 12px;
+    background: rgba(255,255,255,0.07);
+    border-radius: 4px;
+    font-size: 0.83rem;
+    color: var(--text);
+    text-decoration: none;
+    border: 1px solid var(--border);
+    transition: all 0.2s;
+    white-space: nowrap;
+  }
+  nav#toc ul li a:hover { background: var(--primary); border-color: var(--primary); }
+
+  .search-bar {
+    background: var(--mid);
+    padding: 14px 24px;
+    border-bottom: 1px solid var(--border);
+  }
+  .search-bar input {
+    width: 100%;
+    max-width: 600px;
+    padding: 10px 16px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,0.08);
+    color: var(--text);
+    font-size: 0.95rem;
+  }
+  .search-bar input::placeholder { color: var(--muted); }
+
+  main { max-width: 1200px; margin: 0 auto; padding: 32px 24px; }
+
+  .stats-bar {
+    display: flex; flex-wrap: wrap; gap: 16px;
+    background: var(--card);
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 32px;
+    border: 1px solid var(--border);
+  }
+  .stat { text-align: center; flex: 1; min-width: 100px; }
+  .stat .num { font-size: 1.8rem; font-weight: 700; color: var(--accent); }
+  .stat .lbl { font-size: 0.75rem; color: var(--muted); text-transform: uppercase; }
+
+  section.law-section { margin-bottom: 48px; }
+  section.law-section h2 {
+    font-size: 1.4rem;
+    color: var(--accent);
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    scroll-margin-top: 120px;
+  }
+  section.law-section h2 .icon { font-size: 1.5rem; }
+
+  .law-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: 16px;
+  }
+
+  .law-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 18px;
+    transition: all 0.2s;
+    scroll-margin-top: 120px;
+  }
+  .law-card:hover { border-color: var(--accent); transform: translateY(-2px); box-shadow: 0 4px 20px rgba(0,0,0,0.4); }
+  .law-card h3 { font-size: 1rem; color: var(--text); margin-bottom: 8px; }
+  .law-card h3 .law-num { color: var(--accent); font-size: 0.8rem; font-weight: 600; display: block; margin-bottom: 4px; }
+  .law-card .date { font-size: 0.8rem; color: var(--muted); margin-bottom: 10px; }
+  .law-card .desc { font-size: 0.88rem; color: #ccc; line-height: 1.55; }
+  .law-card .provisions { margin-top: 10px; }
+  .law-card .provisions summary { font-size: 0.82rem; color: var(--accent); cursor: pointer; }
+  .law-card .provisions ul { margin-top: 8px; padding-left: 18px; font-size: 0.82rem; color: #bbb; }
+  .law-card .provisions ul li { margin-bottom: 4px; }
+  .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 12px; }
+  .tag {
+    font-size: 0.72rem;
+    padding: 3px 8px;
+    border-radius: 3px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .tag.civil { background: var(--tag-civil); }
+  .tag.criminal { background: var(--tag-criminal); }
+  .tag.commercial { background: var(--tag-commercial); }
+  .tag.labor { background: var(--tag-labor); }
+  .tag.admin { background: var(--tag-admin); }
+  .tag.constitutional { background: var(--tag-constitutional); }
+  .tag.personal { background: var(--tag-personal); }
+  .tag.tax { background: var(--tag-tax); }
+  .tag.ip { background: var(--tag-ip); }
+  .tag.env { background: var(--tag-env); }
+  .tag.financial { background: var(--tag-financial); }
+  .tag.press { background: var(--tag-press); }
+  .tag.superseded { background: #555; }
+  .tag.amended { background: #5d4037; }
+
+  .note-box {
+    background: rgba(200,16,46,0.1);
+    border-left: 4px solid var(--primary);
+    border-radius: 0 6px 6px 0;
+    padding: 12px 16px;
+    margin-bottom: 20px;
+    font-size: 0.87rem;
+    color: #ddd;
+  }
+
+  footer {
+    text-align: center;
+    padding: 32px 24px;
+    color: var(--muted);
+    font-size: 0.82rem;
+    border-top: 1px solid var(--border);
+    margin-top: 48px;
+  }
+  footer a { color: var(--accent); text-decoration: none; }
+
+  @media (max-width: 600px) {
+    header h1 { font-size: 1.4rem; }
+    .law-grid { grid-template-columns: 1fr; }
+    nav#toc { position: static; }
+  }
+
+  .hidden { display: none !important; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="crescent">☪</div>
+  <h1>Tunisian Laws — Comprehensive Legal Reference</h1>
+  <p>A navigable compendium of the Republic of Tunisia's constitutions, codes, statutes, and regulations</p>
+  <p class="meta">Last updated: June 2026 &nbsp;|&nbsp; Sources: WIPO Lex, NYU GlobaLex, JurisiteTunisie, ConstitutionNet, ILO NATLEX</p>
+</header>
+
+<nav id="toc">
+  <h2>Table of Contents</h2>
+  <ul>
+    <li><a href="#constitutional">Constitutional Law</a></li>
+    <li><a href="#civil">Civil &amp; Obligations</a></li>
+    <li><a href="#personal-status">Personal Status</a></li>
+    <li><a href="#criminal">Criminal Law</a></li>
+    <li><a href="#commercial">Commercial Law</a></li>
+    <li><a href="#labor">Labor Law</a></li>
+    <li><a href="#administrative">Administrative Law</a></li>
+    <li><a href="#tax">Tax &amp; Fiscal</a></li>
+    <li><a href="#financial">Financial &amp; Banking</a></li>
+    <li><a href="#investment">Investment &amp; Business</a></li>
+    <li><a href="#intellectual">Intellectual Property</a></li>
+    <li><a href="#environmental">Environmental Law</a></li>
+    <li><a href="#press">Press &amp; Media</a></li>
+    <li><a href="#digital">Digital &amp; ICT</a></li>
+    <li><a href="#health">Health &amp; Pharmacy</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#social">Social Security</a></li>
+    <li><a href="#land">Land &amp; Property</a></li>
+    <li><a href="#associations">Associations &amp; Civil Society</a></li>
+    <li><a href="#security">Security &amp; Counter-terrorism</a></li>
+    <li><a href="#nationality">Nationality &amp; Immigration</a></li>
+    <li><a href="#judicial">Judicial Organization</a></li>
+    <li><a href="#international">International &amp; Treaties</a></li>
+  </ul>
+</nav>
+
+<div class="search-bar">
+  <input type="text" id="searchInput" placeholder="Search laws by name, number, date, or keyword…" oninput="filterLaws(this.value)">
+</div>
+
+<main>
+  <div class="stats-bar">
+    <div class="stat"><div class="num" id="totalCount">150+</div><div class="lbl">Laws Documented</div></div>
+    <div class="stat"><div class="num">23</div><div class="lbl">Legal Categories</div></div>
+    <div class="stat"><div class="num">1906</div><div class="lbl">Earliest Code</div></div>
+    <div class="stat"><div class="num">2022</div><div class="lbl">Latest Constitution</div></div>
+    <div class="stat"><div class="num">Civil</div><div class="lbl">Legal Family</div></div>
+  </div>
+
+  <div class="note-box">
+    Tunisia's legal system is <strong>predominantly civil law-based</strong>, derived from the French legal tradition with elements of Islamic law (particularly in personal status). The unified secular judiciary was established in 1956 upon abolition of Shari'a courts. The current constitution is the <strong>2022 Constitution</strong> (adopted July 25, 2022 by referendum; published August 18, 2022), which supersedes the 1959 and 2014 constitutions. Official legal texts are published in the <em>Journal Officiel de la République Tunisienne</em> (JORT).
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="law-section" id="constitutional">
+    <h2><span class="icon">⚖️</span> Constitutional Law</h2>
+    <div class="law-grid">
+
+      <div class="law-card" id="const-2022">
+        <h3><span class="law-num">Constitution of 2022</span>Constitution of the Republic of Tunisia</h3>
+        <div class="date">Adopted: July 25, 2022 (referendum) | Published: August 18, 2022 | In force: August 2022</div>
+        <div class="desc">The current governing constitution, promulgated by Presidential Decree No. 2022-691 of August 17, 2022. Establishes a presidential system with a bicameral legislature (National Council of Regions and Districts + Assembly of People's Representatives). Supersedes the 1959 and 2014 constitutions as well as Decree-Law No. 2011-14 of March 23, 2011. Article 5 references Islam and "the aims of Pure Islam." Comprises 142 articles organized into 10 chapters.</div>
+        <details class="provisions">
+          <summary>Key provisions</summary>
+          <ul>
+            <li>Art. 1: Tunisia is a free, independent, sovereign state; Islam is its religion, Arabic its language, the republic its form of government</li>
+            <li>Art. 2: Tunisia is a civil state based on citizenship, the will of the people, and the supremacy of law</li>
+            <li>Art. 5: The state shall work to achieve the objectives of Pure Islam</li>
+            <li>Art. 29: Intellectual property is guaranteed</li>
+            <li>Art. 40: Freedom to form political parties, unions, and associations is guaranteed</li>
+            <li>Art. 42: Freedom of peaceful assembly and demonstration is guaranteed</li>
+            <li>Art. 86–90: President elected for 5-year term, limit of two terms</li>
+            <li>Repeals: 1959 Constitution, Decree-Law No. 2011-14, 2014 Constitution</li>
+          </ul>
+        </details>
+        <div class="tags"><span class="tag constitutional">Constitutional</span></div>
+      </div>
+
+      <div class="law-card" id="const-2014">
+        <h3><span class="law-num">Constitution of 2014 [Superseded]</span>Constitution of the Republic of Tunisia</h3>
+        <div class="date">Adopted: January 26, 2014 | In force: February 2014 | Superseded: August 2022</div>
+        <div class="desc">Post-Arab Spring constitution adopted by the National Constituent Assembly with 200 votes for, 12 against, 4 abstentions. Comprised 149 articles across 10 chapters. Established a semi-presidential system. Article 74 restricted the presidency to Muslims. Now superseded by the 2022 Constitution.</div>
+        <details class="provisions">
+          <summary>Key provisions (historical)</summary>
+          <ul>
+            <li>Art. 1: Tunisia is a free, independent, sovereign state; Islam its religion, Arabic its language</li>
+            <li>Art. 2: Tunisia is a civil state based on citizenship, the will of the people, and the primacy of law</li>
+            <li>Art. 20: Equality before the law guaranteed without discrimination</li>
+            <li>Art. 46: Enshrined women's rights and gender parity in elected bodies</li>
+            <li>Art. 74: Presidential candidates must be Muslim, Tunisian nationals, born of Tunisian parents</li>
+            <li>Art. 88: Mechanism for presidential impeachment</li>
+            <li>Art. 115: Prime minister removal required majority of assembly members</li>
+          </ul>
+        </details>
+        <div class="tags"><span class="tag constitutional">Constitutional</span><span class="tag superseded">Superseded</span></div>
+      </div>
+
+      <div class="law-card" id="const-1959">
+        <h3><span class="law-num">Constitution of 1959 [Superseded]</span>Constitution of the Tunisian Republic</h3>
+        <div class="date">Promulgated: June 1, 1959 | In force: June 1, 1959 | Superseded: August 2022</div>
+        <div class="desc">Tunisia's first post-independence constitution. Modeled on the French system, vested strong executive power in a president. Arabic declared national language. Presidents elected for 5-year terms. Amended multiple times — notably in 2002 (removed presidential term limits, opened candidacy to persons over 75). In force for 63 years until replaced by the 2022 Constitution.</div>
+        <details class="provisions">
+          <summary>Key provisions (historical)</summary>
+          <ul>
+            <li>Art. 1: Tunisia is a free, independent, sovereign state; Islam its religion, Arabic its language, the republic its form</li>
+            <li>Art. 39: Presidential term set at 5 years</li>
+            <li>Art. 40: President elected by universal direct suffrage</li>
+            <li>2002 amendment: removed two-term limit, raised age ceiling to 75</li>
+          </ul>
+        </details>
+        <div class="tags"><span class="tag constitutional">Constitutional</span><span class="tag superseded">Superseded</span></div>
+      </div>
+
+      <div class="law-card" id="decree-2011-14">
+        <h3><span class="law-num">Decree-Law No. 2011-14 of March 23, 2011</span>Provisional Organization of Public Authorities</h3>
+        <div class="date">Enacted: March 23, 2011 | In force: March 2011 | Superseded: August 2022</div>
+        <div class="desc">Established the transitional constitutional framework following the 2011 revolution. Organized interim executive and legislative powers pending the drafting and adoption of a permanent constitution. Superseded by the 2022 Constitution.</div>
+        <div class="tags"><span class="tag constitutional">Constitutional</span><span class="tag superseded">Superseded</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="law-section" id="civil">
+    <h2><span class="icon">📜</span> Civil Law &amp; Law of Obligations</h2>
+    <div class="law-grid">
+
+      <div class="law-card" id="coc">
+        <h3><span class="law-num">Code of Obligations and Contracts (COC) — 1906</span>Majallat Al-Iltizamat wa-l-Uqud</h3>
+        <div class="date">Promulgated: December 15, 1906 (under French Protectorate) | In force: January 1, 1907</div>
+        <div class="desc">The foundational civil code governing contracts, torts, and obligations. Derived from the French civil law tradition, adapted for Tunisian context. Covers general theory of obligations, specific contracts (sale, lease, agency, loan, deposit, surety), and civil liability. Has been substantially amended multiple times since independence. Remains in force as the core private law instrument.</div>
+        <details class="provisions">
+          <summary>Key provisions</summary>
+          <ul>
+            <li>Art. 1–106: General theory of obligations (formation, validity, effects, extinction)</li>
+            <li>Art. 13: Requirements for valid contract — capacity, consent, object, cause</li>
+            <li>Art. 62–80: Nullity of contracts (absolute vs. relative)</li>
+            <li>Art. 82–96: Effects of obligations; performance and non-performance</li>
+            <li>Art. 100: Damages for non-performance; principle of full reparation</li>
+            <li>Art. 222–262: Contract of sale (conditions, effects, warranty)</li>
+            <li>Art. 728–733: Civil liability for delict and quasi-delict</li>
+            <li>Art. 786–828: Mandate and agency</li>
+          </ul>
+        </details>
+        <div class="tags"><span class="tag civil">Civil</span><span class="tag amended">Amended</span></div>
+      </div>
+
+      <div class="law-card" id="civil-procedure">
+        <h3><span class="law-num">Code of Civil and Commercial Procedure — 1959</span>Majallat Al-Murafa'at Al-Madaniyya wa-l-Tijariyya</h3>
+        <div class="date">Enacted: 1959 | Multiple amendments</div>
+        <div class="desc">Governs civil and commercial litigation procedures including jurisdiction, service of process, evidence, trials, judgments, and appeals. Regulates enforcement of judgments and provisional measures. Organizes appeals to Courts of First Instance, Courts of Appeal, and the Court of Cassation.</div>
+        <details class="provisions">
+          <summary>Key provisions</summary>
+          <ul>
+            <li>Rules on jurisdiction: territorial and subject-matter</li>
+            <li>Provisional and conservatory measures</li>
+            <li>Rules of evidence and burden of proof</li>
+            <li>Default judgments and opposition procedures</li>
+            <li>Appeals and cassation procedures</li>
+            <li>Enforcement of domestic and foreign judgments</li>
+          </ul>
+        </details>
+        <div class="tags"><span class="tag civil">Civil</span><span class="tag commercial">Commercial</span><span class="tag amended">Amended</span></div>
+      </div>
+
+      <div class="law-card" id="civil-status">
+        <h3><span class="law-num">Law of August 1, 1957</span>Civil Status (Registry of Births, Deaths, Marriages)</h3>
+        <div class="date">Enacted: August 1, 1957 | In force: 1957 | Amended: multiple times</div>
+        <div class="desc">Establishes the civil registration system for Tunisian nationals including registration of births, deaths, marriages, divorces, and changes of nationality. Mandates registration within specified time limits. Organizes the function of civil status officers (officiers d'état civil).</div>
+        <div class="tags"><span class="tag civil">Civil</span><span class="tag admin">Administrative</span></div>
+      </div>
+
+      <div class="law-card" id="nationality">
+        <h3><span class="law-num">Nationality Code — Law No. 63-6 of February 28, 1963</span></h3>
+        <div class="date">Enacted: February 28, 1963 | In force: 1963 | Amended: 1975, 2002, 2010</div>
+        <div class="desc">Defines Tunisian nationality by birth, descent, naturalization, and reacquisition. Originally limited transmission of nationality through the paternal line; amended in 2010 to allow Tunisian mothers married to foreign nationals to transmit nationality to their children. Governs loss, renunciation, and deprivation of nationality.</div>
+        <details class="provisions">
+          <summary>Key provisions</summary>
+          <ul>
+            <li>Art. 6: Nationality acquired by birth to a Tunisian father (jus sanguinis)</li>
+            <li>Art. 12: Nationality acquired through naturalization (5-year residence requirement)</li>
+            <li>2010 amendment: children of Tunisian mother and foreign father may acquire nationality</li>
+            <li>Art. 30–35: Loss and deprivation of Tunisian nationality</li>
+          </ul>
+        </details>
+        <div class="tags"><span class="tag civil">Civil</span><span class="tag nationality">Nationality</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="law-section" id="personal-status">
+    <h2><span class="icon">👪</span> Personal Status Law</h2>
+    <div class="note-box" style="margin-bottom:16px">The Code of Personal Status (CPS) is Tunisia's most internationally distinctive statute — it abolishes polygamy and replaced unilateral repudiation (talaq) with court-supervised divorce. It has been continuously in force since 1957.</div>
+    <div class="law-grid">
+
+      <div class="law-card" id="cps">
+        <h3><span class="law-num">Code of Personal Status (CPS) — Beylical Decree of August 13, 1956</span>Majallat Al-Ahwal Al-Shakhsiyya</h3>
+        <div class="date">Enacted: August 13, 1956 (beylical decree under Lamine Bey) | In force: January 1, 1957 | Amended: 1959, 1966, 1981, 1993, 2017</div>
+        <div class="desc">Tunisia's landmark personal status code, principally drafted by President Habib Bourguiba. Abolished polygamy (criminal offense under Art. 18), replaced unilateral male repudiation (talaq) with court-supervised divorce, set minimum marriage age. The most progressive family law in the Arab world. Covers marriage, divorce, filiation, adoption (recognition of kafala), inheritance, guardianship, and wills. Never suspended or repealed despite political pressures (2011–2013). The 2022 Constitution has not altered its operation.</div>
+        <details class="provisions">
+          <summary>Key provisions</summary>
+          <ul>
+            <li>Art. 3: Marriage requires consent of both spouses; minimum age 18 (with exceptions)</li>
+            <li>Art. 5: Marriage must be registered and conducted before a civil status officer</li>
+            <li>Art. 18: Polygamy prohibited and criminalized — up to 1 year imprisonment + fine for marrying while already married</li>
+            <li>Art. 29–37: Divorce only by court order; grounds include mutual consent, harm, abandonment</li>
+            <li>Art. 31: Either spouse may initiate divorce; court-ordered alimony mandatory</li>
+            <li>Art. 46–67: Filiation and parentage; paternity presumption</li>
+            <li>Art. 68–78: Legal guardianship (tutelle) of minors</li>
+            <li>Art. 85–199: Inheritance rules (miras) — blends civil and Islamic principles</li>
+            <li>Art. 154–165: Guardianship over persons under disability</li>
+            <li>1993 amendment: mother gains equal custody rights; divorced mothers may become guardians</li>
+            <li>2017 amendment: allowed Muslim women to marry non-Muslim men (circular, not codified)</li>
+          </ul>
+        </details>
+        <div class="tags"><span class="tag personal">Personal Status</span><span class="tag civil">Civil</span><span class="tag amended">Amended</span></div>
+      </div>
+
+      <div class="law-card" id="child-protection">
+        <h3><span class="law-num">Child Protection Code — Law No. 95-92 of November 9, 1995</span>Majallat Himayat Al-Tifl</h3>
+        <div class="date">Enacted: November 9, 1995 | In force: 1995 | Amended: 2002, 2008</div>
+        <div class="desc">Comprehensive statute protecting minors from abuse, neglect, exploitation, and trafficking. Establishes the Children's Judge (juge des enfants) with jurisdiction over child protection cases. Covers child welfare, delinquency, protective placement, and guardianship. Implements Tunisia's obligations under the UN Convention on the Rights of the Child (ratified 1992).</div>
+        <details class="provisions">
+          <summary>Key provisions</summary>
+          <ul>
+            <li>Creates specialized Children's Judges and children's courts</li>
+            <li>Art. 24–30: Protective measures for children in danger</li>
+            <li>Art. 70–80: Juvenile delinquency proceedings; preference for rehabilitation over punishment</li>
+            <li>Art. 101: Prohibition of child labor below age 16 in principle</li>
+            <li>Art. 105–110: International child abduction; return mechanisms</li>
+          </ul>
+        </details>
+        <div class="tags"><span class="tag personal">Personal Status</span><span class="tag civil">Civil</span></div>
+      </div>
+
+      <div class="law-card" id="kafala">
+        <h3><span class="law-num">Law No. 58-27 of March 4, 1958</span>Kafala (Legal Sponsorship of Abandoned Children)</h3>
+        <div class="date">Enacted: March 4, 1958 | In force: 1958 | Amended: 1994</div>
+        <div class="desc">Regulates the kafala system — the legal guardianship of abandoned children (Tunisia does not recognize formal adoption in the Islamic sense). Allows Tunisian families to take in abandoned children as legal dependents. Creates rights and obligations equivalent to adoption without severing the child's original lineage.</div>
+        <div class="tags"><span class="tag personal">Personal Status</span></div>
+      </div>
+
+      <div class="law-card" id="women-violence">
+        <h3><span class="law-num">Law No. 2017-58 of August 11, 2017</span>Elimination of Violence Against Women</h3>
+        <div class="date">Enacted: August 11, 2017 | In force: February 2018</div>
+        <div class="desc">Landmark statute criminalizing all forms of violence against women — physical, psychological, sexual, and economic. Abolished the provision allowing rapists to escape prosecution by marrying their victim. Created specialized police units and prosecution procedures for gender-based violence. Established protective orders and victim shelters. Considered one of the most progressive anti-GBV laws in the Arab world.</div>
+        <details class="provisions">
+          <summary>Key provisions</summary>
+          <ul>
+            <li>Removed Art. 227 bis of the Penal Code (marriage escaping rape prosecution)</li>
+            <li>Defines and criminalizes economic, psychological, and sexual violence</li>
+            <li>Establishes specialized prosecution units for violence against women</li>
+            <li>Provides emergency protective orders for victims</li>
+            <li>Mandatory reporting obligations for health professionals</li>
+            <li>National Observatory on Violence Against Women created</li>
+          </ul>
+        </details>
+        <div class="tags"><span class="tag personal">Personal Status</span><span class="tag criminal">Criminal</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="law-section" id="criminal">
+    <h2><span class="icon">⚔️</span> Criminal Law &amp; Procedure</h2>
+    <div class="law-grid">
+
+      <div class="law-card" id="penal-code">
+        <h3><span class="law-num">Penal Code — Law of July 9, 1913 (as amended)</span>Majallat Al-Qanun Al-Jaza'i</h3>
+        <div class="date">Originally enacted: July 9, 1913 (French Protectorate) | Revised: 1964, 1968, 1987, 1993, 1999, 2004, 2010, 2017</div>
+        <div class="desc">Tunisia's criminal code. Enacted under the French Protectorate in 1913, substantially revised after independence. Classifies offenses into crimes (felonies), délits (misdemeanors), and contraventions (infractions). Organized in two books: general provisions and specific offenses. Notable provisions include criminalization of same-sex relations (Art. 230), blasphemy provisions, and offenses against state security. Amended significantly in 2017 following the Violence Against Women Law.</div>
+        <details class="provisions">
+          <summary>Key provisions</summary>
+          <ul>
+            <li>Art. 1–59: General principles — criminal liability, complicity, recidivism, penalties</li>
+            <li>Art. 52: Capital punishment available for certain crimes (murder, rape causing death, terrorism)</li>
+            <li>Art. 72–85: Offenses against state security (treason, espionage)</li>
+            <li>Art. 86: Attacks against the head of state or government</li>
+            <li>Art. 121: Prohibited associations</li>
+            <li>Art. 214: Abortion prohibited except to save mother's life</li>
+            <li>Art. 218: Homicide and serious assault</li>
+            <li>Art. 226: Offenses against public morals</li>
+            <li>Art. 226 bis: Defamation of public officials via new communication technologies</li>
+            <li>Art. 227: Rape — minimum 6 years imprisonment</li>
+            <li>Art. 230: Consensual same-sex relations criminalized — up to 3 years imprisonment</li>
+            <li>Art. 231–245: Theft, fraud, embezzlement</li>
+            <li>Art. 305: Receiving stolen goods</li>
+          </ul>
+        </details>
+        <div class="tags"><span class="tag criminal">Criminal</span><span class="tag amended">Amended</span></div>
+      </div>
+
+      <div class="law-card" id="cpp">
+        <h3><span class="law-num">Code of Criminal Procedure — Law No. 68-23 of July 24, 1968</span></h3>
+        <div class="date">Enacted: July 24, 1968 | Published: JORT No. 32 (August 2–6, 1968) | Amended: Law No. 87-70 (Nov. 26, 1987), Law No. 93-114 (Nov. 22, 1993)</div>
+        <div class="desc">Governs all stages of criminal proceedings in Tunisia. Organized in five books covering: public action and preliminary investigation, trial court jurisdictions, extraordinary remedies (appeals, cassation), special procedures, and execution of sentences. Article 1 establishes that any infraction gives rise to public action aimed at applying penalties.</div>
+        <details class="provisions">
+          <summary>Key provisions</summary>
+          <ul>
+            <li>Art. 1: Any infraction triggers public action ("Toute infraction donne ouverture à une action publique")</li>
+            <li>Art. 13–14 (as amended by Law No. 87-70): Limits on garde à vue detention</li>
+            <li>Art. 47: Preliminary judicial investigation mandatory for crimes (felonies)</li>
+            <li>Art. 57: Rights of suspects during investigation</li>
+            <li>Art. 85–87 (as amended by Law No. 93-114): Preventive detention — initial 6-month maximum, extendable</li>
+            <li>Art. 106–107: Extended detention provisions</li>
+            <li>Book II: Jurisdiction of cantonal courts, courts of first instance, courts of appeal</li>
+            <li>Book III: Opposition, appeal, and cassation remedies</li>
+            <li>Book IV: Military courts, terrorism courts, special jurisdictions</li>
+            <li>Book V: Execution of criminal sentences</li>
+          </ul>
+        </details>
+        <div class="tags"><span class="tag criminal">Criminal</span><span class="tag amended">Amended</span></div>
+      </div>
+
+      <div class="law-card" id="counterterrorism">
+        <h3><span class="law-num">Anti-Terrorism Law — Law No. 2015-26 of July 7, 2015</span></h3>
+        <div class="date">Enacted: July 7, 2015 | In force: July 2015</div>
+        <div class="desc">Comprehensive counter-terrorism statute enacted following the Bardo Museum and Sousse beach attacks (2015). Replaced the 2003 anti-terrorism law. Defines terrorism broadly, criminalizes financing, propaganda, recruitment, and travel for terrorist purposes. Establishes specialized anti-terrorism courts and a national anti-terrorism agency (CTAF). Criticized by human rights groups for overly broad definitions.</div>
+        <details class="provisions">
+          <summary>Key provisions</summary>
+          <ul>
+            <li>Broad definition of "terrorist act" including threats to public order</li>
+            <li>Criminalization of glorification of terrorism and incitement</li>
+            <li>Criminalizes financing of terrorism and related financial flows</li>
+            <li>Prohibition on travel to conflict zones for terrorist purposes</li>
+            <li>Specialized Terrorism Chamber at the Court of First Instance of Tunis</li>
+            <li>Extended detention periods for terrorism suspects</li>
+            <li>Asset freezing without prior judicial authorization</li>
+          </ul>
+        </details>
+        <div class="tags"><span class="tag criminal">Criminal</span><span class="tag security">Security</span></div>
+      </div>
+
+      <div class="law-card" id="anti-corruption">
+        <h3><span class="law-num">Organic Law No. 2017-10 of March 7, 2017</span>Declaration of Assets and Conflict of Interest</h3>
+        <div class="date">Enacted: March 7, 2017 | In force: 2017</div>
+        <div class="desc">Requires elected officials, senior public servants, and government appointees to declare assets, income, and interests. Creates the National Anti-Corruption Authority (INLUCC — Instance Nationale de Lutte contre la Corruption). Whistleblower protections included.</div>
+        <div class="tags"><span class="tag criminal">Criminal</span><span class="tag admin">Administrative</span></div>
+      </div>
+
+      <div class="law-card" id="money-laundering">
+        <h3><span class="law-num">Law No. 2015-26 / AML — Law No. 2019-23 of March 6, 2019</span>Anti-Money Laundering and Financing of Terrorism</h3>
+        <div class="date">Enacted: March 6, 2019 | Replaced: Law No. 2003-75</div>
+        <div class="desc">Brings Tunisia into compliance with FATF recommendations. Criminalizes money laundering and terrorist financing. Imposes KYC (know-your-customer) obligations on financial institutions, notaries, accountants, and real estate agents. Establishes the Financial Intelligence Unit (CTAF — Commission Tunisienne des Analyses Financières).</div>
+        <div class="tags"><span class="tag criminal">Criminal</span><span class="tag financial">Financial</span></div>
+      </div>
+
+      <div class="law-card" id="drugs">
+        <h3><span class="law-num">Law No. 92-52 of May 18, 1992</span>Narcotics and Psychotropic Substances</h3>
+        <div class="date">Enacted: May 18, 1992 | In force: 1992 | Amended: 1999, 2017</div>
+        <div class="desc">Governs narcotics and psychotropic substances including cultivation, production, trafficking, possession, and use. Imposes severe penalties — mandatory minimum 1 year for consumption (Art. 4), up to life imprisonment for trafficking. Article 4 on personal drug use attracted international criticism; the 2017 amendment introduced some discretion for judges in consumption cases.</div>
+        <details class="provisions">
+          <summary>Key provisions</summary>
+          <ul>
+            <li>Art. 4: Personal consumption of narcotics — 1 to 5 years imprisonment + fine (mandatory)</li>
+            <li>Art. 5: Trafficking — 6 years to life imprisonment</li>
+            <li>Art. 12: Confiscation of proceeds and instruments of offenses</li>
+            <li>2017 amendment: judges given discretion on sentencing for first-time consumption offenses</li>
+          </ul>
+        </details>
+        <div class="tags"><span class="tag criminal">Criminal</span></div>
+      </div>
+
+      <div class="law-card" id="decree-2022-54">
+        <h3><span class="law-num">Decree No. 2022-54 of September 13, 2022</span>Combating Information Technology Offenses</h3>
+        <div class="date">Enacted: September 13, 2022 | In force: September 2022</div>
+        <div class="desc">Criminalizes "false information" spread online that "harms third parties, public order, or national defense." Criticized by press freedom organizations for its vague language and potential to criminalize journalism and free speech. Passed by presidential decree without parliamentary scrutiny.</div>
+        <div class="tags"><span class="tag criminal">Criminal</span><span class="tag digital">Digital</span><span class="tag press">Press</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="law-section" id="commercial">
+    <h2><span class="icon">🏪</span> Commercial Law</h2>
+    <div class="law-grid">
+
+      <div class="law-card" id="commercial-code">
+        <h3><span class="law-num">Commercial Code — Law No. 59-129 of October 5, 1959</span>Majallat Al-Tijara</h3>
+        <div class="date">Enacted: October 5, 1959 | In force: January 1, 1960 | Amended: multiple times (through 2007+)</div>
+        <div class="desc">Core statute governing commercial activities, traders, and commercial acts in Tunisia. Defines the status of traders (commerçants), regulates commercial registers, commercial agencies, and trade names. Covers bills of exchange, promissory notes, cheques, and commercial contracts. Has been substantially amended since 1960 to modernize commercial law.</div>
+        <details class="provisions">
+          <summary>Key provisions</summary>
+          <ul>
+            <li>Art. 1–15: Definition of commercial acts and traders</li>
+            <li>Art. 16–30: Commercial register obligations</li>
+            <li>Art. 57–90: Agency and commercial representation</li>
+            <li>Art. 192–260: Bills of exchange (lettres de change)</li>
+            <li>Art. 261–290: Promissory notes (billets à ordre)</li>
+            <li>Art. 291–325: Cheques — form, endorsement, payment, protest</li>
+            <li>Art. 400+: Commercial leases (fonds de commerce)</li>
+          </ul>
+        </details>
+        <div class="tags"><span class="tag commercial">Commercial</span><span class="tag amended">Amended</span></div>
+      </div>
+
+      <div class="law-card" id="companies-code">
+        <h3><span class="law-num">Companies Code — Law No. 2000-93 of November 3, 2000</span>Majallat Al-Sharikaat</h3>
+        <div class="date">Enacted: November 3, 2000 | In force: 2001 | Amended: 2002, 2005, 2009, 2016, 2019</div>
+        <div class="desc">Comprehensive statute regulating all forms of companies in Tunisia. Governs formation, management, operation, auditing, transformation, merger, and dissolution of companies. Covers: SARL (private limited company), SA (joint-stock company), SNC (general partnership), SCS (limited partnership), and cooperative societies.</div>
+        <details class="provisions">
+          <summary>Key provisions</summary>
+          <ul>
+            <li>Art. 1–50: General provisions applicable to all companies</li>
+            <li>Art. 51–128: Joint-stock companies (Sociétés Anonymes — SA): board of directors, general meetings, auditors</li>
+            <li>Art. 129–165: Private limited companies (SARL): capital minimum, management</li>
+            <li>Art. 166–200: General partnerships (SNC)</li>
+            <li>Art. 201–230: Limited partnerships (SCS, SCA)</li>
+            <li>Mandatory: external statutory auditor (commissaire aux comptes) for SA</li>
+            <li>Minority shareholder protection provisions</li>
+            <li>2019 amendment: introduced single-member SARL (SUARL)</li>
+          </ul>
+        </details>
+        <div class="tags"><span class="tag commercial">Commercial</span><span class="tag amended">Amended</span></div>
+      </div>
+
+      <div class="law-card" id="insolvency">
+        <h3><span class="law-num">Collective Proceedings Code — Law No. 1995-34 of April 17, 1995</span>Insolvency and Business Recovery</h3>
+        <div class="date">Enacted: April 17, 1995 | In force: 1995 | Amended: 1999, 2003, 2016</div>
+        <div class="desc">Governs insolvency, bankruptcy, judicial reorganization (redressement judiciaire), and liquidation of insolvent businesses. Establishes procedures for appointing judicial administrators and liquidators, protecting creditors, and rehabilitating viable enterprises. Amended in 2016 to expand preventive settlement mechanisms.</div>
+        <details class="provisions">
+          <summary>Key provisions</summary>
+          <ul>
+            <li>Preventive settlement (règlement amiable) for pre-insolvency situations</li>
+            <li>Judicial recovery (redressement judiciaire): 6-month observation period</li>
+            <li>Liquidation (faillite): asset realization and creditor distribution</li>
+            <li>Ranking of creditors: secured, preferred, unsecured</li>
+            <li>Art. 36: Suspension of creditor actions during reorganization</li>
+          </ul>
+        </details>
+        <div class="tags"><span class="tag commercial">Commercial</span><span class="tag amended">Amended</span></div>
+      </div>
+
+      <div class="law-card" id="consumer-protection">
+        <h3><span class="law-num">Consumer Protection Law — Law No. 92-117 of December 7, 1992</span></h3>
+        <div class="date">Enacted: December 7, 1992 | In force: 1993 | Amended: 2009, 2015</div>
+        <div class="desc">Protects consumers against defective goods, unfair commercial practices, misleading advertising, and price manipulation. Establishes the right to information, right to safety, and right to redress. Regulates consumer contracts including distance contracts and credit. Creates the National Council for Consumer Protection.</div>
+        <div class="tags"><span class="tag commercial">Commercial</span><span class="tag civil">Civil</span></div>
+      </div>
+
+      <div class="law-card" id="competition">
+        <h3><span class="law-num">Competition and Prices Law — Law No. 2015-36 of September 15, 2015</span></h3>
+        <div class="date">Enacted: September 15, 2015 | In force: 2015 | Replaced: Law No. 91-64</div>
+        <div class="desc">Governs competition policy, prohibits anti-competitive agreements, abuse of dominant position, and anti-competitive mergers. Establishes the Competition Council (Conseil de la Concurrence) as independent regulatory authority. Regulates prices for essential goods and services.</div>
+        <div class="tags"><span class="tag commercial">Commercial</span></div>
+      </div>
+
+      <div class="law-card" id="e-commerce">
+        <h3><span class="law-num">Electronic Commerce Law — Law No. 2000-83 of August 9, 2000</span></h3>
+        <div class="date">Enacted: August 9, 2000 | In force: 2000 | Amended: 2004</div>
+        <div class="desc">First statute to legally recognize electronic contracts and digital signatures in Tunisia. Establishes the legal equivalence of electronic documents and handwritten signatures. Governs online commercial transactions, electronic payment, and online offers. Establishes the legal framework for certification authorities issuing digital certificates.</div>
+        <div class="tags"><span class="tag commercial">Commercial</span><span class="tag digital">Digital</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="law-section" id="labor">
+    <h2><span class="icon">👷</span> Labor Law</h2>
+    <div class="law-grid">
+
+      <div class="law-card" id="labor-code">
+        <h3><span class="law-num">Labor Code — Law No. 66-27 of April 30, 1966</span>Majallat Al-Shughl</h3>
+        <div class="date">Enacted: April 30, 1966 | In force: May 1966 | Amended: 1994, 1996, 2006, 2007, 2011, 2017</div>
+        <div class="desc">The primary statute governing employment relationships in Tunisia. Covers individual employment contracts, conditions of work, wages, termination, workplace safety, collective bargaining, and trade unions. Applies to the private sector; public servants are governed by the General Statute of Civil Servants. Implements ILO core labor conventions (Tunisia has ratified 62 ILO conventions).</div>
+        <details class="provisions">
+          <summary>Key provisions</summary>
+          <ul>
+            <li>Art. 6: Employment contract — types (fixed-term, indefinite-term, project-based)</li>
+            <li>Art. 14–22: Trial period (période d'essai)</li>
+            <li>Art. 23–35: Obligations of employer and employee</li>
+            <li>Art. 40: Minimum wage (SMIG/SMAG) — set by decree</li>
+            <li>Art. 73–83: Annual paid leave — minimum 1 day per month (18 days/year)</li>
+            <li>Art. 90–100: Work hours — 48 hours/week maximum (40 hours in industry)</li>
+            <li>Art. 120: Dismissal — requires just cause; procedural requirements for economic dismissal</li>
+            <li>Art. 123: Severance pay for unfair dismissal</li>
+            <li>Art. 152: Trade union rights; freedom of association</li>
+            <li>Art. 155: Right to strike (with pre-notice requirements)</li>
+            <li>Art. 193–200: Labor inspectorate powers</li>
+            <li>Art. 230–240: Occupational health and safety requirements</li>
+          </ul>
+        </details>
+        <div class="tags"><span class="tag labor">Labor</span><span class="tag amended">Amended</span></div>
+      </div>
+
+      <div class="law-card" id="civil-servants">
+        <h3><span class="law-num">General Statute of Civil Servants — Law No. 83-112 of December 12, 1983</span></h3>
+        <div class="date">Enacted: December 12, 1983 | In force: 1984 | Amended: 2007, 2011, 2017</div>
+        <div class="desc">Governs the employment conditions, rights, and obligations of Tunisian civil servants (fonctionnaires). Covers recruitment, grades, promotions, disciplinary procedures, leave, retirement, and termination. Complemented by specific statutes for particular sectors (teachers, judges, military, etc.).</div>
+        <div class="tags"><span class="tag labor">Labor</span><span class="tag admin">Administrative</span></div>
+      </div>
+
+      <div class="law-card" id="social-security-labor">
+        <h3><span class="law-num">Social Security Law — Law No. 60-30 of December 14, 1960</span></h3>
+        <div class="date">Enacted: December 14, 1960 | In force: 1961 | Amended: extensively</div>
+        <div class="desc">Establishes the compulsory social security system. Organizes the National Social Security Fund (CNSS for private sector) and the National Retirement and Social Welfare Fund (CNRPS for public sector). Covers retirement pensions, invalidity, survivors' benefits, occupational accidents, and maternity allowances.</div>
+        <div class="tags"><span class="tag labor">Labor</span><span class="tag social">Social</span></div>
+      </div>
+
+      <div class="law-card" id="work-accidents">
+        <h3><span class="law-num">Occupational Accidents and Diseases Law — Law No. 94-28 of February 21, 1994</span></h3>
+        <div class="date">Enacted: February 21, 1994 | In force: 1994</div>
+        <div class="desc">Defines occupational accidents and diseases, establishes mandatory employer liability, and sets compensation levels for temporary or permanent disability and death. Requires employers to report occupational accidents within 2 days. Organizes compulsory insurance through CNSS.</div>
+        <div class="tags"><span class="tag labor">Labor</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="law-section" id="administrative">
+    <h2><span class="icon">🏛️</span> Administrative Law</h2>
+    <div class="law-grid">
+
+      <div class="law-card" id="admin-court">
+        <h3><span class="law-num">Administrative Court Law — Law No. 72-40 of June 1, 1972</span></h3>
+        <div class="date">Enacted: June 1, 1972 | In force: 1972 | Amended: multiple times</div>
+        <div class="desc">Establishes the Administrative Court (Tribunal Administratif) as the supreme administrative jurisdiction. Has jurisdiction over disputes between citizens and public bodies, annulment of illegal administrative acts, and administrative contracts. Also serves as the Supreme Audit Institution reviewing public accounts. Organized into chambers; appeals go to Administrative Court plenary.</div>
+        <div class="tags"><span class="tag admin">Administrative</span></div>
+      </div>
+
+      <div class="law-card" id="local-government">
+        <h3><span class="law-num">Local Government Code — Law No. 2018-29 of May 9, 2018</span>Majallat Al-Jama'aat Al-Mahaliyya</h3>
+        <div class="date">Enacted: May 9, 2018 | In force: May 2018 | Implements: 2014 Constitution Chapter VII</div>
+        <div class="desc">Comprehensive decentralization legislation replacing the previous municipalities law. Organizes three levels of local government: municipalities (balladiyyat), regions (wilayat), and districts (aqalim). Establishes directly-elected municipal councils with legislative powers in local matters. Introduces participatory budgeting and citizens' right to petition. Implemented after 2018 municipal elections.</div>
+        <details class="provisions">
+          <summary>Key provisions</summary>
+          <ul>
+            <li>Three levels: municipality, region (governorate), district</li>
+            <li>Directly elected councils at all three levels</li>
+            <li>Fiscal autonomy — own revenue sources and transfers from central budget</li>
+            <li>Participatory democracy mechanisms (citizen petitions, public consultation)</li>
+            <li>Gender parity requirement for municipal council lists</li>
+            <li>Youth quota (minimum 1/3 of each list under 35)</li>
+          </ul>
+        </details>
+        <div class="tags"><span class="tag admin">Administrative</span></div>
+      </div>
+
+      <div class="law-card" id="public-procurement">
+        <h3><span class="law-num">Public Procurement Decree — Decree No. 2014-1039 of March 13, 2014</span></h3>
+        <div class="date">Enacted: March 13, 2014 | In force: 2014 | Amended: 2022</div>
+        <div class="desc">Governs all public procurement by state entities, public establishments, and local authorities. Establishes competitive bidding requirements, transparency obligations, evaluation criteria, and remedies for tenderers. Creates the National Commission for Public Procurement Investigations (HAICOP). Sets thresholds for direct award, restricted tendering, and open tendering.</div>
+        <div class="tags"><span class="tag admin">Administrative</span></div>
+      </div>
+
+      <div class="law-card" id="foia">
+        <h3><span class="law-num">Access to Information Decree — Decree-Law No. 2011-41 of May 26, 2011</span></h3>
+        <div class="date">Enacted: May 26, 2011 | In force: 2011 | Strengthened by 2016 Organic Law</div>
+        <div class="desc">Grants citizens the right to access information held by public bodies. Establishes a 20-day response deadline for requests. Replaced in part by the more comprehensive Organic Law No. 2016-22 of March 24, 2016, which created an independent Access to Information Commission (IVD predecessor).</div>
+        <div class="tags"><span class="tag admin">Administrative</span><span class="tag press">Press</span></div>
+      </div>
+
+      <div class="law-card" id="e-government">
+        <h3><span class="law-num">Law No. 2016-46 of July 11, 2016</span>Electronic Procedures in Administrative Transactions</h3>
+        <div class="date">Enacted: July 11, 2016 | In force: 2017</div>
+        <div class="desc">Authorizes and regulates e-government services. Allows administrative procedures to be conducted electronically. Establishes standards for electronic authentication, digital archives, and online payment to the state. Part of Tunisia's e-government reform strategy.</div>
+        <div class="tags"><span class="tag admin">Administrative</span><span class="tag digital">Digital</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="law-section" id="tax">
+    <h2><span class="icon">💰</span> Tax &amp; Fiscal Law</h2>
+    <div class="law-grid">
+
+      <div class="law-card" id="income-tax">
+        <h3><span class="law-num">Income Tax Code — Law No. 89-114 of December 30, 1989</span>Code de l'Impôt sur le Revenu des Personnes Physiques et l'Impôt sur les Sociétés</h3>
+        <div class="date">Enacted: December 30, 1989 | In force: January 1, 1990 | Amended: annually in Finance Laws</div>
+        <div class="desc">Governs personal income tax (IRPP) and corporate income tax (IS) in Tunisia. Personal income tax is progressive with rates from 0% to 35%. Corporate income tax standard rate is 15%, with higher rates for banks and telecoms (35%) and reduced rates for SMEs and certain sectors. Amended annually through the Finance Law.</div>
+        <details class="provisions">
+          <summary>Key rates (as of 2024)</summary>
+          <ul>
+            <li>Personal income tax: 0% up to 5,000 TND, 26% bracket, 35% top rate</li>
+            <li>Corporate income tax: 15% standard rate</li>
+            <li>Banks, financial institutions, telecoms: 35%</li>
+            <li>SMEs: reduced rate of 10% (conditions apply)</li>
+            <li>Withholding tax on dividends: 10%</li>
+            <li>Capital gains tax: included in income tax</li>
+          </ul>
+        </details>
+        <div class="tags"><span class="tag tax">Tax</span><span class="tag amended">Amended</span></div>
+      </div>
+
+      <div class="law-card" id="vat">
+        <h3><span class="law-num">VAT Code — Law No. 88-61 of June 2, 1988</span>Code de la Taxe sur la Valeur Ajoutée</h3>
+        <div class="date">Enacted: June 2, 1988 | In force: January 1, 1989 | Amended: annually</div>
+        <div class="desc">Establishes value-added tax in Tunisia. Standard rate 19%; reduced rates of 13% (certain services) and 7% (basic goods, agricultural products). Exports are zero-rated. Registration required for businesses with turnover exceeding 100,000 TND/year (services) or 200,000 TND (goods).</div>
+        <div class="tags"><span class="tag tax">Tax</span><span class="tag amended">Amended</span></div>
+      </div>
+
+      <div class="law-card" id="tax-procedure">
+        <h3><span class="law-num">Tax Procedures Code — Law No. 2000-82 of August 9, 2000</span>Code des Droits et Procédures Fiscaux</h3>
+        <div class="date">Enacted: August 9, 2000 | In force: 2001 | Amended: annually</div>
+        <div class="desc">Unifies and governs all tax administration procedures including filing obligations, tax audits, assessment, payment, penalties, and dispute resolution. Establishes taxpayers' rights during tax audits. Provides for administrative appeals before tax committees and judicial appeals before administrative courts.</div>
+        <div class="tags"><span class="tag tax">Tax</span></div>
+      </div>
+
+      <div class="law-card" id="customs">
+        <h3><span class="law-num">Customs Code — Law No. 2008-77 of December 22, 2008</span></h3>
+        <div class="date">Enacted: December 22, 2008 | In force: 2009 | Replaced: 1955 Customs Code</div>
+        <div class="desc">Governs importation, exportation, transit, and customs duties. Establishes the legal framework for customs declarations, inspections, duty rates, and customs offenses. Aligns Tunisia's customs procedures with international standards (WCO Revised Kyoto Convention). Governs free zones and customs warehouses.</div>
+        <div class="tags"><span class="tag tax">Tax</span><span class="tag commercial">Commercial</span></div>
+      </div>
+
+      <div class="law-card" id="local-tax">
+        <h3><span class="law-num">Local Taxes Law — Law No. 97-11 of February 3, 1997</span></h3>
+        <div class="date">Enacted: February 3, 1997 | In force: 1997 | Amended: multiple times</div>
+        <div class="desc">Regulates taxes and fees collected by municipalities including property taxes (TFP — taxe foncière sur les propriétés bâties et non bâties), tourism taxes, advertising taxes, and local business taxes (TCL — taxe sur les établissements à caractère industriel, commercial ou professionnel).</div>
+        <div class="tags"><span class="tag tax">Tax</span><span class="tag admin">Administrative</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="law-section" id="financial">
+    <h2><span class="icon">🏦</span> Financial &amp; Banking Law</h2>
+    <div class="law-grid">
+
+      <div class="law-card" id="banking">
+        <h3><span class="law-num">Banking Law — Law No. 2016-48 of July 11, 2016</span></h3>
+        <div class="date">Enacted: July 11, 2016 | In force: 2016 | Replaced: Law No. 2001-65</div>
+        <div class="desc">Regulates credit institutions, banking activities, and financial services in Tunisia. Establishes licensing requirements for banks and microfinance institutions. Strengthens the supervisory powers of the Central Bank of Tunisia (BCT). Introduces new categories of banking licenses and regulates Islamic banking activities.</div>
+        <details class="provisions">
+          <summary>Key provisions</summary>
+          <ul>
+            <li>Licensing: exclusive reserve of banking activities for licensed credit institutions</li>
+            <li>Capital requirements: minimum TND 25 million for universal banks</li>
+            <li>Supervision: BCT has powers to inspect, sanction, and revoke licenses</li>
+            <li>Islamic banking: participatory banks regulated under specific provisions</li>
+            <li>Deposit guarantee: Fund for Deposit Guarantee created</li>
+            <li>Resolution: framework for failing banks established</li>
+          </ul>
+        </details>
+        <div class="tags"><span class="tag financial">Financial</span></div>
+      </div>
+
+      <div class="law-card" id="central-bank">
+        <h3><span class="law-num">Central Bank Law — Law No. 2016-35 of April 25, 2016</span></h3>
+        <div class="date">Enacted: April 25, 2016 | In force: 2016 | Replaced: Law No. 58-90 (1958)</div>
+        <div class="desc">Establishes the Banque Centrale de Tunisie (BCT) as an independent institution responsible for monetary policy, exchange rate management, payment systems oversight, and banking supervision. Grants operational independence to the BCT Governor. Prohibits direct central bank financing of the state budget deficit.</div>
+        <div class="tags"><span class="tag financial">Financial</span></div>
+      </div>
+
+      <div class="law-card" id="insurance">
+        <h3><span class="law-num">Insurance Code — Law No. 92-24 of February 9, 1992</span></h3>
+        <div class="date">Enacted: February 9, 1992 | In force: 1992 | Amended: 1997, 2002, 2008, 2014</div>
+        <div class="desc">Governs all insurance and reinsurance activities in Tunisia. Mandatory insurance categories include third-party motor liability, employer liability, and professional liability for certain professions. Regulates insurance contract terms, claims procedures, and policyholder protections. Insurance companies supervised by the Insurance General Committee (CGA).</div>
+        <div class="tags"><span class="tag financial">Financial</span></div>
+      </div>
+
+      <div class="law-card" id="microfinance">
+        <h3><span class="law-num">Microfinance Law — Law No. 2011-117 of November 5, 2011</span></h3>
+        <div class="date">Enacted: November 5, 2011 | In force: 2011</div>
+        <div class="desc">Liberalizes and regulates the microfinance sector, allowing private and associative organizations to offer microcredit services beyond the former state monopoly (Banque Tunisienne de Solidarité). Establishes the Supervisory Authority for Microfinance (ACM). Maximum loan amounts and interest rate caps specified.</div>
+        <div class="tags"><span class="tag financial">Financial</span><span class="tag social">Social</span></div>
+      </div>
+
+      <div class="law-card" id="securities">
+        <h3><span class="law-num">Financial Market Law — Law No. 94-117 of November 14, 1994</span></h3>
+        <div class="date">Enacted: November 14, 1994 | In force: 1995 | Amended: 1999, 2005, 2016</div>
+        <div class="desc">Governs the Tunisian stock exchange (Bourse des Valeurs Mobilières de Tunis — BVMT), securities regulation, and capital markets. Creates the Financial Market Council (CMF — Conseil du Marché Financier) as the securities regulator. Regulates public offers, disclosure requirements, insider trading, and market manipulation.</div>
+        <div class="tags"><span class="tag financial">Financial</span><span class="tag commercial">Commercial</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="law-section" id="investment">
+    <h2><span class="icon">📈</span> Investment &amp; Business Environment</h2>
+    <div class="law-grid">
+
+      <div class="law-card" id="investment-code">
+        <h3><span class="law-num">Investment Law — Law No. 2016-71 of September 30, 2016</span></h3>
+        <div class="date">Enacted: September 30, 2016 | In force: April 2017 | Replaced: Investment Code of 1993</div>
+        <div class="desc">Tunisia's primary investment statute, replacing the 1993 Investment Code. Applies to both domestic and foreign investment. Guarantees freedom of investment, equal treatment of foreign and domestic investors, protection against expropriation (with compensation), and transfer of profits and capital. Establishes the Investment Authority (FIPA — Foreign Investment Promotion Agency) and the Investment Development Agency (IDI). Creates investment incentives including tax benefits for priority sectors and regions.</div>
+        <details class="provisions">
+          <summary>Key provisions</summary>
+          <ul>
+            <li>Freedom of establishment for foreign investors (with exceptions in certain sectors)</li>
+            <li>Art. 7: Equal treatment of foreign investors</li>
+            <li>Art. 21–25: Protection against nationalization and expropriation</li>
+            <li>Art. 26: Freedom to transfer capital, profits, and salaries of foreign staff</li>
+            <li>Incentive framework: preferential tax rates for investment in priority sectors</li>
+            <li>Regional development incentives for investments in interior regions</li>
+            <li>Foreign ownership: up to 100% in most sectors; limited in certain strategic sectors</li>
+            <li>Single window (guichet unique) for investment approvals</li>
+          </ul>
+        </details>
+        <div class="tags"><span class="tag commercial">Commercial</span><span class="tag financial">Financial</span></div>
+      </div>
+
+      <div class="law-card" id="free-zones">
+        <h3><span class="law-num">Free Zones Law — Law No. 92-81 of August 3, 1992</span></h3>
+        <div class="date">Enacted: August 3, 1992 | In force: 1993 | Amended: 2007, 2009, 2019</div>
+        <div class="desc">Creates special economic zones (free zones) offering customs and tax advantages for export-oriented businesses. Free zone companies are exempt from import duties, VAT on local purchases, and income tax for initial periods. Currently active free zones include Bizerte Economic Activity Park. Requires minimum 70% export of production.</div>
+        <div class="tags"><span class="tag commercial">Commercial</span><span class="tag tax">Tax</span></div>
+      </div>
+
+      <div class="law-card" id="startup-act">
+        <h3><span class="law-num">Startup Act — Law No. 2018-20 of April 17, 2018</span></h3>
+        <div class="date">Enacted: April 17, 2018 | In force: August 2018</div>
+        <div class="desc">Innovative legislation creating a special legal and fiscal framework for innovative startups. Eligible startups receive a "Startup" label granting advantages including: salary coverage for founders for 1 year, exemption from employer social security contributions for 3 years, preferential tax treatment, facilitated foreign currency access, and streamlined administrative procedures. One of Africa's first dedicated startup laws.</div>
+        <details class="provisions">
+          <summary>Key provisions</summary>
+          <ul>
+            <li>"Startup" label granted by the Startup Tunisia Committee</li>
+            <li>Founder salary covered by the state for up to 1 year</li>
+            <li>3-year exemption from employer social security contributions</li>
+            <li>5-year corporate tax holiday</li>
+            <li>Foreign currency account allowed for startups</li>
+            <li>Fast-track work permits for foreign talent</li>
+            <li>Crowdfunding and convertible notes facilitated</li>
+          </ul>
+        </details>
+        <div class="tags"><span class="tag commercial">Commercial</span><span class="tag digital">Digital</span></div>
+      </div>
+
+      <div class="law-card" id="arbitration">
+        <h3><span class="law-num">Arbitration Code — Law No. 93-42 of April 26, 1993</span></h3>
+        <div class="date">Enacted: April 26, 1993 | In force: 1993</div>
+        <div class="desc">Governs domestic and international commercial arbitration in Tunisia. Based on the UNCITRAL Model Law. Provides for arbitration agreements, constitution of tribunals, conduct of proceedings, and recognition and enforcement of awards. Tunisia ratified the New York Convention on the Recognition and Enforcement of Foreign Arbitral Awards in 1967.</div>
+        <div class="tags"><span class="tag commercial">Commercial</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="law-section" id="intellectual">
+    <h2><span class="icon">💡</span> Intellectual Property Law</h2>
+    <div class="law-grid">
+
+      <div class="law-card" id="copyright">
+        <h3><span class="law-num">Literary and Artistic Property Law — Law No. 2009-33 of June 23, 2009</span></h3>
+        <div class="date">Enacted: June 23, 2009 | In force: 2009 | Replaced: Law No. 94-36</div>
+        <div class="desc">Governs copyright and related rights in Tunisia. Protects literary, artistic, and musical works, software, databases, and audiovisual productions. Protection term: author's life + 70 years. Covers moral rights (inalienable) and economic rights (transferable). Aligns with WIPO Copyright Treaty and TRIPS Agreement obligations. Enforced by the Tunisian Copyright Protection Office (OTPDA).</div>
+        <details class="provisions">
+          <summary>Key provisions</summary>
+          <ul>
+            <li>Art. 1–10: Scope — literary, artistic, musical, audiovisual, photographic works; software</li>
+            <li>Art. 15: Moral rights (right of integrity, right of attribution) — inalienable and perpetual</li>
+            <li>Art. 16–22: Economic rights — reproduction, distribution, public performance</li>
+            <li>Art. 24: Duration — life of author + 70 years</li>
+            <li>Art. 45–55: Related rights for performers, producers, broadcasters</li>
+            <li>Art. 60–75: Exceptions and limitations (private use, education, libraries)</li>
+            <li>Art. 87–100: Civil and criminal remedies for infringement</li>
+          </ul>
+        </details>
+        <div class="tags"><span class="tag ip">IP</span></div>
+      </div>
+
+      <div class="law-card" id="trademarks">
+        <h3><span class="law-num">Industrial Property Law — Law No. 2000-84 of August 24, 2000</span></h3>
+        <div class="date">Enacted: August 24, 2000 | In force: 2001 | Amended: 2007</div>
+        <div class="desc">Governs patents, trademarks, geographical indications, industrial designs, and utility models in Tunisia. Administered by the Tunisian Intellectual Property Office (INNORPI). Tunisia is a member of WIPO, the Paris Convention, the Patent Cooperation Treaty (PCT), and the Madrid Protocol on trademarks.</div>
+        <details class="provisions">
+          <summary>Key provisions</summary>
+          <ul>
+            <li>Patents: 20-year protection from filing date; requires novelty, inventive step, industrial application</li>
+            <li>Trademarks: 10-year protection, renewable; registration at INNORPI required</li>
+            <li>Industrial designs: 5-year protection, renewable up to 4 times (25 years total)</li>
+            <li>Geographical indications: protection for Tunisian products with geographic origin</li>
+            <li>Compulsory licenses: available for public health or national emergency</li>
+          </ul>
+        </details>
+        <div class="tags"><span class="tag ip">IP</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="law-section" id="environmental">
+    <h2><span class="icon">🌿</span> Environmental Law</h2>
+    <div class="law-grid">
+
+      <div class="law-card" id="env-framework">
+        <h3><span class="law-num">Framework Environmental Law — Law No. 88-91 of August 2, 1988</span></h3>
+        <div class="date">Enacted: August 2, 1988 | In force: 1988 | Amended: 1992, 2001</div>
+        <div class="desc">Tunisia's foundational environmental statute, creating the National Environment Protection Agency (ANPE). Establishes environmental impact assessment (EIA) requirements for major projects. Governs pollution prevention, waste management, and natural resource protection. Establishes the principle of "polluter pays."</div>
+        <div class="tags"><span class="tag env">Environmental</span></div>
+      </div>
+
+      <div class="law-card" id="water-code">
+        <h3><span class="law-num">Water Code — Law No. 75-16 of March 31, 1975</span></h3>
+        <div class="date">Enacted: March 31, 1975 | In force: 1975 | Amended: 1987, 2001</div>
+        <div class="desc">Classifies all water resources (surface and groundwater) as public domain. Governs water use permits, irrigation rights, water conservation, and protection from pollution. Establishes the National Water Authority and regional water committees.</div>
+        <div class="tags"><span class="tag env">Environmental</span></div>
+      </div>
+
+      <div class="law-card" id="forests">
+        <h3><span class="law-num">Forestry Code — Law No. 88-20 of March 13, 1988</span></h3>
+        <div class="date">Enacted: March 13, 1988 | In force: 1988</div>
+        <div class="desc">Classifies and protects Tunisian forests and natural parks. Regulates logging permits, forest fires (criminalized), afforestation, and pastoral use of forest land. Creates the Directorate General of Forests under the Ministry of Agriculture.</div>
+        <div class="tags"><span class="tag env">Environmental</span></div>
+      </div>
+
+      <div class="law-card" id="waste">
+        <h3><span class="law-num">Waste Management Law — Law No. 96-41 of June 10, 1996</span></h3>
+        <div class="date">Enacted: June 10, 1996 | In force: 1996 | Amended: 2007</div>
+        <div class="desc">Governs waste prevention, collection, transport, treatment, and disposal. Creates the National Agency for Waste Management (ANGed). Establishes the waste hierarchy (prevention, reuse, recycling, recovery, disposal). Special provisions for hazardous waste, medical waste, and industrial effluents.</div>
+        <div class="tags"><span class="tag env">Environmental</span></div>
+      </div>
+
+      <div class="law-card" id="climate">
+        <h3><span class="law-num">Law No. 2015-12 of May 11, 2015</span>Energy Transition and Green Economy</h3>
+        <div class="date">Enacted: May 11, 2015 | In force: 2015</div>
+        <div class="desc">Framework law for energy transition and promotion of renewable energy. Sets national targets for renewable energy share (30% by 2030, updated to 35%). Regulates self-generation of electricity from renewables, feed-in tariffs, and investment in the energy sector. Establishes the National Agency for Energy Conservation (ANME).</div>
+        <div class="tags"><span class="tag env">Environmental</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="law-section" id="press">
+    <h2><span class="icon">📰</span> Press, Media &amp; Freedom of Expression</h2>
+    <div class="law-grid">
+
+      <div class="law-card" id="press-decree">
+        <h3><span class="law-num">Press Decree — Decree-Law No. 2011-115 of November 2, 2011</span></h3>
+        <div class="date">Enacted: November 2, 2011 | In force: 2011 | Replaced: Press Code of 1975</div>
+        <div class="desc">Post-revolution statute guaranteeing freedom of the press and abolishing prior government control over media. Abolished the requirement for prior authorization to publish newspapers. Criminalized defamation but with strong protections for press freedom. Created the High Authority for Audio-Visual Communication (HAICA — Haute Autorité Indépendante de la Communication Audiovisuelle).</div>
+        <div class="tags"><span class="tag press">Press</span></div>
+      </div>
+
+      <div class="law-card" id="haica">
+        <h3><span class="law-num">HAICA Organic Law — Decree-Law No. 2011-116 of November 2, 2011</span></h3>
+        <div class="date">Enacted: November 2, 2011 | In force: 2011</div>
+        <div class="desc">Establishes the High Authority for Audio-Visual Communication (HAICA) as an independent regulatory body for radio and television broadcasting. HAICA grants broadcasting licenses, sets content standards, and monitors compliance. Replaced the previous state-controlled broadcasting authority.</div>
+        <div class="tags"><span class="tag press">Press</span></div>
+      </div>
+
+      <div class="law-card" id="access-info">
+        <h3><span class="law-num">Access to Information Organic Law — Law No. 2016-22 of March 24, 2016</span></h3>
+        <div class="date">Enacted: March 24, 2016 | In force: 2017</div>
+        <div class="desc">Comprehensive right-to-information law creating an independent Access to Information Authority (IVD — Instance d'Accès à l'Information). Any person may request information from public bodies; response within 20 days required. Narrow exceptions for national security, privacy, and commercial confidentiality. Considered one of the strongest RTI laws in the MENA region.</div>
+        <div class="tags"><span class="tag press">Press</span><span class="tag admin">Administrative</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="law-section" id="digital">
+    <h2><span class="icon">💻</span> Digital Law &amp; ICT</h2>
+    <div class="law-grid">
+
+      <div class="law-card" id="data-protection">
+        <h3><span class="law-num">Personal Data Protection Law — Law No. 2004-63 of July 27, 2004</span></h3>
+        <div class="date">Enacted: July 27, 2004 | In force: 2004 | Amended: 2013</div>
+        <div class="desc">Tunisia's data protection statute — one of the first in Africa. Creates the National Authority for Personal Data Protection (INPDP — Instance Nationale de Protection des Données Personnelles). Requires prior authorization from INPDP before processing sensitive personal data. Establishes data subject rights (access, rectification, deletion) and obligations on data controllers.</div>
+        <details class="provisions">
+          <summary>Key provisions</summary>
+          <ul>
+            <li>Mandatory registration of personal data processing with INPDP</li>
+            <li>Prior authorization for sensitive data (health, biometric, political, religious)</li>
+            <li>Data subject rights: access, rectification, objection, deletion</li>
+            <li>Restrictions on cross-border data transfers</li>
+            <li>Security obligations for data controllers</li>
+            <li>Criminal sanctions for violations: up to 2 years + fines</li>
+          </ul>
+        </details>
+        <div class="tags"><span class="tag digital">Digital</span></div>
+      </div>
+
+      <div class="law-card" id="cybercrime">
+        <h3><span class="law-num">Cybercrime Law — Law No. 99-89 of August 2, 1999</span>(as amended)</h3>
+        <div class="date">Enacted: August 2, 1999 | In force: 1999 | Amended: 2004, 2010</div>
+        <div class="desc">Criminalizes unauthorized access to computer systems, interception of electronic communications, introduction of malicious code, and computer fraud. Establishes penalties of 2 to 5 years imprisonment for basic offenses; up to 8 years for attacks on critical infrastructure. Pre-dates the current Digital Code effort.</div>
+        <div class="tags"><span class="tag digital">Digital</span><span class="tag criminal">Criminal</span></div>
+      </div>
+
+      <div class="law-card" id="telecom">
+        <h3><span class="law-num">Telecommunications Code — Law No. 2001-1 of January 15, 2001</span></h3>
+        <div class="date">Enacted: January 15, 2001 | In force: 2001 | Amended: 2002, 2008, 2013</div>
+        <div class="desc">Liberalizes the telecommunications sector and establishes the independent regulator (INT — Instance Nationale des Télécommunications). Governs licensing of operators, frequency management, interconnection, universal service obligations, and quality standards. Opened mobile and internet markets to competition.</div>
+        <div class="tags"><span class="tag digital">Digital</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="law-section" id="health">
+    <h2><span class="icon">🏥</span> Health &amp; Pharmaceutical Law</h2>
+    <div class="law-grid">
+
+      <div class="law-card" id="public-health">
+        <h3><span class="law-num">Public Health Code — Law No. 91-63 of July 29, 1991</span></h3>
+        <div class="date">Enacted: July 29, 1991 | In force: 1992 | Amended: 1994, 2002, 2008, 2019</div>
+        <div class="desc">Framework law for public health in Tunisia. Covers organization of the health system, health facilities (public and private), medical professions, pharmaceutical activities, and preventive health. Establishes obligations for health establishments and practitioners. Governs mandatory vaccination programs and epidemic disease control.</div>
+        <div class="tags"><span class="tag health">Health</span></div>
+      </div>
+
+      <div class="law-card" id="pharmacy">
+        <h3><span class="law-num">Pharmacy Law — Law No. 85-91 of September 11, 1985</span></h3>
+        <div class="date">Enacted: September 11, 1985 | In force: 1986 | Amended: 1992, 2004</div>
+        <div class="desc">Governs pharmaceutical activities including manufacturing, import, distribution, and dispensing of medicines. Requires prior authorization for drug marketing (visa d'exploitation). Regulates pharmacy ownership (restricted to licensed pharmacists). Establishes the National Drug Authority (Agence Nationale de Contrôle Sanitaire et Environnemental des Produits — ANCSEP).</div>
+        <div class="tags"><span class="tag health">Health</span></div>
+      </div>
+
+      <div class="law-card" id="mental-health">
+        <h3><span class="law-num">Mental Health Law — Law No. 92-83 of August 3, 1992</span></h3>
+        <div class="date">Enacted: August 3, 1992 | In force: 1992</div>
+        <div class="desc">Governs mental health care and protection of psychiatric patients' rights. Regulates voluntary and involuntary hospitalization, patient consent, and judicial oversight of psychiatric confinement. Establishes conditions for involuntary placement and patients' right to legal representation.</div>
+        <div class="tags"><span class="tag health">Health</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="law-section" id="education">
+    <h2><span class="icon">🎓</span> Education Law</h2>
+    <div class="law-grid">
+
+      <div class="law-card" id="education-law">
+        <h3><span class="law-num">Education Framework Law — Law No. 2002-80 of July 23, 2002</span></h3>
+        <div class="date">Enacted: July 23, 2002 | In force: 2002 | Replaced: Law No. 91-65</div>
+        <div class="desc">Framework law organizing the Tunisian national education system. Establishes compulsory schooling for 6–16 year olds. Organizes the three-stage system: basic education (9 years), secondary education (4 years), and higher education. Defines national curriculum objectives, teacher qualifications, and school governance.</div>
+        <div class="tags"><span class="tag education">Education</span></div>
+      </div>
+
+      <div class="law-card" id="higher-education">
+        <h3><span class="law-num">Higher Education Law — Law No. 2008-19 of February 25, 2008</span></h3>
+        <div class="date">Enacted: February 25, 2008 | In force: 2008</div>
+        <div class="desc">Governs universities, higher institutes, and research establishments. Introduces the LMD (Licence–Master–Doctorat) system aligned with the Bologna Process. Regulates accreditation, quality assurance, student rights, and university governance. Establishes the framework for private higher education institutions.</div>
+        <div class="tags"><span class="tag education">Education</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="law-section" id="social">
+    <h2><span class="icon">🤝</span> Social Security &amp; Protection</h2>
+    <div class="law-grid">
+
+      <div class="law-card" id="cnss">
+        <h3><span class="law-num">CNSS Organic Law — Law No. 60-30 of December 14, 1960 (as amended)</span></h3>
+        <div class="date">Enacted: 1960 | Extensively amended through 2024</div>
+        <div class="desc">Establishes the National Social Security Fund (Caisse Nationale de Sécurité Sociale — CNSS) for private sector workers. Covers contributory retirement pensions, invalidity, death benefits, occupational hazards, family allowances, and maternity. Employee contribution: 9.18%; Employer contribution: 16.57% of gross wages.</div>
+        <div class="tags"><span class="tag social">Social</span><span class="tag labor">Labor</span></div>
+      </div>
+
+      <div class="law-card" id="social-assistance">
+        <h3><span class="law-num">Social Assistance Program Law — Law No. 2019-49 of June 6, 2019</span>AMEN Social</h3>
+        <div class="date">Enacted: June 6, 2019 | In force: 2020</div>
+        <div class="desc">Creates Tunisia's unified social protection system "AMEN Social" replacing fragmented assistance programs. Provides means-tested direct cash transfers to poor families (National Aid Program — PAN), health coverage for the poor (AMGP), and subsidized access to services. Governed by the Ministry of Social Affairs.</div>
+        <div class="tags"><span class="tag social">Social</span></div>
+      </div>
+
+      <div class="law-card" id="disability">
+        <h3><span class="law-num">Disability Law — Law No. 2005-83 of August 15, 2005</span>Promotion and Protection of Persons with Disabilities</h3>
+        <div class="date">Enacted: August 15, 2005 | In force: 2005</div>
+        <div class="desc">Framework law for the rights and inclusion of persons with disabilities. Prohibits discrimination in employment, education, and public services. Requires accessibility in public buildings and transportation. Establishes disability quota of 1% in public sector employment. Creates the National Bureau of Disabled Persons.</div>
+        <div class="tags"><span class="tag social">Social</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="law-section" id="land">
+    <h2><span class="icon">🏠</span> Land &amp; Property Law</h2>
+    <div class="law-grid">
+
+      <div class="law-card" id="land-registry">
+        <h3><span class="law-num">Real Property Registration Law — Law of July 1, 1885 (as reformed)</span>Immatriculation Foncière</h3>
+        <div class="date">Originally: 1885 (protectorate) | Overhauled: Law No. 65-5 of February 12, 1965 | Amended: 1992, 2005</div>
+        <div class="desc">Governs land title registration (immatriculation foncière) through the Property Rights Registry (Conservation de la Propriété Foncière). Once registered, title is conclusive and indefeasible. Unregistered land may be subject to adverse possession claims. Tunisia operates a Torrens-style title system for registered properties.</div>
+        <div class="tags"><span class="tag land">Land</span><span class="tag civil">Civil</span></div>
+      </div>
+
+      <div class="law-card" id="urban-planning">
+        <h3><span class="law-num">Urban Planning Code — Law No. 94-122 of November 28, 1994</span>Code de l'Aménagement du Territoire et de l'Urbanisme</h3>
+        <div class="date">Enacted: November 28, 1994 | In force: 1995 | Amended: 2003, 2009, 2016</div>
+        <div class="desc">Governs land use planning, building permits, zoning, and urban development in Tunisia. Requires detailed urban plans (PAD — Plans d'Aménagement de Détail) for urban areas. Establishes building permit requirements, setback rules, and height restrictions. Regulates real estate development and subdivision approvals.</div>
+        <div class="tags"><span class="tag land">Land</span><span class="tag admin">Administrative</span></div>
+      </div>
+
+      <div class="law-card" id="housing">
+        <h3><span class="law-num">Housing Law — Law No. 77-46 of May 30, 1977</span>Rental Relations and Tenant Protections</h3>
+        <div class="date">Enacted: May 30, 1977 | In force: 1977 | Amended: 1996, 2013</div>
+        <div class="desc">Governs residential leases and tenant-landlord relations. Sets minimum lease terms, notice periods for termination, and tenant protection against arbitrary eviction. Regulates rent increases for controlled accommodation. Applies to residential leases; commercial leases are regulated separately under the COC.</div>
+        <div class="tags"><span class="tag land">Land</span><span class="tag civil">Civil</span></div>
+      </div>
+
+      <div class="law-card" id="co-ownership">
+        <h3><span class="law-num">Co-ownership Law — Law No. 1977-42 of May 23, 1977</span>Propriété par Étages ou par Appartements</h3>
+        <div class="date">Enacted: May 23, 1977 | In force: 1977 | Amended: 1994</div>
+        <div class="desc">Governs horizontal co-ownership (apartment buildings and condominiums). Defines common areas vs. private lots, establishes the mandatory Syndicate of Co-owners (syndicat des copropriétaires), and regulates management, maintenance costs, and dispute resolution between co-owners.</div>
+        <div class="tags"><span class="tag land">Land</span><span class="tag civil">Civil</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="law-section" id="associations">
+    <h2><span class="icon">🏢</span> Associations &amp; Civil Society</h2>
+    <div class="law-grid">
+
+      <div class="law-card" id="associations-decree">
+        <h3><span class="law-num">Associations Decree — Decree-Law No. 2011-88 of September 24, 2011</span></h3>
+        <div class="date">Enacted: September 24, 2011 | In force: 2011 | Replaced: Law No. 59-154 (1959)</div>
+        <div class="desc">Post-revolution statute liberalizing civil society formation. Replaced the restrictive 1959 law. Article 12: associations are legally constituted upon submission of a notification letter — no prior government approval required. Prohibits dissolution by executive action without judicial order. Enabled a rapid expansion of civil society: over 20,000 associations registered by 2015.</div>
+        <details class="provisions">
+          <summary>Key provisions</summary>
+          <ul>
+            <li>Art. 3: Freedom to form associations guaranteed</li>
+            <li>Art. 10: Founders must submit notification (not seek prior approval) to the Secretary General of Government</li>
+            <li>Art. 12: Association acquires legal personality upon notification</li>
+            <li>Art. 14: Registration certificate issued within 7 days</li>
+            <li>Art. 26: Dissolution only by judicial order on defined grounds</li>
+            <li>Art. 31: Foreign associations may operate with prior authorization</li>
+          </ul>
+        </details>
+        <div class="tags"><span class="tag admin">Administrative</span><span class="tag constitutional">Constitutional</span></div>
+      </div>
+
+      <div class="law-card" id="political-parties">
+        <h3><span class="law-num">Political Parties Law — Decree-Law No. 2011-87 of September 24, 2011</span></h3>
+        <div class="date">Enacted: September 24, 2011 | In force: 2011 | Amended: 2014</div>
+        <div class="desc">Governs the formation, registration, financing, and activities of political parties. Requires notification-based registration (not prior authorization). Prohibits parties based on religion, race, gender, or region exclusively. Mandates financial transparency and annual reporting. Political party financing regulated: prohibits foreign funding, limits campaign spending.</div>
+        <div class="tags"><span class="tag admin">Administrative</span><span class="tag constitutional">Constitutional</span></div>
+      </div>
+
+      <div class="law-card" id="electoral">
+        <h3><span class="law-num">Electoral Law — Organic Law No. 2014-16 of May 26, 2014</span>(as amended)</h3>
+        <div class="date">Enacted: May 26, 2014 | In force: 2014 | Amended: 2019, 2022</div>
+        <div class="desc">Governs elections for the President of the Republic, the Assembly of People's Representatives, and (previously) the Assembly of Regions and Districts. Establishes the Independent High Authority for Elections (ISIE — Instance Supérieure Indépendante pour les Élections) as the permanent electoral commission. Sets rules on candidacy, campaigning, vote counting, and dispute resolution.</div>
+        <div class="tags"><span class="tag constitutional">Constitutional</span><span class="tag admin">Administrative</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="law-section" id="security">
+    <h2><span class="icon">🛡️</span> Security &amp; Counter-terrorism</h2>
+    <div class="law-grid">
+
+      <div class="law-card" id="national-security">
+        <h3><span class="law-num">National Security Law — Law No. 2019-73 of December 31, 2019</span>Internal Security Forces Statute</h3>
+        <div class="date">Enacted: December 31, 2019 | In force: 2020</div>
+        <div class="desc">Governs the organization, status, and conduct of Tunisia's internal security forces (National Police and National Guard). Defines missions, hierarchy, disciplinary procedures, and accountability mechanisms. Establishes an independent oversight body for police conduct complaints.</div>
+        <div class="tags"><span class="tag security">Security</span><span class="tag admin">Administrative</span></div>
+      </div>
+
+      <div class="law-card" id="state-emergency">
+        <h3><span class="law-num">State of Emergency Decree — Decree No. 78-50 of January 26, 1978</span></h3>
+        <div class="date">Enacted: January 26, 1978 | In force: 1978</div>
+        <div class="desc">Establishes the legal framework for declaring and managing states of emergency. Grants expanded executive powers including restriction of movement, house arrest, administrative detention, and closure of meeting places. Tunisia declared a state of emergency in November 2015 (after Bardo and Sousse attacks), which was repeatedly extended and remained nominally in force for years.</div>
+        <div class="tags"><span class="tag security">Security</span><span class="tag constitutional">Constitutional</span></div>
+      </div>
+
+      <div class="law-card" id="military-justice">
+        <h3><span class="law-num">Military Justice Code — Law No. 86-79 of September 9, 1986</span></h3>
+        <div class="date">Enacted: September 9, 1986 | In force: 1986 | Amended: 2019</div>
+        <div class="desc">Governs military offenses and the organization of military courts (tribunaux militaires). Military courts have jurisdiction over offenses by military personnel and certain offenses against national defense. A 2019 amendment restricted jurisdiction of military courts over civilians — a key human rights improvement.</div>
+        <div class="tags"><span class="tag security">Security</span><span class="tag criminal">Criminal</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="law-section" id="nationality">
+    <h2><span class="icon">🛂</span> Nationality, Immigration &amp; Asylum</h2>
+    <div class="law-grid">
+
+      <div class="law-card" id="immigration">
+        <h3><span class="law-num">Entry and Residence of Foreigners — Law No. 68-7 of March 8, 1968</span></h3>
+        <div class="date">Enacted: March 8, 1968 | In force: 1968 | Amended: 1975, 2004</div>
+        <div class="desc">Governs the entry, stay, and expulsion of foreign nationals in Tunisia. Requires visa for most non-Maghreb nationals (bilateral visa exemptions apply). Establishes residence permit categories and procedures. Governs administrative detention pending deportation. Tunisia has no comprehensive asylum law; refugee status determined by UNHCR under its mandate.</div>
+        <div class="tags"><span class="tag nationality">Nationality</span><span class="tag admin">Administrative</span></div>
+      </div>
+
+      <div class="law-card" id="migration-irregular">
+        <h3><span class="law-num">Irregular Migration Law — Law No. 2004-6 of February 3, 2004</span></h3>
+        <div class="date">Enacted: February 3, 2004 | In force: 2004</div>
+        <div class="desc">Criminalizes irregular emigration by Tunisian nationals ("harraga") with penalties of up to 3 years imprisonment. Criticized by human rights organizations as criminalizing movement. Used to prosecute irregular migrants attempting to cross to Europe. Tunisia also receives migrants from sub-Saharan Africa; their status is governed by the 1968 law and UNHCR procedure.</div>
+        <div class="tags"><span class="tag nationality">Nationality</span><span class="tag criminal">Criminal</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="law-section" id="judicial">
+    <h2><span class="icon">⚖️</span> Judicial Organization</h2>
+    <div class="law-grid">
+
+      <div class="law-card" id="judicial-org">
+        <h3><span class="law-num">Judicial Organization Law — Law No. 2013-13 of April 2, 2013</span></h3>
+        <div class="date">Enacted: April 2, 2013 | In force: 2013 | Amended: 2022</div>
+        <div class="desc">Organizes the court system of Tunisia. Courts of First Instance (Tribunaux de Première Instance) — one per governorate. Courts of Appeal — three (Tunis, Sousse, Sfax). Court of Cassation (Cour de Cassation) — apex civil and criminal court, based in Tunis. Administrative Court — apex administrative jurisdiction. Constitutional Court — established by 2022 Constitution. Cantonal courts handle minor civil and criminal matters.</div>
+        <details class="provisions">
+          <summary>Court structure</summary>
+          <ul>
+            <li>Cantonal Courts: minor civil matters, misdemeanor infractions</li>
+            <li>Courts of First Instance (24): civil, commercial, criminal chambers</li>
+            <li>Courts of Appeal (3 — Tunis, Sousse, Sfax): appellate jurisdiction</li>
+            <li>Court of Cassation (Tunis): reviews points of law only</li>
+            <li>Administrative Court: all public law disputes</li>
+            <li>Terrorism Chamber: specialized at TFI Tunis level</li>
+            <li>Constitutional Court: established under 2022 Constitution</li>
+          </ul>
+        </details>
+        <div class="tags"><span class="tag admin">Administrative</span><span class="tag constitutional">Constitutional</span></div>
+      </div>
+
+      <div class="law-card" id="judiciary-statute">
+        <h3><span class="law-num">Judicial Statute — Law No. 67-29 of July 14, 1967</span>(as amended)</h3>
+        <div class="date">Enacted: July 14, 1967 | In force: 1967 | Amended: 1997, 2013, 2022</div>
+        <div class="desc">Governs the appointment, promotion, transfer, discipline, and removal of judges. Establishes the Superior Council of the Judiciary (Conseil Supérieur de la Magistrature — CSM) as the body responsible for judicial governance. Post-2022, the CSM's composition was changed, reducing independence according to critics.</div>
+        <div class="tags"><span class="tag admin">Administrative</span><span class="tag constitutional">Constitutional</span></div>
+      </div>
+
+      <div class="law-card" id="transitional-justice">
+        <h3><span class="law-num">Transitional Justice Law — Organic Law No. 2013-53 of December 24, 2013</span></h3>
+        <div class="date">Enacted: December 24, 2013 | In force: 2014</div>
+        <div class="desc">Establishes Tunisia's transitional justice framework including the Truth and Dignity Commission (IVD — Instance Vérité et Dignité). Covers: truth-seeking, reparations, institutional reform, and accountability for human rights violations committed between July 1, 1955 and December 31, 2013. IVD operated from 2014–2019; issued final report in 2019.</div>
+        <div class="tags"><span class="tag admin">Administrative</span><span class="tag constitutional">Constitutional</span><span class="tag criminal">Criminal</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="law-section" id="international">
+    <h2><span class="icon">🌍</span> International Law &amp; Key Treaties</h2>
+    <div class="law-grid">
+
+      <div class="law-card" id="treaties-overview">
+        <h3><span class="law-num">Key International Conventions Ratified by Tunisia</span></h3>
+        <div class="date">Various dates</div>
+        <div class="desc">Tunisia is party to numerous international conventions that form part of Tunisian law upon ratification (monist approach).</div>
+        <details class="provisions">
+          <summary>Major conventions</summary>
+          <ul>
+            <li>UN Charter (1956) — upon independence</li>
+            <li>Universal Declaration of Human Rights (1948) — adopted, not treaty</li>
+            <li>International Covenant on Civil and Political Rights — ratified March 18, 1969</li>
+            <li>International Covenant on Economic, Social and Cultural Rights — ratified March 18, 1969</li>
+            <li>Convention on the Elimination of All Forms of Discrimination Against Women (CEDAW) — ratified September 20, 1985 (with reservations; reservations partially lifted 2011)</li>
+            <li>Convention on the Rights of the Child — ratified January 29, 1992</li>
+            <li>UN Convention Against Torture — ratified September 23, 1988</li>
+            <li>African Charter on Human and Peoples' Rights — ratified 1983</li>
+            <li>Arab Charter on Human Rights — ratified 2008</li>
+            <li>New York Convention on Arbitral Awards (1958) — ratified July 22, 1967</li>
+            <li>ILO Core Conventions (62 conventions ratified)</li>
+            <li>TRIPS Agreement — WTO member since March 29, 1995</li>
+            <li>WIPO Copyright Treaty — ratified 2012</li>
+            <li>Patent Cooperation Treaty (PCT) — member since March 1, 2001</li>
+            <li>UN Convention Against Corruption (UNCAC) — ratified October 23, 2008</li>
+            <li>Association Agreement with the European Union (1998)</li>
+          </ul>
+        </details>
+        <div class="tags"><span class="tag constitutional">Constitutional</span></div>
+      </div>
+
+      <div class="law-card" id="eu-association">
+        <h3><span class="law-num">EU-Tunisia Association Agreement — Law No. 97-37 of July 1, 1997</span></h3>
+        <div class="date">Signed: July 17, 1995 | Ratified by Tunisia: July 1, 1997 | In force: March 1, 1998</div>
+        <div class="desc">Association agreement between Tunisia and the European Union, the first such agreement with a Mediterranean country (Euro-Mediterranean Partnership). Established a free trade area for manufactured goods, progressively eliminating tariffs. Includes provisions on services, capital, intellectual property, and political dialogue. Tunisia achieved compliance with WTO rules under this agreement.</div>
+        <div class="tags"><span class="tag commercial">Commercial</span><span class="tag constitutional">Constitutional</span></div>
+      </div>
+
+      <div class="law-card" id="maghreb-union">
+        <h3><span class="law-num">Arab Maghreb Union Treaty — 1989</span></h3>
+        <div class="date">Signed: February 17, 1989 (Marrakesh Treaty) | Ratified: 1989</div>
+        <div class="desc">Treaty establishing the Arab Maghreb Union (UMA) among Tunisia, Algeria, Morocco, Libya, and Mauritania. Aims for eventual economic integration. In practice, the union has been largely dormant due to Algeria-Morocco tensions. However, bilateral agreements within the AMU framework remain in force.</div>
+        <div class="tags"><span class="tag commercial">Commercial</span><span class="tag constitutional">Constitutional</span></div>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <p>Compiled from: <a href="https://www.wipo.int/wipolex/en/" target="_blank">WIPO Lex</a> · <a href="https://www.nyulawglobal.org/globalex/Tunisia1.html" target="_blank">NYU GlobaLex</a> · <a href="https://jurisitetunisie.com" target="_blank">Jurisite Tunisie</a> · <a href="https://constitutionnet.org/country/tunisia" target="_blank">ConstitutionNet</a> · ILO NATLEX · Official JORT records</p>
+  <p style="margin-top:8px;">This document is for informational purposes only. For authoritative legal advice, consult an authorized Tunisian legal professional or the official Journal Officiel de la République Tunisienne (JORT).</p>
+  <p style="margin-top:8px; color:#888;">Version 1.0 — June 2026 | Repository: <a href="https://github.com/henihaddad/all_tunisian_laws_progressive" target="_blank">henihaddad/all_tunisian_laws_progressive</a></p>
+</footer>
+
+<script>
+function filterLaws(query) {
+  const q = query.toLowerCase().trim();
+  const cards = document.querySelectorAll('.law-card');
+  let visible = 0;
+  cards.forEach(card => {
+    const text = card.innerText.toLowerCase();
+    if (!q || text.includes(q)) {
+      card.classList.remove('hidden');
+      visible++;
+    } else {
+      card.classList.add('hidden');
+    }
+  });
+  document.getElementById('totalCount').textContent = visible;
+}
+// Count cards on load
+document.addEventListener('DOMContentLoaded', () => {
+  const count = document.querySelectorAll('.law-card').length;
+  document.getElementById('totalCount').textContent = count;
+});
+</script>
+</body>
+</html>
