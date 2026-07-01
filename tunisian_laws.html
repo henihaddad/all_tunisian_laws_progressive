@@ -27,6 +27,14 @@
     --tag-env: #1b5e20;
     --tag-financial: #0d47a1;
     --tag-press: #37474f;
+    --tag-digital: #283593;
+    --tag-education: #6a1b9a;
+    --tag-health: #00695c;
+    --tag-land: #795548;
+    --tag-nationality: #ad1457;
+    --tag-security: #263238;
+    --tag-social: #558b2f;
+    --tag-pending: #e65100;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -162,6 +170,14 @@
   .tag.press { background: var(--tag-press); }
   .tag.superseded { background: #555; }
   .tag.amended { background: #5d4037; }
+  .tag.digital { background: var(--tag-digital); }
+  .tag.education { background: var(--tag-education); }
+  .tag.health { background: var(--tag-health); }
+  .tag.land { background: var(--tag-land); }
+  .tag.nationality { background: var(--tag-nationality); }
+  .tag.security { background: var(--tag-security); }
+  .tag.social { background: var(--tag-social); }
+  .tag.pending { background: var(--tag-pending); border: 1px dashed #fff3; }
 
   .note-box {
     background: rgba(200,16,46,0.1);
@@ -198,7 +214,7 @@
   <div class="crescent">☪</div>
   <h1>Tunisian Laws — Comprehensive Legal Reference</h1>
   <p>A navigable compendium of the Republic of Tunisia's constitutions, codes, statutes, and regulations</p>
-  <p class="meta">Last updated: June 2026 &nbsp;|&nbsp; Sources: WIPO Lex, NYU GlobaLex, JurisiteTunisie, ConstitutionNet, ILO NATLEX</p>
+  <p class="meta">Last updated: July 2026 &nbsp;|&nbsp; Sources: WIPO Lex, NYU GlobaLex, JurisiteTunisie, ConstitutionNet, ILO NATLEX, JORT, Law Library of Congress</p>
 </header>
 
 <nav id="toc">
@@ -227,6 +243,7 @@
     <li><a href="#nationality">Nationality &amp; Immigration</a></li>
     <li><a href="#judicial">Judicial Organization</a></li>
     <li><a href="#international">International &amp; Treaties</a></li>
+    <li><a href="#future-expansion">Future Expansion</a></li>
   </ul>
 </nav>
 
@@ -236,7 +253,7 @@
 
 <main>
   <div class="stats-bar">
-    <div class="stat"><div class="num" id="totalCount">150+</div><div class="lbl">Laws Documented</div></div>
+    <div class="stat"><div class="num" id="totalCount">95+</div><div class="lbl">Laws Documented</div></div>
     <div class="stat"><div class="num">23</div><div class="lbl">Legal Categories</div></div>
     <div class="stat"><div class="num">1906</div><div class="lbl">Earliest Code</div></div>
     <div class="stat"><div class="num">2022</div><div class="lbl">Latest Constitution</div></div>
@@ -245,6 +262,10 @@
 
   <div class="note-box">
     Tunisia's legal system is <strong>predominantly civil law-based</strong>, derived from the French legal tradition with elements of Islamic law (particularly in personal status). The unified secular judiciary was established in 1956 upon abolition of Shari'a courts. The current constitution is the <strong>2022 Constitution</strong> (adopted July 25, 2022 by referendum; published August 18, 2022), which supersedes the 1959 and 2014 constitutions. Official legal texts are published in the <em>Journal Officiel de la République Tunisienne</em> (JORT).
+  </div>
+
+  <div class="note-box" id="whats-new">
+    <strong>What's new (July 2026 update):</strong> Added the <a href="#finance-law-2026">Finance Law 2026</a> (wealth-tax reform, e-invoicing expansion), the <a href="#labor-contracts-2025">2025 labor-contract reform</a> banning workforce subcontracting, the <a href="#agri-debt-2026">Agricultural Debt Regularization Law</a>, the <a href="#ifad-2025">IFAD 13th Replenishment ratification</a>, the pending <a href="#ai-data-bill">AI &amp; data-protection reform bill</a>, and the pending <a href="#associations-bill">associations-law amendment</a>, plus a note on the 2024–2026 civil-society crackdown. Entries pending enactment are marked <span class="tag pending">Pending</span>. See <a href="#future-expansion">Areas for future expansion</a> at the bottom of this document.
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════ -->
@@ -663,7 +684,7 @@
 
       <div class="law-card" id="labor-code">
         <h3><span class="law-num">Labor Code — Law No. 66-27 of April 30, 1966</span>Majallat Al-Shughl</h3>
-        <div class="date">Enacted: April 30, 1966 | In force: May 1966 | Amended: 1994, 1996, 2006, 2007, 2011, 2017</div>
+        <div class="date">Enacted: April 30, 1966 | In force: May 1966 | Amended: 1994, 1996, 2006, 2007, 2011, 2017, 2025</div>
         <div class="desc">The primary statute governing employment relationships in Tunisia. Covers individual employment contracts, conditions of work, wages, termination, workplace safety, collective bargaining, and trade unions. Applies to the private sector; public servants are governed by the General Statute of Civil Servants. Implements ILO core labor conventions (Tunisia has ratified 62 ILO conventions).</div>
         <details class="provisions">
           <summary>Key provisions</summary>
@@ -680,6 +701,24 @@
             <li>Art. 155: Right to strike (with pre-notice requirements)</li>
             <li>Art. 193–200: Labor inspectorate powers</li>
             <li>Art. 230–240: Occupational health and safety requirements</li>
+          </ul>
+        </details>
+        <div class="tags"><span class="tag labor">Labor</span><span class="tag amended">Amended</span></div>
+      </div>
+
+      <div class="law-card" id="labor-contracts-2025">
+        <h3><span class="law-num">Law No. 2025-9 of May 21, 2025</span>Regulation of Employment Contracts &amp; Prohibition of Labor Subcontracting</h3>
+        <div class="date">Enacted: May 21, 2025 | Published: JORT No. 61/2025 | In force: 2025</div>
+        <div class="desc">Major amendment to the Labor Code responding to years of criticism over precarious "sous-traitance" (third-party labor subcontracting) arrangements used to circumvent permanent employment protections. Makes the indefinite-term contract (CDI) the general rule for employment relationships and sharply restricts recourse to fixed-term contracts (CDD). Bans the lending/subcontracting of manpower by intermediary firms to user companies outside narrowly licensed temporary-work agencies, and imposes criminal and administrative penalties for violations.</div>
+        <details class="provisions">
+          <summary>Key provisions</summary>
+          <ul>
+            <li>CDI (contrat à durée indéterminée) established as the default and general-rule contract type</li>
+            <li>Art. 6-2 (new): CDD permitted only for defined, temporary, or seasonal needs, with capped duration and number of renewals; part-time work allowed under CDI or CDD (new Art. 2-94)</li>
+            <li>Chapter II: prohibits labor subcontracting (sous-traitance de main-d'œuvre) and the "loan" of workers between companies</li>
+            <li>Requires reclassification of subcontracted workers as direct employees of the user company after the law's entry into force, subject to transition rules</li>
+            <li>Criminal sanctions (fines and, for repeat offenses, imprisonment) for employers and intermediaries violating the subcontracting ban</li>
+            <li>Reinforces labor inspectorate powers to investigate disguised subcontracting arrangements</li>
           </ul>
         </details>
         <div class="tags"><span class="tag labor">Labor</span><span class="tag amended">Amended</span></div>
@@ -814,6 +853,33 @@
         <div class="tags"><span class="tag tax">Tax</span><span class="tag admin">Administrative</span></div>
       </div>
 
+      <div class="law-card" id="finance-law-2025">
+        <h3><span class="law-num">Finance Law 2025 — Law No. 2024-48 of December 9, 2024</span>Loi de Finances pour l'année 2025</h3>
+        <div class="date">Enacted: December 9, 2024 | In force: January 1, 2025</div>
+        <div class="desc">Annual budget and tax-policy statute for fiscal year 2025. Set state revenue and expenditure ceilings (budget of ~78 billion TND) and introduced the first version of the annual net-wealth tax on real and movable property valued above 3 million TND at a flat 0.5% rate, plus customs/duty exemptions for equipment used by childhood, elderly, and disability-care institutions.</div>
+        <div class="tags"><span class="tag tax">Tax</span><span class="tag amended">Amended</span></div>
+      </div>
+
+      <div class="law-card" id="finance-law-2026">
+        <h3><span class="law-num">Finance Law 2026 — Law No. 2025-17 of December 12, 2025</span>Loi de Finances pour l'année 2026</h3>
+        <div class="date">Enacted: December 12, 2025 | Published: JORT No. 88 of December 31, 2025 | In force: January 1, 2026</div>
+        <div class="desc">Annual budget and tax-policy statute for fiscal year 2026, authorizing state revenue of 52.56 billion TND and payment appropriations of 63.575 billion TND. Framed by the government as a "tax justice" reform aimed at reducing informality and easing the burden on middle- and low-income households, while raising levies on higher-value assets and corporate profits.</div>
+        <details class="provisions">
+          <summary>Key provisions</summary>
+          <ul>
+            <li>Art. 104 et seq.: Expands mandatory e-invoicing (facturation électronique) to <strong>all VAT-liable service transactions</strong>, not just goods and previously-designated sectors — no grace period before penalties apply</li>
+            <li>Replaces the flat 0.5% net-wealth tax (introduced by Finance Law 2025) with a <strong>progressive wealth-tax scale</strong> on real and movable property owned as of January 1, 2026 by persons whose net assets exceed 5 million TND</li>
+            <li>Introduces a temporary additional <strong>4% contribution on corporate profits</strong> (2025 profits declared in 2026 and after), non-deductible from the IS tax base</li>
+            <li>Extends the exceptional Contribution Sociale de Solidarité (CSS) measures through 2026</li>
+            <li>Exempts employer-funded employee transport benefits from personal income tax</li>
+            <li>Widens the list of tax-deductible charitable donations for IRPP/IS purposes</li>
+            <li>Introduces a simplified legal and fiscal regime to encourage informal-sector businesses to formalize (simplified declarations, eased social-security access)</li>
+            <li>Rationalizes customs/consumption-duty advantages for vehicles adapted for persons with physical disabilities (Art. 104)</li>
+          </ul>
+        </details>
+        <div class="tags"><span class="tag tax">Tax</span><span class="tag digital">Digital</span><span class="tag amended">Amended</span></div>
+      </div>
+
     </div>
   </section>
 
@@ -859,6 +925,13 @@
         <div class="date">Enacted: November 5, 2011 | In force: 2011</div>
         <div class="desc">Liberalizes and regulates the microfinance sector, allowing private and associative organizations to offer microcredit services beyond the former state monopoly (Banque Tunisienne de Solidarité). Establishes the Supervisory Authority for Microfinance (ACM). Maximum loan amounts and interest rate caps specified.</div>
         <div class="tags"><span class="tag financial">Financial</span><span class="tag social">Social</span></div>
+      </div>
+
+      <div class="law-card" id="agri-debt-2026">
+        <h3><span class="law-num">Law No. 2026-5 of March 11, 2026</span>Regularization of Distressed Agricultural Debts</h3>
+        <div class="date">Enacted: March 11, 2026 | Promulgated by President Kais Saied | In force: 2026</div>
+        <div class="desc">Establishes a debt-relief and restructuring mechanism for farmers and agricultural companies whose bank and public-fund debts became distressed amid successive drought years and rising input costs. Provides for rescheduling, partial forgiveness of principal and penalty interest below defined thresholds, and eligibility criteria and deadlines for farmers to apply through participating banks and the Ministry of Agriculture's regional bodies (CRDA).</div>
+        <div class="tags"><span class="tag financial">Financial</span><span class="tag land">Land</span></div>
       </div>
 
       <div class="law-card" id="securities">
@@ -1071,6 +1144,23 @@
         <div class="tags"><span class="tag digital">Digital</span></div>
       </div>
 
+      <div class="law-card" id="ai-data-bill">
+        <h3><span class="law-num">Draft Organic Law on Personal Data Protection &amp; AI Governance (2025–2026)</span><span class="tag pending" style="margin-left:8px;">Pending</span></h3>
+        <div class="date">Submitted to the Assembly of the Representatives of the People: 2025 | Status as of mid-2026: under parliamentary examination — not yet enacted</div>
+        <div class="desc">Comprehensive 123-article draft organic law, organized into 6 titles, intended to replace Law No. 2004-63 in full. Would create a modernized personal-data-protection regime addressing artificial intelligence and automated decision-making, algorithmic risk, and cross-border data transfers, while reorganizing the INPDP's powers. Not yet law — tracked here as a significant pending reform; this entry will be updated to a full statute entry upon promulgation.</div>
+        <details class="provisions">
+          <summary>Key proposed features (subject to change before adoption)</summary>
+          <ul>
+            <li>Explicit rules governing AI systems and automated/algorithmic decision-making that affect individuals</li>
+            <li>"Regulatory sandboxes" for AI and data-driven innovation supervised by INPDP</li>
+            <li>Strengthened safeguards and approval mechanisms for transfer of personal data outside Tunisia</li>
+            <li>Modernized sanctions regime and expanded INPDP investigative and enforcement powers</li>
+            <li>Alignment efforts with international personal-data-protection standards (comparable to GDPR-style frameworks)</li>
+          </ul>
+        </details>
+        <div class="tags"><span class="tag digital">Digital</span><span class="tag pending">Pending</span></div>
+      </div>
+
       <div class="law-card" id="cybercrime">
         <h3><span class="law-num">Cybercrime Law — Law No. 99-89 of August 2, 1999</span>(as amended)</h3>
         <div class="date">Enacted: August 2, 1999 | In force: 1999 | Amended: 2004, 2010</div>
@@ -1227,6 +1317,20 @@
         <div class="tags"><span class="tag admin">Administrative</span><span class="tag constitutional">Constitutional</span></div>
       </div>
 
+      <div class="law-card" id="associations-bill">
+        <h3><span class="law-num">Draft Amendment to Decree-Law No. 2011-88 on Associations</span><span class="tag pending" style="margin-left:8px;">Pending</span></h3>
+        <div class="date">Proposed to Parliament: October 10, 2023 (by 10 members of the Assembly of Representatives of the People) | Status as of mid-2026: pending, not adopted</div>
+        <div class="desc">Proposed legislation that would replace the notification-based system under Decree-Law 2011-88 with a registration/prior-approval regime and impose new controls on associations' foreign funding, staffing, and activities. International and Tunisian human rights organizations (Human Rights Watch, Amnesty International, OMCT, ICNL) have called for the bill to be withdrawn, warning it would grant the executive broad powers to deny, suspend, or dissolve associations. Not enacted; tracked here as a live threat to the current legal framework in the Associations Decree above.</div>
+        <div class="tags"><span class="tag admin">Administrative</span><span class="tag pending">Pending</span></div>
+      </div>
+
+      <div class="law-card" id="civil-society-crackdown">
+        <h3><span class="law-num">2024–2026 Civil Society Enforcement Actions</span>Judicial Suspensions &amp; Ministerial Dissolutions of Associations</h3>
+        <div class="date">Ongoing since May 2024, intensifying through 2025–2026</div>
+        <div class="desc">Not new legislation, but a significant shift in how existing law is applied: Tunisian courts have ordered the temporary suspension of at least 25 associations since 2024 — including the Tunisian League for Human Rights (LTDH), the Tunisian Association of Democratic Women (ATFD), the Tunisian Forum for Economic and Social Rights (FTDES), OMCT Tunisia, I Watch, and the Nawaat journalists' association — citing alleged administrative or foreign-funding irregularities under Decree-Law 2011-88. Separately, the Ministry of Interior issued dissolution orders against several associations and development organizations by ministerial decree on January 7, 2026, for alleged non-compliance. Rights groups (Amnesty International, Human Rights Watch) characterize the trend as the instrumentalization of existing legal mechanisms to narrow civic space, compounding the risk posed by the pending associations bill above.</div>
+        <div class="tags"><span class="tag admin">Administrative</span><span class="tag security">Security</span></div>
+      </div>
+
       <div class="law-card" id="political-parties">
         <h3><span class="law-num">Political Parties Law — Decree-Law No. 2011-87 of September 24, 2011</span></h3>
         <div class="date">Enacted: September 24, 2011 | In force: 2011 | Amended: 2014</div>
@@ -1259,7 +1363,7 @@
       <div class="law-card" id="state-emergency">
         <h3><span class="law-num">State of Emergency Decree — Decree No. 78-50 of January 26, 1978</span></h3>
         <div class="date">Enacted: January 26, 1978 | In force: 1978</div>
-        <div class="desc">Establishes the legal framework for declaring and managing states of emergency. Grants expanded executive powers including restriction of movement, house arrest, administrative detention, and closure of meeting places. Tunisia declared a state of emergency in November 2015 (after Bardo and Sousse attacks), which was repeatedly extended and remained nominally in force for years.</div>
+        <div class="desc">Establishes the legal framework for declaring and managing states of emergency. Grants expanded executive powers including restriction of movement, house arrest, administrative detention, and closure of meeting places. Tunisia declared a state of emergency in November 2015 (after Bardo and Sousse attacks), which has been renewed by successive presidential decrees every year since — most recently for the period January 1 – December 30, 2026 — remaining continuously in force for over a decade.</div>
         <div class="tags"><span class="tag security">Security</span><span class="tag constitutional">Constitutional</span></div>
       </div>
 
@@ -1383,6 +1487,30 @@
         <div class="tags"><span class="tag commercial">Commercial</span><span class="tag constitutional">Constitutional</span></div>
       </div>
 
+      <div class="law-card" id="ifad-2025">
+        <h3><span class="law-num">Law No. 2025-16 of October 8, 2025</span>IFAD Thirteenth Replenishment Ratification</h3>
+        <div class="date">Enacted: October 8, 2025 | Published: JORT No. 123/2025</div>
+        <div class="desc">Authorizes the Tunisian State to subscribe to the Thirteenth Replenishment of the resources of the International Fund for Agricultural Development (IFAD/FIDA), committing Tunisia's contribution to the multilateral fund that finances rural poverty-reduction and agricultural-development programs, including projects implemented through Tunisia's Ministry of Agriculture and the CRDA regional agricultural bodies.</div>
+        <div class="tags"><span class="tag constitutional">Constitutional</span><span class="tag financial">Financial</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="law-section" id="future-expansion">
+    <h2><span class="icon">🧭</span> Areas for Future Expansion</h2>
+    <div class="note-box">
+      This artifact is actively maintained and re-checked against new legislation on each run. Areas identified for deeper coverage in future updates:
+      <ul style="margin: 10px 0 0 22px; line-height: 1.8;">
+        <li><strong>Dedicated Agricultural Law category</strong> — Tunisia has no dedicated section for agricultural legislation (land tenure reform, the Code Rural, collective lands Law No. 2016-69, drought/water-scarcity emergency measures); currently agricultural items are cross-filed under Financial and Land &amp; Property law.</li>
+        <li><strong>Water Code reform</strong> — the 1975 Water Code (see Environmental Law) is reportedly under active government/expert review as of March 2026 in response to Tunisia's water-scarcity crisis; no revised code has been promulgated yet — monitor for a replacement statute.</li>
+        <li><strong>AI &amp; data-protection reform bill</strong> — track the 123-article draft organic law (see Digital Law) through to promulgation; update its entry to a full statute once enacted.</li>
+        <li><strong>Associations-law amendment</strong> — track the pending amendment to Decree-Law 2011-88 (see Associations &amp; Civil Society) through to a parliamentary vote.</li>
+        <li><strong>Judicial independence legislation</strong> — the 2022 dissolution of the Supreme Judicial Council and its replacement by a presidentially-appointed Provisional Judicial Order warrants a deeper dedicated entry with full provisions in the Judicial Organization section.</li>
+        <li><strong>Sector-specific finance-law provisions</strong> — annual Finance Laws contain dozens of narrow sectoral measures (customs exemptions, sector-specific incentives) that are summarized here only at a high level; a detailed running log could be added.</li>
+        <li><strong>Regional/municipal by-laws</strong> — out of scope for this national-level compendium, but noted as a category not covered.</li>
+      </ul>
     </div>
   </section>
 
@@ -1391,7 +1519,7 @@
 <footer>
   <p>Compiled from: <a href="https://www.wipo.int/wipolex/en/" target="_blank">WIPO Lex</a> · <a href="https://www.nyulawglobal.org/globalex/Tunisia1.html" target="_blank">NYU GlobaLex</a> · <a href="https://jurisitetunisie.com" target="_blank">Jurisite Tunisie</a> · <a href="https://constitutionnet.org/country/tunisia" target="_blank">ConstitutionNet</a> · ILO NATLEX · Official JORT records</p>
   <p style="margin-top:8px;">This document is for informational purposes only. For authoritative legal advice, consult an authorized Tunisian legal professional or the official Journal Officiel de la République Tunisienne (JORT).</p>
-  <p style="margin-top:8px; color:#888;">Version 1.0 — June 2026 | Repository: <a href="https://github.com/henihaddad/all_tunisian_laws_progressive" target="_blank">henihaddad/all_tunisian_laws_progressive</a></p>
+  <p style="margin-top:8px; color:#888;">Version 1.1 — July 2026 | Repository: <a href="https://github.com/henihaddad/all_tunisian_laws_progressive" target="_blank">henihaddad/all_tunisian_laws_progressive</a></p>
 </footer>
 
 <script>
