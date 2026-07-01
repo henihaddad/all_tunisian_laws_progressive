@@ -27,6 +27,16 @@
     --tag-env: #1b5e20;
     --tag-financial: #0d47a1;
     --tag-press: #37474f;
+    --tag-land: #6d4c41;
+    --tag-social: #00695c;
+    --tag-digital: #283593;
+    --tag-health: #ad1457;
+    --tag-education: #558b2f;
+    --tag-nationality: #4527a0;
+    --tag-security: #263238;
+    --tag-energy: #ef6c00;
+    --tag-transport: #01579b;
+    --tag-pending: #616161;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -162,6 +172,16 @@
   .tag.press { background: var(--tag-press); }
   .tag.superseded { background: #555; }
   .tag.amended { background: #5d4037; }
+  .tag.land { background: var(--tag-land); }
+  .tag.social { background: var(--tag-social); }
+  .tag.digital { background: var(--tag-digital); }
+  .tag.health { background: var(--tag-health); }
+  .tag.education { background: var(--tag-education); }
+  .tag.nationality { background: var(--tag-nationality); }
+  .tag.security { background: var(--tag-security); }
+  .tag.energy { background: var(--tag-energy); }
+  .tag.transport { background: var(--tag-transport); }
+  .tag.pending { background: var(--tag-pending); border: 1px dashed #999; }
 
   .note-box {
     background: rgba(200,16,46,0.1);
@@ -198,7 +218,7 @@
   <div class="crescent">☪</div>
   <h1>Tunisian Laws — Comprehensive Legal Reference</h1>
   <p>A navigable compendium of the Republic of Tunisia's constitutions, codes, statutes, and regulations</p>
-  <p class="meta">Last updated: June 2026 &nbsp;|&nbsp; Sources: WIPO Lex, NYU GlobaLex, JurisiteTunisie, ConstitutionNet, ILO NATLEX</p>
+  <p class="meta">Last updated: July 2026 &nbsp;|&nbsp; Sources: WIPO Lex, NYU GlobaLex, JurisiteTunisie, ConstitutionNet, ILO NATLEX, JORT, legislation-securite.tn</p>
 </header>
 
 <nav id="toc">
@@ -226,7 +246,10 @@
     <li><a href="#security">Security &amp; Counter-terrorism</a></li>
     <li><a href="#nationality">Nationality &amp; Immigration</a></li>
     <li><a href="#judicial">Judicial Organization</a></li>
+    <li><a href="#energy">Energy &amp; Natural Resources</a></li>
+    <li><a href="#transport">Transport Law</a></li>
     <li><a href="#international">International &amp; Treaties</a></li>
+    <li><a href="#changelog">Changelog</a></li>
   </ul>
 </nav>
 
@@ -237,7 +260,7 @@
 <main>
   <div class="stats-bar">
     <div class="stat"><div class="num" id="totalCount">150+</div><div class="lbl">Laws Documented</div></div>
-    <div class="stat"><div class="num">23</div><div class="lbl">Legal Categories</div></div>
+    <div class="stat"><div class="num">25</div><div class="lbl">Legal Categories</div></div>
     <div class="stat"><div class="num">1906</div><div class="lbl">Earliest Code</div></div>
     <div class="stat"><div class="num">2022</div><div class="lbl">Latest Constitution</div></div>
     <div class="stat"><div class="num">Civil</div><div class="lbl">Legal Family</div></div>
@@ -245,6 +268,10 @@
 
   <div class="note-box">
     Tunisia's legal system is <strong>predominantly civil law-based</strong>, derived from the French legal tradition with elements of Islamic law (particularly in personal status). The unified secular judiciary was established in 1956 upon abolition of Shari'a courts. The current constitution is the <strong>2022 Constitution</strong> (adopted July 25, 2022 by referendum; published August 18, 2022), which supersedes the 1959 and 2014 constitutions. Official legal texts are published in the <em>Journal Officiel de la République Tunisienne</em> (JORT).
+  </div>
+
+  <div class="note-box" style="border-left-color: var(--accent);">
+    <strong>Version 2.0 update (July 2026):</strong> This revision adds annual Finance Laws through 2026, the 2024 cheque-law reform, the 2025 labor sub-contracting ban, the 2022 restructuring of judicial governance, 2023–2025 electoral and local-government amendments, military justice amendments, and previously uncovered codes (mining, hydrocarbons, aviation, road traffic, maritime, PPP, real rights). Pending/draft legislation not yet enacted is marked with a <span class="tag pending">Pending</span> tag. See the <a href="#changelog">Changelog</a> for the full list of changes.
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════ -->
@@ -367,7 +394,7 @@
         <div class="tags"><span class="tag civil">Civil</span><span class="tag admin">Administrative</span></div>
       </div>
 
-      <div class="law-card" id="nationality">
+      <div class="law-card" id="nationality-code">
         <h3><span class="law-num">Nationality Code — Law No. 63-6 of February 28, 1963</span></h3>
         <div class="date">Enacted: February 28, 1963 | In force: 1963 | Amended: 1975, 2002, 2010</div>
         <div class="desc">Defines Tunisian nationality by birth, descent, naturalization, and reacquisition. Originally limited transmission of nationality through the paternal line; amended in 2010 to allow Tunisian mothers married to foreign nationals to transmit nationality to their children. Governs loss, renunciation, and deprivation of nationality.</div>
@@ -380,7 +407,8 @@
             <li>Art. 30–35: Loss and deprivation of Tunisian nationality</li>
           </ul>
         </details>
-        <div class="tags"><span class="tag civil">Civil</span><span class="tag nationality">Nationality</span></div>
+        <div class="desc" style="margin-top:8px;"><strong>Pending reform:</strong> a draft bill sponsored by 36 deputies, referred to the ARP's Commission des droits et libertés (reported March 30, 2026), would amend Articles 8, 9, 10, 20, 21, and 38bis to address stateless parents' children, foundlings, exceptional naturalization for high-skill foreigners, and loss of acquired nationality. Not yet enacted as of July 2026.</div>
+        <div class="tags"><span class="tag civil">Civil</span><span class="tag nationality">Nationality</span><span class="tag pending">Pending reform</span></div>
       </div>
 
     </div>
@@ -534,7 +562,7 @@
       <div class="law-card" id="anti-corruption">
         <h3><span class="law-num">Organic Law No. 2017-10 of March 7, 2017</span>Declaration of Assets and Conflict of Interest</h3>
         <div class="date">Enacted: March 7, 2017 | In force: 2017</div>
-        <div class="desc">Requires elected officials, senior public servants, and government appointees to declare assets, income, and interests. Creates the National Anti-Corruption Authority (INLUCC — Instance Nationale de Lutte contre la Corruption). Whistleblower protections included.</div>
+        <div class="desc">Requires elected officials, senior public servants, and government appointees to declare assets, income, and interests. Whistleblower protections included. Anti-corruption enforcement is otherwise carried by the National Anti-Corruption Authority (INLUCC), originally created by framework Decree-Law No. 2011-120 of November 14, 2011 — not this law. An Organic Law of August 27, 2018 attempted to replace INLUCC with a permanent constitutional body (IBOGLUCC, per Art. 130 of the 2014 Constitution) but that body was never operationalized. The Interior Ministry shut down INLUCC's offices in August 2021, and as of 2026 it remains non-functional; the 2022 Constitution dropped the constitutional anti-corruption body entirely, and no replacement statute has been enacted.</div>
         <div class="tags"><span class="tag criminal">Criminal</span><span class="tag admin">Administrative</span></div>
       </div>
 
@@ -562,9 +590,9 @@
       </div>
 
       <div class="law-card" id="decree-2022-54">
-        <h3><span class="law-num">Decree No. 2022-54 of September 13, 2022</span>Combating Information Technology Offenses</h3>
-        <div class="date">Enacted: September 13, 2022 | In force: September 2022</div>
-        <div class="desc">Criminalizes "false information" spread online that "harms third parties, public order, or national defense." Criticized by press freedom organizations for its vague language and potential to criminalize journalism and free speech. Passed by presidential decree without parliamentary scrutiny.</div>
+        <h3><span class="law-num">Decree-Law No. 2022-54 of September 13, 2022</span>Combating Information Technology Offenses</h3>
+        <div class="date">Enacted: September 13, 2022 | In force: September 2022 | Unamended through 2026</div>
+        <div class="desc">Criminalizes "false information" spread online that "harms third parties, public order, or national defense" (Art. 24). Criticized by press freedom organizations for its vague language and potential to criminalize journalism and free speech. Passed by presidential decree without parliamentary scrutiny. Enforcement intensified through 2024–2025: journalists Borhen Bsaies and Mourad Zeghidi were sentenced to prison under Art. 24 in May 2024; lawyers Samir Dilou, Dalila Msaddek, and Ayachi Hammami were charged under Art. 24 in November 2025. The Tunis Court of Appeal upheld and, in several instances, increased sentences in the "Conspiracy Case" on November 28, 2025 (some terms raised from 18 to 20 years). No legislative amendment of the decree-law has been enacted despite these controversies.</div>
         <div class="tags"><span class="tag criminal">Criminal</span><span class="tag digital">Digital</span><span class="tag press">Press</span></div>
       </div>
 
@@ -593,6 +621,13 @@
           </ul>
         </details>
         <div class="tags"><span class="tag commercial">Commercial</span><span class="tag amended">Amended</span></div>
+      </div>
+
+      <div class="law-card" id="cheque-reform">
+        <h3><span class="law-num">Law No. 2024-41 of August 2, 2024</span>Reform of Bounced-Cheque Rules</h3>
+        <div class="date">Enacted: August 2, 2024 | In force: February 2, 2025</div>
+        <div class="desc">Major reform of the Commercial Code's cheque provisions (Art. 291–325). Decriminalizes bounced cheques of 5,000 TND or less (civil recovery only); reduces prison penalties for larger amounts; imposes new bank obligations to check drawer creditworthiness and monitor accounts; creates a unified digital platform for cheque verification and reservation of funds before issuance. Intended to reduce prison overcrowding tied to cheque offenses, though banks' tightened controls were reported to have caused short-term liquidity friction for small businesses in early 2025.</div>
+        <div class="tags"><span class="tag commercial">Commercial</span><span class="tag financial">Financial</span></div>
       </div>
 
       <div class="law-card" id="companies-code">
@@ -671,7 +706,7 @@
             <li>Art. 6: Employment contract — types (fixed-term, indefinite-term, project-based)</li>
             <li>Art. 14–22: Trial period (période d'essai)</li>
             <li>Art. 23–35: Obligations of employer and employee</li>
-            <li>Art. 40: Minimum wage (SMIG/SMAG) — set by decree</li>
+            <li>Art. 40: Minimum wage (SMIG/SMAG) — set by decree; SMIG raised effective May 1, 2024 and SMAG (agricultural minimum wage) fixed by Decree No. 2024-420 of July 9, 2024 (JORT No. 85)</li>
             <li>Art. 73–83: Annual paid leave — minimum 1 day per month (18 days/year)</li>
             <li>Art. 90–100: Work hours — 48 hours/week maximum (40 hours in industry)</li>
             <li>Art. 120: Dismissal — requires just cause; procedural requirements for economic dismissal</li>
@@ -683,6 +718,13 @@
           </ul>
         </details>
         <div class="tags"><span class="tag labor">Labor</span><span class="tag amended">Amended</span></div>
+      </div>
+
+      <div class="law-card" id="subcontracting-ban">
+        <h3><span class="law-num">Law No. 2025-16 of May 23, 2025</span>Organization of Employment Contracts and Ban on Labor Sub-Contracting</h3>
+        <div class="date">Adopted by ARP: May 21, 2025 | Published: JORT No. 61, May 23, 2025 | In force: 2025</div>
+        <div class="desc">Amends the Labor Code to ban the use of manpower sub-contracting ("sous-traitance de main d'œuvre") for an employer's core business activities, making indefinite-term contracts (CDI) the default form of employment. Fixed-term contracts (CDD) renewed continuously for 4 years or more and terminated since March 6, 2024 are automatically converted to CDI. Repeat violations are punishable by fines of 10,000–30,000 TND and 3–6 months' imprisonment. One of the most significant labor reforms since the 1996 and 2007 Labor Code amendments.</div>
+        <div class="tags"><span class="tag labor">Labor</span><span class="tag criminal">Criminal</span></div>
       </div>
 
       <div class="law-card" id="civil-servants">
@@ -722,18 +764,19 @@
       </div>
 
       <div class="law-card" id="local-government">
-        <h3><span class="law-num">Local Government Code — Law No. 2018-29 of May 9, 2018</span>Majallat Al-Jama'aat Al-Mahaliyya</h3>
-        <div class="date">Enacted: May 9, 2018 | In force: May 2018 | Implements: 2014 Constitution Chapter VII</div>
-        <div class="desc">Comprehensive decentralization legislation replacing the previous municipalities law. Organizes three levels of local government: municipalities (balladiyyat), regions (wilayat), and districts (aqalim). Establishes directly-elected municipal councils with legislative powers in local matters. Introduces participatory budgeting and citizens' right to petition. Implemented after 2018 municipal elections.</div>
+        <h3><span class="law-num">Local Government Code — Law No. 2018-29 of May 9, 2018</span>Majallat Al-Jama'aat Al-Mahaliyya <span class="tag amended" style="font-size:0.65rem;">Partially superseded 2023–2025</span></h3>
+        <div class="date">Enacted: May 9, 2018 | In force: May 2018 | Region/district provisions superseded: 2023–2025</div>
+        <div class="desc">Decentralization legislation organizing three levels of local government: municipalities (balladiyyat), regions (wilayat), and districts (aqalim), with directly-elected councils, fiscal autonomy, and participatory budgeting. Municipality-level provisions remain in force, but the region/district framework has been reshaped for the 2022 Constitution's "bottom-up" local governance model: Decree-Law No. 2023-10 of March 8, 2023 (JORT No. 24) regulated the election of local councils and the composition of regional/district councils under the new system, and Organic Law No. 2025-4 of March 12, 2025 (JORT No. 30) formally established local, regional, and district councils as autonomous bodies with legal personality, expressly repealing the region/district provisions of this 2018 code as well as Organic Law No. 89-11 (1989) and Law No. 94-87 (1994).</div>
         <details class="provisions">
           <summary>Key provisions</summary>
           <ul>
             <li>Three levels: municipality, region (governorate), district</li>
-            <li>Directly elected councils at all three levels</li>
+            <li>Directly elected councils at all three levels (sector-level direct election, tiered upward, since the 2023–2025 reforms)</li>
             <li>Fiscal autonomy — own revenue sources and transfers from central budget</li>
             <li>Participatory democracy mechanisms (citizen petitions, public consultation)</li>
             <li>Gender parity requirement for municipal council lists</li>
             <li>Youth quota (minimum 1/3 of each list under 35)</li>
+            <li>Decree-Law 2023-10 and Organic Law 2025-4: region/district councils reconstituted as autonomous legal persons under the bottom-up model</li>
           </ul>
         </details>
         <div class="tags"><span class="tag admin">Administrative</span></div>
@@ -814,6 +857,34 @@
         <div class="tags"><span class="tag tax">Tax</span><span class="tag admin">Administrative</span></div>
       </div>
 
+      <div class="law-card" id="finance-law-2023">
+        <h3><span class="law-num">Decree-Law No. 2022-79 of December 22, 2022</span>Finance Law for 2023</h3>
+        <div class="date">Enacted: December 22, 2022 | Published: JORT No. 141, December 23, 2022</div>
+        <div class="desc">Annual budget law for fiscal year 2023, enacted by presidential decree-law (no parliament seated at signature). Fixed revenues at 46.424 billion TND and expenditures at 53.921 billion TND, a projected deficit of 7.497 billion TND. Sets yearly income tax, VAT, and customs adjustments applicable to the 2023 fiscal year.</div>
+        <div class="tags"><span class="tag tax">Tax</span></div>
+      </div>
+
+      <div class="law-card" id="finance-law-2024">
+        <h3><span class="law-num">Law No. 2023-13 of December 11, 2023</span>Finance Law for 2024</h3>
+        <div class="date">Enacted: December 11, 2023 | Published: JORT No. 144, December 12, 2023</div>
+        <div class="desc">Annual budget law for fiscal year 2024, totaling roughly 77.9 billion TND (+9.3% vs. 2023): about 49 billion TND in revenues and 59 billion TND in expenditures. Created a judicial-reform fund financed by a 10 TND stamp fee on court procedures, granted a 4-year corporate tax exemption for enterprises created in 2024–2025 with an investment declaration certificate (Art. 33), introduced tax easements on gluten-free products, and expanded tax authorities' access to bank account information (including at the Central Bank).</div>
+        <div class="tags"><span class="tag tax">Tax</span></div>
+      </div>
+
+      <div class="law-card" id="finance-law-2025">
+        <h3><span class="law-num">Law No. 2024-48 of December 9, 2024</span>Finance Law for 2025</h3>
+        <div class="date">Enacted: ~December 9, 2024 | Published: JORT No. 149, ~December 10, 2024</div>
+        <div class="desc">Annual budget law for fiscal year 2025. Introduced a 2% "contribution conjoncturelle" on corporate profits, raised the corporate income tax rate for certain sectors, revised personal income tax (IRPP) brackets, and enacted tax amnesty/regularization measures. Articles 50–51 created two SME/startup financing lines (7 million and 10 million TND) via the National Employment Fund.</div>
+        <div class="tags"><span class="tag tax">Tax</span></div>
+      </div>
+
+      <div class="law-card" id="finance-law-2026">
+        <h3><span class="law-num">Law No. 2025-17 of December 12, 2025</span>Finance Law for 2026</h3>
+        <div class="date">Adopted by ARP: December 4, 2025 | Adopted by Conseil national des régions et des districts: December 7, 2025 | Published: JORT No. 148, December 12, 2025</div>
+        <div class="desc">Current annual budget law. Fixes revenues at 52.560 billion TND and expenditure credits at 63.575 billion TND. Focuses on social protection and purchasing-power support for vulnerable and middle-income households, and introduces "innovative financing mechanisms" for the budget. Article 85 extends the 2025 SME/startup financing lines through December 31, 2026. As of July 2026, a separate proposition de loi (No. 12/2026) to amend this Finance Law is under committee review at the ARP.</div>
+        <div class="tags"><span class="tag tax">Tax</span></div>
+      </div>
+
     </div>
   </section>
 
@@ -843,14 +914,14 @@
       <div class="law-card" id="central-bank">
         <h3><span class="law-num">Central Bank Law — Law No. 2016-35 of April 25, 2016</span></h3>
         <div class="date">Enacted: April 25, 2016 | In force: 2016 | Replaced: Law No. 58-90 (1958)</div>
-        <div class="desc">Establishes the Banque Centrale de Tunisie (BCT) as an independent institution responsible for monetary policy, exchange rate management, payment systems oversight, and banking supervision. Grants operational independence to the BCT Governor. Prohibits direct central bank financing of the state budget deficit.</div>
+        <div class="desc">Establishes the Banque Centrale de Tunisie (BCT) as an independent institution responsible for monetary policy, exchange rate management, payment systems oversight, and banking supervision. Grants operational independence to the BCT Governor. Article 25 prohibits direct central bank financing of the state budget deficit. This prohibition has not been repealed, but Parliament has repeatedly enacted one-off statutory derogations from Article 25 to authorize capped, interest-free BCT advances to the Treasury: a 7 billion TND facility approved February 2023 (92/133 votes, over the Governor's objections about foreign-currency reserves), a further 7 billion TND facility for 2024 embedded in the Finance Law 2024, and another 7 billion TND facility approved December 2024 for 2025 budget financing.</div>
         <div class="tags"><span class="tag financial">Financial</span></div>
       </div>
 
       <div class="law-card" id="insurance">
         <h3><span class="law-num">Insurance Code — Law No. 92-24 of February 9, 1992</span></h3>
         <div class="date">Enacted: February 9, 1992 | In force: 1992 | Amended: 1997, 2002, 2008, 2014</div>
-        <div class="desc">Governs all insurance and reinsurance activities in Tunisia. Mandatory insurance categories include third-party motor liability, employer liability, and professional liability for certain professions. Regulates insurance contract terms, claims procedures, and policyholder protections. Insurance companies supervised by the Insurance General Committee (CGA).</div>
+        <div class="desc">Governs all insurance and reinsurance activities in Tunisia. Mandatory insurance categories include third-party motor liability, employer liability, and professional liability for certain professions. Regulates insurance contract terms, claims procedures, and policyholder protections. Insurance companies supervised by the Insurance General Committee (CGA). Insurance intermediation (brokers and agents) is not separately codified — it is regulated within this code's own provisions on intermediaries (Art. 69 et seq.), refined by Law No. 2008-8 of February 13, 2008.</div>
         <div class="tags"><span class="tag financial">Financial</span></div>
       </div>
 
@@ -866,6 +937,13 @@
         <div class="date">Enacted: November 14, 1994 | In force: 1995 | Amended: 1999, 2005, 2016</div>
         <div class="desc">Governs the Tunisian stock exchange (Bourse des Valeurs Mobilières de Tunis — BVMT), securities regulation, and capital markets. Creates the Financial Market Council (CMF — Conseil du Marché Financier) as the securities regulator. Regulates public offers, disclosure requirements, insider trading, and market manipulation.</div>
         <div class="tags"><span class="tag financial">Financial</span><span class="tag commercial">Commercial</span></div>
+      </div>
+
+      <div class="law-card" id="forex-code-reform">
+        <h3><span class="law-num">Proposition de Loi No. 2025-115 (pending)</span>New Foreign Exchange Code (Code des Changes) <span class="tag pending">Pending</span></h3>
+        <div class="date">Council of Ministers reform outline approved: March 14, 2024 | Bill introduced: 2025 | Under ARP Finance Committee review as of June 2026</div>
+        <div class="desc">A long-anticipated overhaul of Tunisia's foreign exchange and capital-transfer regime, aiming to liberalize forex rules for businesses and individuals while managing external debt sustainability. As of June 2026 the bill remains under review by the ARP Finance Committee; the employers' association CONECT submitted 41 proposed amendments and was heard by the committee on June 1, 2026. Not yet enacted — the exchange-control framework under earlier legislation (Décret-loi 1976 foreign exchange framework and subsequent circulars) remains in force pending adoption.</div>
+        <div class="tags"><span class="tag financial">Financial</span><span class="tag pending">Pending</span></div>
       </div>
 
     </div>
@@ -891,9 +969,17 @@
             <li>Regional development incentives for investments in interior regions</li>
             <li>Foreign ownership: up to 100% in most sectors; limited in certain strategic sectors</li>
             <li>Single window (guichet unique) for investment approvals</li>
+            <li>Government Decree No. 2024-182 of April 5, 2024: amended the 2017-389 implementing decree, revising job-creation thresholds and incentives for projects of national interest</li>
           </ul>
         </details>
         <div class="tags"><span class="tag commercial">Commercial</span><span class="tag financial">Financial</span></div>
+      </div>
+
+      <div class="law-card" id="ppp-law">
+        <h3><span class="law-num">Public-Private Partnership Law — Law No. 2015-49 of November 27, 2015</span></h3>
+        <div class="date">Enacted: November 27, 2015 | In force: 2016 | Amended: Law No. 2019-47</div>
+        <div class="desc">Establishes the legal framework for public-private partnership contracts, distinct from the general Public Procurement Decree. Governs project selection, tendering, risk allocation, and contract duration for large infrastructure and service concessions. Implementing decrees (Government Decrees No. 2016-771, 2016-772, and 2016-782 of June 20, 2016) set procedural rules; Government Decree No. 2016-1185 of October 14, 2016 created the General PPP Authority (IGPPP) to oversee project appraisal. Amended by Law No. 2019-47, which revised Articles 3, 27, and 38 on IGPPP powers and deemed administrative authorizations.</div>
+        <div class="tags"><span class="tag commercial">Commercial</span><span class="tag admin">Administrative</span></div>
       </div>
 
       <div class="law-card" id="free-zones">
@@ -1068,7 +1154,8 @@
             <li>Criminal sanctions for violations: up to 2 years + fines</li>
           </ul>
         </details>
-        <div class="tags"><span class="tag digital">Digital</span></div>
+        <div class="desc" style="margin-top:8px;"><strong>Pending reform:</strong> a draft organic law on personal data protection, deposited by 17 deputies in July 2025, would replace this 2004 law with a GDPR-style regime — mandatory Data Protection Officers, breach notification duties, turnover-based fines, and a restructured, more financially autonomous INPDP with a dedicated enforcement division. Still under parliamentary examination as of February 2026; not yet enacted. Separately, Article 30 of the 2022 Constitution (successor to Article 24 of 2014) reaffirms protection of privacy and personal data, though it omits the 2014 text's explicit "state duty" language, and Article 125 places independent bodies (including any future INPDP) under presidential authority, raising independence concerns for the pending reform.</div>
+        <div class="tags"><span class="tag digital">Digital</span><span class="tag pending">Pending reform</span></div>
       </div>
 
       <div class="law-card" id="cybercrime">
@@ -1173,6 +1260,13 @@
     <h2><span class="icon">🏠</span> Land &amp; Property Law</h2>
     <div class="law-grid">
 
+      <div class="law-card" id="droits-reels">
+        <h3><span class="law-num">Code of Real Rights (Code des Droits Réels) — Law No. 65-5 of February 12, 1965</span>Majallat Al-Huquq Al-'Ayniyya</h3>
+        <div class="date">Enacted: February 12, 1965 | In force: 1965 | Amended: multiple times</div>
+        <div class="desc">Codifies real property rights distinct from the registration system — ownership, usufruct, easements (servitudes), mortgages (hypothèques), and other in rem rights over immovable property. Works alongside the 1885/1965 Real Property Registration Law: this code defines the substantive rights, while the registration law governs how title to those rights is recorded and made opposable to third parties. Agricultural land matters are governed by scattered sector-specific laws (e.g., on state agricultural land and agricultural investment) rather than a single consolidated "Code Rural."</div>
+        <div class="tags"><span class="tag land">Land</span><span class="tag civil">Civil</span></div>
+      </div>
+
       <div class="law-card" id="land-registry">
         <h3><span class="law-num">Real Property Registration Law — Law of July 1, 1885 (as reformed)</span>Immatriculation Foncière</h3>
         <div class="date">Originally: 1885 (protectorate) | Overhauled: Law No. 65-5 of February 12, 1965 | Amended: 1992, 2005</div>
@@ -1227,6 +1321,13 @@
         <div class="tags"><span class="tag admin">Administrative</span><span class="tag constitutional">Constitutional</span></div>
       </div>
 
+      <div class="law-card" id="ngo-reform-draft">
+        <h3><span class="law-num">Draft Law No. 027/2023 (pending)</span>Proposed Replacement of the Associations Decree <span class="tag pending">Pending</span></h3>
+        <div class="date">Submitted: October/November 2023 | Resubmitted (revised): April 8, 2026 | Not enacted as of July 2026</div>
+        <div class="desc">A parliamentary bill (sponsored by 9 MPs including Fatma M'seddi) that would replace Decree-Law No. 2011-88 with much stricter rules, notably requiring prior approval from a Financial Analysis Commission for any foreign funding of associations, with a 2-month government response window. Human Rights Watch labeled it a "Bill Dismantling Civil Society" (November 2023); UN Special Rapporteur Clément Voule raised formal concerns in January 2024. A revised version was resubmitted to Parliament on April 8, 2026 after 12 committee hearing sessions. Separately, enforcement action under the existing 2011 decree intensified in 2025: at least 14 civil-society organizations (including ATFD, FTDES, Aswat Nissa, Nawaat, and OMCT's Tunisia office) were suspended or targeted between July and November 2025 on financial-irregularity grounds.</div>
+        <div class="tags"><span class="tag admin">Administrative</span><span class="tag pending">Pending</span></div>
+      </div>
+
       <div class="law-card" id="political-parties">
         <h3><span class="law-num">Political Parties Law — Decree-Law No. 2011-87 of September 24, 2011</span></h3>
         <div class="date">Enacted: September 24, 2011 | In force: 2011 | Amended: 2014</div>
@@ -1236,8 +1337,8 @@
 
       <div class="law-card" id="electoral">
         <h3><span class="law-num">Electoral Law — Organic Law No. 2014-16 of May 26, 2014</span>(as amended)</h3>
-        <div class="date">Enacted: May 26, 2014 | In force: 2014 | Amended: 2019, 2022</div>
-        <div class="desc">Governs elections for the President of the Republic, the Assembly of People's Representatives, and (previously) the Assembly of Regions and Districts. Establishes the Independent High Authority for Elections (ISIE — Instance Supérieure Indépendante pour les Élections) as the permanent electoral commission. Sets rules on candidacy, campaigning, vote counting, and dispute resolution.</div>
+        <div class="date">Enacted: May 26, 2014 | In force: 2014 | Heavily amended: 2022–2024</div>
+        <div class="desc">Governs elections for the President of the Republic and the Assembly of People's Representatives (formerly also the Assembly of Regions and Districts). Establishes the Independent High Authority for Elections (ISIE) as the permanent electoral commission. Reshaped extensively since 2022: Decree-Law No. 2022-22 of April 21, 2022 restructured ISIE — reducing its council from 9 to 7 members, cutting the mandate from 6 to 4 years (non-renewable), and shifting appointment/removal power from the ARP to direct presidential decree. Further amendments followed: Decree-Law No. 2022-34 (June 1, 2022), Decree-Law No. 2022-55 (September 15, 2022, JORT No. 102), Decree-Law No. 2023-8 (March 8, 2023, JORT No. 24), and Organic Law No. 2024-45 of September 28, 2024 (enacted ahead of the October 2024 presidential election). As of mid-2026, a dispute is unresolved over whether sitting ISIE members' mandates expired on May 9, 2026; municipal elections remain pending a new organic law and convocation decree, with legislative elections scheduled for 2027 and the next presidential election for 2029.</div>
         <div class="tags"><span class="tag constitutional">Constitutional</span><span class="tag admin">Administrative</span></div>
       </div>
 
@@ -1259,14 +1360,14 @@
       <div class="law-card" id="state-emergency">
         <h3><span class="law-num">State of Emergency Decree — Decree No. 78-50 of January 26, 1978</span></h3>
         <div class="date">Enacted: January 26, 1978 | In force: 1978</div>
-        <div class="desc">Establishes the legal framework for declaring and managing states of emergency. Grants expanded executive powers including restriction of movement, house arrest, administrative detention, and closure of meeting places. Tunisia declared a state of emergency in November 2015 (after Bardo and Sousse attacks), which was repeatedly extended and remained nominally in force for years.</div>
+        <div class="desc">Establishes the legal framework for declaring and managing states of emergency. Grants expanded executive powers including restriction of movement, house arrest, administrative detention, and closure of meeting places. Tunisia declared a state of emergency in November 2015 (after Bardo and Sousse attacks), which has been repeatedly extended by presidential order (rather than new legislation) ever since — the most recently documented extension runs through December 31 of the current renewal cycle — and remains nominally in force through 2026.</div>
         <div class="tags"><span class="tag security">Security</span><span class="tag constitutional">Constitutional</span></div>
       </div>
 
       <div class="law-card" id="military-justice">
         <h3><span class="law-num">Military Justice Code — Law No. 86-79 of September 9, 1986</span></h3>
-        <div class="date">Enacted: September 9, 1986 | In force: 1986 | Amended: 2019</div>
-        <div class="desc">Governs military offenses and the organization of military courts (tribunaux militaires). Military courts have jurisdiction over offenses by military personnel and certain offenses against national defense. A 2019 amendment restricted jurisdiction of military courts over civilians — a key human rights improvement.</div>
+        <div class="date">Enacted: September 9, 1986 | In force: 1986 | Amended: 2019, 2023, 2024</div>
+        <div class="desc">Governs military offenses and the organization of military courts (tribunaux militaires). Military courts have jurisdiction over offenses by military personnel and certain offenses against national defense. A 2019 amendment restricted jurisdiction of military courts over civilians — a key human rights improvement. Organic Law No. 2023-6 of August 8, 2023 further amended Decree-Law No. 2011-70 on the organization of military justice and the status of military magistrates. Law No. 2024-35 of July 15, 2024 amended Articles 20 and 68 of the Military Justice Code itself, and Government Decree No. 2025-1033 of October 31, 2025 updated implementing rules on magistrates' rank correspondence (effective November 1, 2025).</div>
         <div class="tags"><span class="tag security">Security</span><span class="tag criminal">Criminal</span></div>
       </div>
 
@@ -1281,7 +1382,7 @@
       <div class="law-card" id="immigration">
         <h3><span class="law-num">Entry and Residence of Foreigners — Law No. 68-7 of March 8, 1968</span></h3>
         <div class="date">Enacted: March 8, 1968 | In force: 1968 | Amended: 1975, 2004</div>
-        <div class="desc">Governs the entry, stay, and expulsion of foreign nationals in Tunisia. Requires visa for most non-Maghreb nationals (bilateral visa exemptions apply). Establishes residence permit categories and procedures. Governs administrative detention pending deportation. Tunisia has no comprehensive asylum law; refugee status determined by UNHCR under its mandate.</div>
+        <div class="desc">Governs the entry, stay, and expulsion of foreign nationals in Tunisia. Requires visa for most non-Maghreb nationals (bilateral visa exemptions apply). Establishes residence permit categories and procedures. Governs administrative detention pending deportation. Tunisia still has no national asylum law as of 2026 — confirmed repeatedly by HRW (November 2025) and the ICJ (December 2024); refugee status is determined by UNHCR under its mandate rather than domestic legislation. In June 2024, authorities instructed UNHCR to suspend asylum-application processing, citing an intent to build a national legal framework; no such framework had materialized as of late 2025.</div>
         <div class="tags"><span class="tag nationality">Nationality</span><span class="tag admin">Administrative</span></div>
       </div>
 
@@ -1322,15 +1423,80 @@
       <div class="law-card" id="judiciary-statute">
         <h3><span class="law-num">Judicial Statute — Law No. 67-29 of July 14, 1967</span>(as amended)</h3>
         <div class="date">Enacted: July 14, 1967 | In force: 1967 | Amended: 1997, 2013, 2022</div>
-        <div class="desc">Governs the appointment, promotion, transfer, discipline, and removal of judges. Establishes the Superior Council of the Judiciary (Conseil Supérieur de la Magistrature — CSM) as the body responsible for judicial governance. Post-2022, the CSM's composition was changed, reducing independence according to critics.</div>
+        <div class="desc">Governs the appointment, promotion, transfer, discipline, and removal of judges. Formerly organized around the elected Superior Council of the Judiciary (Conseil Supérieur de la Magistrature — CSM, Organic Law No. 2016-34), which was dissolved by decree-law in February 2022 — see the Provisional High Judicial Council card below for the current governance structure.</div>
+        <div class="tags"><span class="tag admin">Administrative</span><span class="tag constitutional">Constitutional</span></div>
+      </div>
+
+      <div class="law-card" id="cspm">
+        <h3><span class="law-num">Decree-Law No. 2022-11 of February 12, 2022</span>Provisional High Judicial Council (CSPM)</h3>
+        <div class="date">Enacted: February 12, 2022 | Published: JORT No. 16, February 13, 2022 | Amended: June 1, 2022</div>
+        <div class="desc">Dissolved the elected Superior Council of the Judiciary (Organic Law No. 2016-34, expressly repealed) and replaced it with a "Conseil supérieur provisoire de la magistrature" (CSPM), composed of three separate provisional councils — judicial, administrative, and financial — each headed by the first president of the corresponding top court, with members appointed by presidential decree rather than elected by their peers. Decree-Law No. 2022-35 of June 1, 2022 amended the framework to allow the President to dismiss any judge by decree in cases of "urgency or threat to public security"; this power was used the same day to dismiss 57 judges (Presidential Decree No. 2022-516). Widely criticized by the ICJ and Tunisian judges' associations as removing judicial self-governance. No further restructuring has been enacted through 2026; the CSPM remains the operative body.</div>
         <div class="tags"><span class="tag admin">Administrative</span><span class="tag constitutional">Constitutional</span></div>
       </div>
 
       <div class="law-card" id="transitional-justice">
         <h3><span class="law-num">Transitional Justice Law — Organic Law No. 2013-53 of December 24, 2013</span></h3>
         <div class="date">Enacted: December 24, 2013 | In force: 2014</div>
-        <div class="desc">Establishes Tunisia's transitional justice framework including the Truth and Dignity Commission (IVD — Instance Vérité et Dignité). Covers: truth-seeking, reparations, institutional reform, and accountability for human rights violations committed between July 1, 1955 and December 31, 2013. IVD operated from 2014–2019; issued final report in 2019.</div>
+        <div class="desc">Establishes Tunisia's transitional justice framework including the Truth and Dignity Commission (IVD — Instance Vérité et Dignité). Covers: truth-seeking, reparations, institutional reform, and accountability for human rights violations committed between July 1, 1955 and December 31, 2013. IVD operated from 2014–2019; issued final report in 2019. Implementation has since stalled: the specialized criminal chambers created to try IVD-referred cases continue to sit but face chronic postponements (e.g., 11 cases pushed from May to September 2025) and near-empty defendant benches, as accused officials frequently decline to appear. No new legislation has been enacted to revive or amend the framework as of 2026.</div>
         <div class="tags"><span class="tag admin">Administrative</span><span class="tag constitutional">Constitutional</span><span class="tag criminal">Criminal</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="law-section" id="energy">
+    <h2><span class="icon">⛏️</span> Energy &amp; Natural Resources</h2>
+    <div class="law-grid">
+
+      <div class="law-card" id="mining-code">
+        <h3><span class="law-num">Mining Code — Law No. 2003-30 of April 28, 2003</span>Code Minier</h3>
+        <div class="date">Enacted: April 28, 2003 | Published: JORT No. 34, April 29, 2003</div>
+        <div class="desc">Governs prospecting, exploration, and exploitation of mineral resources (excluding hydrocarbons). Establishes permit categories (prospecting permits, exploration permits, exploitation concessions), royalty and tax regimes for mining operators, and environmental rehabilitation obligations for mine sites. Administered by the Ministry of Industry, Mines and Energy.</div>
+        <div class="tags"><span class="tag energy">Energy</span><span class="tag env">Environmental</span></div>
+      </div>
+
+      <div class="law-card" id="hydrocarbons-code">
+        <h3><span class="law-num">Hydrocarbons Code — Law No. 99-93 of August 17, 1999</span>Code des Hydrocarbures</h3>
+        <div class="date">Enacted: August 17, 1999 | Amended: 2002, 2004 and subsequently</div>
+        <div class="desc">Governs oil and gas exploration, production-sharing and concession contracts, and the fiscal regime (royalties, production shares, corporate taxation) applicable to hydrocarbon operators. A structural reform aimed at "energy sovereignty" and improved governance/transparency has been under review by a restricted ministerial council since February 2025, but as of July 2026 remains a draft — no new Hydrocarbons Code has been promulgated.</div>
+        <div class="tags"><span class="tag energy">Energy</span><span class="tag tax">Tax</span></div>
+      </div>
+
+      <div class="law-card" id="green-hydrogen">
+        <h3><span class="law-num">National Strategy for Green Hydrogen Development</span>(policy strategy, not yet codified)</h3>
+        <div class="date">Issued: September 2023 (Ministry of Industry, Energy and Mines, with GIZ) | Finalized: May–July 2024</div>
+        <div class="desc">Sets national targets for green hydrogen production (8.3 Mt by 2050, 6.4 Mt earmarked for export) and outlines incentive and export-infrastructure priorities. Dedicated legislation to define "green hydrogen," authorize projects, and set investment incentives remains under development (per IRENA, June 2025) and had not been enacted as of mid-2026 — this entry documents a policy strategy, not a statute.</div>
+        <div class="tags"><span class="tag energy">Energy</span><span class="tag env">Environmental</span><span class="tag pending">Pending legislation</span></div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="law-section" id="transport">
+    <h2><span class="icon">🚢</span> Transport Law</h2>
+    <div class="law-grid">
+
+      <div class="law-card" id="aviation-code">
+        <h3><span class="law-num">Civil Aviation Code — Law No. 99-58 of June 29, 1999</span>Code de l'Aéronautique Civile</h3>
+        <div class="date">Enacted: June 29, 1999 | Published: JORT No. 54, July 6, 1999</div>
+        <div class="desc">Governs civil aviation including aircraft registration, airworthiness, airport operations, air carrier liability, and aviation safety oversight. Establishes the regulatory powers of the civil aviation authority (OACA) and airspace management rules.</div>
+        <div class="tags"><span class="tag transport">Transport</span><span class="tag commercial">Commercial</span></div>
+      </div>
+
+      <div class="law-card" id="road-code">
+        <h3><span class="law-num">Road Traffic Code — Law No. 99-71 of July 26, 1999</span>Code de la Route</h3>
+        <div class="date">Enacted: July 26, 1999 | Published: JORT No. 61, July 30, 1999 | Replaced: 1978 Road Code</div>
+        <div class="desc">Governs road traffic rules, vehicle registration and inspection, driver licensing, and traffic offenses. Sets penalties for moving violations, drunk driving, and unlicensed driving. Remains the base statute in force, with implementing regulations updated periodically.</div>
+        <div class="tags"><span class="tag transport">Transport</span><span class="tag criminal">Criminal</span></div>
+      </div>
+
+      <div class="law-card" id="maritime-code">
+        <h3><span class="law-num">Maritime Commercial Code (Code de Commerce Maritime)</span>as consolidated and amended</h3>
+        <div class="date">Base text: Law No. 62-13 | Amended: Law No. 95-33 of April 14, 1995; Law No. 98-109 of December 28, 1998; Law No. 2004-3 of January 20, 2004</div>
+        <div class="desc">Governs maritime commerce: ship registration, carriage of goods by sea, maritime liens and mortgages, general average, and marine insurance. Complemented by Law No. 95-33 on the organization of merchant-marine professions and Law No. 98-109 establishing the Office of the Merchant Marine and Ports (OMMP). No single unified "Code de la Marine Marchande" exists by that name — the regime is this Commercial Maritime Code plus the sectoral laws above.</div>
+        <div class="tags"><span class="tag transport">Transport</span><span class="tag commercial">Commercial</span></div>
       </div>
 
     </div>
@@ -1386,12 +1552,22 @@
     </div>
   </section>
 
+  <!-- ═══════════════════════════════════════════════════════════ -->
+  <section class="law-section" id="changelog">
+    <h2><span class="icon">🗒️</span> Changelog</h2>
+    <div class="note-box" style="margin-bottom:0;">
+      <strong>Version 2.0 (July 1, 2026)</strong> — Added: Finance Laws for 2023–2026; cheque-law reform (Law 2024-41); labor sub-contracting ban (Law 2025-16) and SMIG/SMAG 2024 update; the Provisional High Judicial Council (Decree-Laws 2022-11 and 2022-35); local-government amendments (Decree-Law 2023-10, Organic Law 2025-4); electoral-law/ISIE amendments (Decree-Laws 2022-22/2022-34/2022-55/2023-8, Organic Law 2024-45); military justice amendments (Organic Law 2023-6, Law 2024-35); the PPP Law (2015-49); the Code des Droits Réels (1965); and three new sections — Mining/Hydrocarbons/Green Hydrogen ("Energy &amp; Natural Resources") and Aviation/Road/Maritime codes ("Transport Law"). Flagged as pending/not-yet-enacted: the NGO law reform draft (No. 027/2023), the personal-data-protection reform bill, the Foreign Exchange Code reform (Proposition de Loi 2025-115), and the nationality-code reform draft. Corrected the INLUCC/anti-corruption entry to reflect its 2011 founding decree-law and its non-functional status since 2021. Fixed missing category-tag colors (land, social, digital, health, education, nationality, security) in the stylesheet.
+      <br><br>
+      <strong>Version 1.0 (June 2026)</strong> — Initial comprehensive release covering ~150 laws across 23 categories, from the 1906 Code of Obligations and Contracts through the 2022 Constitution.
+    </div>
+  </section>
+
 </main>
 
 <footer>
   <p>Compiled from: <a href="https://www.wipo.int/wipolex/en/" target="_blank">WIPO Lex</a> · <a href="https://www.nyulawglobal.org/globalex/Tunisia1.html" target="_blank">NYU GlobaLex</a> · <a href="https://jurisitetunisie.com" target="_blank">Jurisite Tunisie</a> · <a href="https://constitutionnet.org/country/tunisia" target="_blank">ConstitutionNet</a> · ILO NATLEX · Official JORT records</p>
   <p style="margin-top:8px;">This document is for informational purposes only. For authoritative legal advice, consult an authorized Tunisian legal professional or the official Journal Officiel de la République Tunisienne (JORT).</p>
-  <p style="margin-top:8px; color:#888;">Version 1.0 — June 2026 | Repository: <a href="https://github.com/henihaddad/all_tunisian_laws_progressive" target="_blank">henihaddad/all_tunisian_laws_progressive</a></p>
+  <p style="margin-top:8px; color:#888;">Version 2.0 — July 2026 | Repository: <a href="https://github.com/henihaddad/all_tunisian_laws_progressive" target="_blank">henihaddad/all_tunisian_laws_progressive</a></p>
 </footer>
 
 <script>
