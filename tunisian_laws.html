@@ -39,6 +39,7 @@
     --tag-agriculture: #558b2f;
     --tag-tourism: #6a1b9a;
     --tag-sport: #1a237e;
+    --tag-judicial: #4527a0;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -186,6 +187,7 @@
   .tag.agriculture { background: var(--tag-agriculture); }
   .tag.tourism { background: var(--tag-tourism); }
   .tag.sport { background: var(--tag-sport); }
+  .tag.judicial { background: var(--tag-judicial); }
 
   .note-box {
     background: rgba(200,16,46,0.1);
@@ -222,7 +224,7 @@
   <div class="crescent">☪</div>
   <h1>Tunisian Laws — Comprehensive Legal Reference</h1>
   <p>A navigable compendium of the Republic of Tunisia's constitutions, codes, statutes, and regulations</p>
-  <p class="meta">Version 4.8 — July 1, 2026 &nbsp;|&nbsp; Sources: WIPO Lex, NYU GlobaLex, JurisiteTunisie, ConstitutionNet, ILO NATLEX, JORT (via 9anoun.tn), Assemblée des Représentants du Peuple, ICNL, CPJ, RSF, HRW, Amnesty International, FIDH, Carnegie Endowment, TIMEP, Business News, La Presse de Tunisie, African Manager, Kapitalis, Managers.tn, Le Temps News, Nawaat, LPA Legal, allAfrica, InforMEA, Office des Terres Domaniales, IACE, L'Economiste Maghrébin, EuroMed Rights, MERIP, Arab Reform Initiative, JURIST</p>
+  <p class="meta">Version 4.9 — July 1, 2026 &nbsp;|&nbsp; Sources: WIPO Lex, NYU GlobaLex, JurisiteTunisie, ConstitutionNet, ILO NATLEX, JORT (via 9anoun.tn), Assemblée des Représentants du Peuple, ICNL, CPJ, RSF, HRW, Amnesty International, FIDH, Carnegie Endowment, TIMEP, Business News, La Presse de Tunisie, African Manager, Kapitalis, Managers.tn, Le Temps News, Nawaat, LPA Legal, allAfrica, InforMEA, Office des Terres Domaniales, IACE, L'Economiste Maghrébin, EuroMed Rights, MERIP, Arab Reform Initiative, JURIST</p>
 </header>
 
 <nav id="toc">
@@ -266,7 +268,7 @@
 
 <main>
   <div class="stats-bar">
-    <div class="stat"><div class="num" id="totalCount">209+</div><div class="lbl">Laws Documented</div></div>
+    <div class="stat"><div class="num" id="totalCount">211+</div><div class="lbl">Laws Documented</div></div>
     <div class="stat"><div class="num">29</div><div class="lbl">Legal Categories</div></div>
     <div class="stat"><div class="num">1906</div><div class="lbl">Earliest Code</div></div>
     <div class="stat"><div class="num">2026</div><div class="lbl">Latest Law</div></div>
@@ -311,6 +313,10 @@
 
   <div class="note-box">
     <strong>v4.8 update (July 1, 2026, Run 9):</strong> A targeted follow-up check identified one genuine, previously overlooked gap despite this project's extensive coverage of criminal and constitutional law: <strong>Organic Law No. 2018-50 of October 23, 2018 on the Elimination of All Forms of Racial Discrimination</strong> was entirely absent from the artifact, even though it is one of Tunisia's most internationally documented statutes (the first anti-racial-discrimination criminal law in the MENA region). The new entry cites the law's adoption/promulgation dates, Article 2's definition of racial discrimination, the criminal penalties and legal-entity fines it establishes, and the Article 11 National Commission against Racial Discrimination, and adds a 2024–2026 implementation note — drawn from EuroMed Rights, MERIP, and Arab Reform Initiative analysis — that enforcement has been limited, alongside the case of Mnemty president Saadia Mosbah, whose 8-year sentence on separate money-laundering/illicit-enrichment charges was upheld on appeal in June 2026 and which Amnesty International and other rights groups describe as ordinary criminal law being used against a leading anti-racism advocate. One new standalone entry added (209 total); no existing entries altered.
+  </div>
+
+  <div class="note-box">
+    <strong>v4.9 update (July 1, 2026, Run 10):</strong> Cross-checked v4.8 against a fresh research sweep spanning labor, migration/asylum, and treaty ratifications, then independently re-verified each candidate finding before inclusion. Most candidates duplicated existing entries (the May 2025 subcontracting reform, the September 2024 electoral-jurisdiction amendment, and the Decree-Law 2022-54 press-freedom entry were already documented, in v4.8's case with a more precise citation than this run's own initial research turned up). Three genuine items were confirmed across independent sources and added: (1) <strong>Law No. 2024-44 of August 12, 2024</strong> (Maternity and Paternity Leave Reform), entirely absent — expands paternity leave from a pre-existing 1-day (private sector) / 2-day (civil servants) baseline to 7–10 days at full pay and restructures maternity leave into prenatal/postnatal components; (2) the June 2024 <strong>UNHCR suspension</strong> of asylum registration and status-determination processing in Tunisia, confirmed via HRW's 2025 and 2026 World Report chapters, added to the Entry and Residence of Foreigners entry; (3) <strong>Decree No. 23 of 2025</strong> (JORT Issue No. 4, January 11, 2025) ratifying the North Western Sahara Aquifer System tripartite groundwater consultation mechanism with Algeria and Libya, a wholly uncovered treaty. Also fixed a structural bug: the <code>judicial</code> tag class was used on 5 entries but had no corresponding CSS color rule or custom property, rendering those tags uncolored — added <code>--tag-judicial</code> and its <code>.tag.judicial</code> rule. Two new standalone entries added (211 total); two existing entries revised for currency; one CSS bug fixed.
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════ -->
@@ -1007,6 +1013,13 @@
         <div class="date">Published: JORT, April 30, 2026 | Effective: retroactive to January 1, 2026 | Covers: 2026–2028</div>
         <div class="desc">A package of three government decrees, implementing Labor Code Art. 40, staging minimum and general wage increases over three years. Decree No. 2026-66 sets the guaranteed agricultural minimum wage (SMAG) for workers 18 and over at TND 21.336/day in 2026, rising to TND 22.400 (2027) and TND 23.520 (2028), plus a technical-skill premium for specialized agricultural workers. Decree No. 2026-67 sets the guaranteed inter-professional minimum wage (SMIG) for non-agricultural sectors at TND 554.736/month (48-hour regime) or TND 470.251/month (40-hour regime) in 2026, rising in stages to TND 611.520 / TND 517.571 by 2028. Decree No. 2026-68 mandates an annual 5% increase in base salaries plus transport and attendance allowances for non-agricultural sectors covered by sectoral collective bargaining agreements, with monthly increases of roughly TND 36–46 for line workers, ~TND 53 for supervisory staff, and ~TND 69 for management-grade employees in 2026; the increases extend to retirement pensions, with penalties for employer non-compliance.</div>
         <div class="tags"><span class="tag labor">Labor</span></div>
+      </div>
+
+      <div class="law-card" id="parental-leave-2024">
+        <h3><span class="law-num">Law No. 2024-44 of August 12, 2024</span>Maternity and Paternity Leave Reform</h3>
+        <div class="date">Adopted by ARP: July 31, 2024 (111-1-4) | Published: JORT No. 2024-099, August 12, 2024</div>
+        <div class="desc">Restructures maternity and paternity leave across the public and private sectors. Expands paternity leave from the prior baseline of 1 day (private sector, Labor Code) / 2 days (civil servants) to 7 days at full pay — extended to 10 days for multiple births or a newborn with disability, prematurity, or a congenital condition requiring care, plus 3 additional days in the event of stillbirth; must be taken within 30 days of the birth. Restructures maternity leave into a prenatal component (up to 15 days in the final month, on medical order) and a postnatal component extended from 30 to 90 days (120 days for complicated or multiple births).</div>
+        <div class="tags"><span class="tag labor">Labor</span><span class="tag social">Social</span><span class="tag personal">Personal Status</span></div>
       </div>
 
       <div class="law-card" id="vocational-training">
@@ -2082,7 +2095,7 @@
       <div class="law-card" id="immigration">
         <h3><span class="law-num">Law No. 68-7 of March 8, 1968</span>Entry and Residence of Foreigners</h3>
         <div class="date">Enacted: March 8, 1968 | In force: 1968 | Amended: 1975, 2004</div>
-        <div class="desc">Governs the entry, stay, and expulsion of foreign nationals in Tunisia. Requires visa for most non-Maghreb nationals (bilateral visa exemptions apply). Establishes residence permit categories and procedures. Governs administrative detention pending deportation. Tunisia has no comprehensive asylum law; refugee status determined by UNHCR under its mandate.</div>
+        <div class="desc">Governs the entry, stay, and expulsion of foreign nationals in Tunisia. Requires visa for most non-Maghreb nationals (bilateral visa exemptions apply). Establishes residence permit categories and procedures. Governs administrative detention pending deportation. Tunisia has no comprehensive asylum law; refugee status was determined by UNHCR under its mandate, but in June 2024 Tunisian authorities instructed UNHCR to suspend new registration, pre-registration, and refugee-status-determination processing (services to already-registered refugees continued); the government's stated rationale was an intent to establish a national asylum system, which had not been enacted as of Human Rights Watch's 2025 and 2026 World Report chapters on Tunisia.</div>
         <div class="tags"><span class="tag nationality">Nationality</span><span class="tag admin">Administrative</span></div>
       </div>
 
@@ -2267,6 +2280,13 @@
         <div class="date">Signed: February 17, 1989 | Ratified: 1989</div>
         <div class="desc">Treaty establishing the Arab Maghreb Union (UMA) among Tunisia, Algeria, Morocco, Libya, and Mauritania. Aims for eventual economic integration and free movement. In practice largely dormant due to Algeria-Morocco tensions. Bilateral agreements within the AMU framework remain in force, including free movement protocols for Maghreb nationals within the region.</div>
         <div class="tags"><span class="tag commercial">Commercial</span><span class="tag constitutional">Constitutional</span></div>
+      </div>
+
+      <div class="law-card" id="sass-aquifer-decree">
+        <h3><span class="law-num">Decree No. 23 of 2025</span>Ratification of the North Western Sahara Aquifer System Consultation Mechanism</h3>
+        <div class="date">Underlying agreement signed: April 24, 2024 (Algeria, tripartite agriculture-ministers meeting) | Ratifying decree published: JORT Issue No. 4, January 11, 2025</div>
+        <div class="desc">A two-article decree: Art. 1 ratifies the tripartite agreement establishing a consultation mechanism ("mécanisme de concertation") for shared management of the North Western Sahara Aquifer System (SASS/NWSAS), a transboundary fossil groundwater resource shared by Tunisia, Algeria, and Libya and critical to southern Tunisia's water supply; Art. 2 covers publication. Algeria ratified the same agreement in parallel.</div>
+        <div class="tags"><span class="tag env">Environmental</span><span class="tag constitutional">Constitutional</span></div>
       </div>
 
       <div class="law-card" id="unclos-ratification">
@@ -2674,7 +2694,7 @@
 <footer>
   <p>Compiled from: <a href="https://www.wipo.int/wipolex/en/" target="_blank">WIPO Lex</a> · <a href="https://www.nyulawglobal.org/globalex/Tunisia1.html" target="_blank">NYU GlobaLex</a> · <a href="https://jurisitetunisie.com" target="_blank">Jurisite Tunisie</a> · <a href="https://constitutionnet.org/country/tunisia" target="_blank">ConstitutionNet</a> · ILO NATLEX · JORT Official Records · WIPO Lex · LOC Global Legal Monitor</p>
   <p style="margin-top:8px;">This document is for informational purposes only. For authoritative legal advice, consult a licensed Tunisian legal professional or the official <em>Journal Officiel de la République Tunisienne</em> (JORT).</p>
-  <p style="margin-top:8px; color:#888;">Version 4.8 — July 1, 2026 (Run 9) | Repository: <a href="https://github.com/henihaddad/all_tunisian_laws_progressive" target="_blank">henihaddad/all_tunisian_laws_progressive</a></p>
+  <p style="margin-top:8px; color:#888;">Version 4.9 — July 1, 2026 (Run 10) | Repository: <a href="https://github.com/henihaddad/all_tunisian_laws_progressive" target="_blank">henihaddad/all_tunisian_laws_progressive</a></p>
 </footer>
 
 <script>
