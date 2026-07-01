@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Tunisian Laws — Comprehensive Legal Reference v4.13</title>
+<title>Tunisian Laws — Comprehensive Legal Reference v4.14</title>
 <style>
   :root {
     --primary: #c8102e;
@@ -40,6 +40,7 @@
     --tag-tourism: #6a1b9a;
     --tag-sport: #1a237e;
     --tag-judicial: #4527a0;
+    --tag-pending: #ff8f00;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -188,6 +189,7 @@
   .tag.tourism { background: var(--tag-tourism); }
   .tag.sport { background: var(--tag-sport); }
   .tag.judicial { background: var(--tag-judicial); }
+  .tag.pending { background: var(--tag-pending); color: #1a1a2e; }
 
   .note-box {
     background: rgba(200,16,46,0.1);
@@ -224,7 +226,7 @@
   <div class="crescent">☪</div>
   <h1>Tunisian Laws — Comprehensive Legal Reference</h1>
   <p>A navigable compendium of the Republic of Tunisia's constitutions, codes, statutes, and regulations</p>
-  <p class="meta">Version 4.13 — July 1, 2026 &nbsp;|&nbsp; Sources: WIPO Lex, NYU GlobaLex, JurisiteTunisie, ConstitutionNet, ILO NATLEX, JORT (via 9anoun.tn), Assemblée des Représentants du Peuple, ICNL, CPJ, RSF, HRW, Amnesty International, FIDH, Carnegie Endowment, TIMEP, Business News, La Presse de Tunisie, African Manager, Kapitalis, Managers.tn, Le Temps News, Nawaat, LPA Legal, allAfrica, InforMEA, Office des Terres Domaniales, IACE, L'Economiste Maghrébin, EuroMed Rights, MERIP, Arab Reform Initiative, JURIST</p>
+  <p class="meta">Version 4.14 — July 1, 2026 &nbsp;|&nbsp; Sources: WIPO Lex, NYU GlobaLex, JurisiteTunisie, ConstitutionNet, ILO NATLEX, JORT (via 9anoun.tn), Assemblée des Représentants du Peuple, ICNL, CPJ, RSF, HRW, Amnesty International, FIDH, Carnegie Endowment, TIMEP, Business News, La Presse de Tunisie, African Manager, Kapitalis, Managers.tn, Le Temps News, Nawaat, LPA Legal, allAfrica, InforMEA, Office des Terres Domaniales, IACE, L'Economiste Maghrébin, EuroMed Rights, MERIP, Arab Reform Initiative, JURIST</p>
 </header>
 
 <nav id="toc">
@@ -268,7 +270,7 @@
 
 <main>
   <div class="stats-bar">
-    <div class="stat"><div class="num" id="totalCount">212+</div><div class="lbl">Laws Documented</div></div>
+    <div class="stat"><div class="num" id="totalCount">213+</div><div class="lbl">Laws Documented</div></div>
     <div class="stat"><div class="num">29</div><div class="lbl">Legal Categories</div></div>
     <div class="stat"><div class="num">1906</div><div class="lbl">Earliest Code</div></div>
     <div class="stat"><div class="num">2026</div><div class="lbl">Latest Law</div></div>
@@ -333,6 +335,10 @@
 
   <div class="note-box">
     <strong>v4.13 update (July 1, 2026, Run 14):</strong> Two parallel research sweeps (recent 2023–2026 legislation, and entirely uncovered legal-code areas) initially surfaced roughly 30 candidate items across tax, labor, transport, energy, culture, health, and institutional topics — cross-checking against the artifact showed essentially all of them were already present, in most cases with more precise citations than this run's own initial drafts (e.g., this run's draft citations for the Sport Law, Cinema Law, Blood Transfusion Law, and Organ Transplant Law were all superseded by the artifact's already-correct Law No. 1995-11, Law No. 93-40, Law No. 91-72, and Law No. 91-22 entries, and were discarded rather than introducing a regression; a draft claim that Finance Law 2023/2024 taxed telecommunications operators directly was also investigated and found to be inaccurate — that levy applied only to banks, financial establishments, and insurers, per the official Note Commune n°7/2024 — and was not added). Three genuine gaps were closed after independent verification: (1) <strong>Décret n° 2025-165 of March 20, 2025</strong> (JORT No. 2025-033) appointing Sarra Zaafrani Zenzri as Head of Government in place of Kamel Madouri — the fourth such change since 2021 — entirely absent from the artifact despite its extensive institutional coverage; (2) the <strong>Investment Law</strong> entry now cites <strong>Décret n° 2024-182 of April 4, 2024</strong>, which amended the law's implementing regulation (Décret gouvernemental n° 2017-389 of 2017, not the 2016 law itself) on incentive-claim deadlines and eligible agricultural services; (3) the <strong>Finance Law 2026</strong> entry now notes that the bank/insurer conjunctural contribution was reportedly made permanent and extended to telecommunications operators and auto dealers, sourced to two independent secondary outlets (ilBoursa, InFirst Auditors) with an explicit caveat that the specific implementing article could not be confirmed against primary JORT text. Also fixed a version-string bug: the page's <code>&lt;title&gt;</code> tag had been left at "v4.11" for two prior runs while the header/footer correctly read "v4.12" — now synchronized. One new standalone entry added (212 total); two existing entries revised for currency; one version-string bug fixed.
+  </div>
+
+  <div class="note-box">
+    <strong>v4.14 update (July 1, 2026, Run 15):</strong> This run initially started from a stale local checkout of the artifact's v1.0 baseline (87 entries) rather than current <code>main</code>; the mistake was caught before merging by fetching and diffing against <code>origin/main</code> (v4.13, 212 entries), and the branch was reset to match current <code>main</code> rather than risk a large regression — consistent with how prior runs (see the discarded PRs preceding v2.0 and v4.10) have handled the same failure mode. A subsequent, narrower gap-check confirmed that virtually every 2023–2026 development surfaced by this run's initial research (Finance Laws 2024–2026, Law No. 2025-9, Law No. 2024-41, Law No. 2024-10, CNRD establishment, Constitutional Court status, the pending Personal Data Protection and NGO-funding bills) was already present, in most cases with more precise citations. Three genuine gaps were closed: (1) the <strong>Higher Education Law</strong> entry now notes a pending 27-deputy bill to amend Article 15, replacing elected university presidents with ministry-appointed ones (opposed by FGESRS, under debate as of February 2026); (2) the <strong>Judicial Officers (Huissiers)</strong> entry now notes a pending modernization bill containing a provision allowing mutual-consent divorce before a huissier-notaire without court involvement, criticized by women's rights groups as weakening Personal Status Code safeguards; (3) a new standalone entry for the <strong>2026–2030 National Development Plan bill</strong>, examined by all ARP standing committees June 29–30, 2026 but not yet put to a plenary vote — the framework expected to underpin the AI strategy and NDC 3.0 climate plan already noted elsewhere in this document. Also added a missing <code>.tag.pending</code> CSS rule (used by these three entries but previously undefined). One new standalone entry added (213 total); two existing entries revised for currency; one CSS gap fixed.
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════ -->
@@ -1832,8 +1838,8 @@
       <div class="law-card" id="higher-education">
         <h3><span class="law-num">Higher Education Law — Law No. 2008-19 of February 25, 2008</span></h3>
         <div class="date">Enacted: February 25, 2008 | In force: 2008</div>
-        <div class="desc">Governs universities, higher institutes, and research establishments. Introduces the LMD (Licence–Master–Doctorat) system aligned with the Bologna Process. Regulates accreditation, quality assurance, student rights, and university governance. Establishes the framework for private higher education institutions.</div>
-        <div class="tags"><span class="tag education">Education</span></div>
+        <div class="desc">Governs universities, higher institutes, and research establishments. Introduces the LMD (Licence–Master–Doctorat) system aligned with the Bologna Process. Regulates accreditation, quality assurance, student rights, and university governance. Establishes the framework for private higher education institutions. <strong>Pending reform:</strong> a bill filed by 27 deputies to amend Article 15 would replace the current system of elected university presidents with ministry-appointed presidents (capped at two terms); under live parliamentary debate as of February 2026 and opposed by the Federal General Union of Higher Education and Scientific Research (FGESRS). Not yet enacted.</div>
+        <div class="tags"><span class="tag education">Education</span><span class="tag pending">Pending</span></div>
       </div>
 
       <div class="law-card" id="vocational-training-edu">
@@ -2238,7 +2244,7 @@
       <div class="law-card" id="bailiffs">
         <h3><span class="law-num">Law No. 66-49 of July 2, 1966 (as amended)</span>Judicial Officers (Huissiers de Justice)</h3>
         <div class="date">Enacted: July 2, 1966 | In force: 1966 | Amended: 1995, 2002, 2011</div>
-        <div class="desc">Regulates the profession of judicial officers (huissiers de justice) in Tunisia — officers of the court responsible for serving legal process, executing judgments, and conducting judicial auctions (ventes aux enchères). Huissiers are public officers appointed by the Ministry of Justice; they hold a monopoly on service of process and enforcement of court judgments. Regulated by the National Chamber of Huissiers (Chambre Nationale des Huissiers de Justice). The 2011 amendment introduced electronic service of process as a supplementary method.</div>
+        <div class="desc">Regulates the profession of judicial officers (huissiers de justice) in Tunisia — officers of the court responsible for serving legal process, executing judgments, and conducting judicial auctions (ventes aux enchères). Huissiers are public officers appointed by the Ministry of Justice; they hold a monopoly on service of process and enforcement of court judgments. Regulated by the National Chamber of Huissiers (Chambre Nationale des Huissiers de Justice). The 2011 amendment introduced electronic service of process as a supplementary method. <strong>Pending reform:</strong> a modernization bill (digitized archives, revised access conditions to the profession, expanded legal protections for huissiers) is under review, supported by the professional order; a provision within it would additionally allow mutual-consent divorce to be finalized before a huissier-notaire without court involvement, which women's rights groups have criticized as weakening Personal Status Code judicial safeguards for wives. Not yet enacted.</div>
         <details class="provisions">
           <summary>Key provisions</summary>
           <ul>
@@ -2251,7 +2257,7 @@
             <li>Art. 45–50: Professional discipline; liability for service errors</li>
           </ul>
         </details>
-        <div class="tags"><span class="tag judicial">Judicial</span><span class="tag civil">Civil</span></div>
+        <div class="tags"><span class="tag judicial">Judicial</span><span class="tag civil">Civil</span><span class="tag pending">Pending</span></div>
       </div>
 
     </div>
@@ -2523,6 +2529,13 @@
         <div class="tags"><span class="tag financial">Financial</span><span class="tag admin">Administrative</span></div>
       </div>
 
+      <div class="law-card" id="development-plan-2026-2030">
+        <h3><span class="law-num">2026–2030 National Development Plan (Bill)</span></h3>
+        <div class="date">Filed under Constitution Arts. 75 &amp; 77 | ARP standing-committee examination: June 29–30, 2026 | Status: pending plenary vote as of July 1, 2026</div>
+        <div class="desc">The economic and social planning framework law for 2026–2030, examined jointly by all Assembly of People's Representatives standing committees on June 29–30, 2026 but not yet put to a plenary vote. Targets raising investment from roughly 15.5% to 20% of GDP and organizes a public-investment project portfolio of approximately TND 102 billion. Once adopted, it is expected to serve as the legal reference framework underpinning the national AI strategy and the NDC 3.0 climate financing plan already noted elsewhere in this document. Not yet enacted — the most active legislative process in Tunisia as of this update.</div>
+        <div class="tags"><span class="tag financial">Financial</span><span class="tag constitutional">Constitutional</span><span class="tag pending">Pending</span></div>
+      </div>
+
     </div>
   </section>
 
@@ -2717,7 +2730,7 @@
 <footer>
   <p>Compiled from: <a href="https://www.wipo.int/wipolex/en/" target="_blank">WIPO Lex</a> · <a href="https://www.nyulawglobal.org/globalex/Tunisia1.html" target="_blank">NYU GlobaLex</a> · <a href="https://jurisitetunisie.com" target="_blank">Jurisite Tunisie</a> · <a href="https://constitutionnet.org/country/tunisia" target="_blank">ConstitutionNet</a> · ILO NATLEX · JORT Official Records · WIPO Lex · LOC Global Legal Monitor</p>
   <p style="margin-top:8px;">This document is for informational purposes only. For authoritative legal advice, consult a licensed Tunisian legal professional or the official <em>Journal Officiel de la République Tunisienne</em> (JORT).</p>
-  <p style="margin-top:8px; color:#888;">Version 4.13 — July 1, 2026 (Run 14) | Repository: <a href="https://github.com/henihaddad/all_tunisian_laws_progressive" target="_blank">henihaddad/all_tunisian_laws_progressive</a></p>
+  <p style="margin-top:8px; color:#888;">Version 4.14 — July 1, 2026 (Run 15) | Repository: <a href="https://github.com/henihaddad/all_tunisian_laws_progressive" target="_blank">henihaddad/all_tunisian_laws_progressive</a></p>
 </footer>
 
 <script>
