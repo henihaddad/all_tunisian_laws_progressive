@@ -27,6 +27,14 @@
     --tag-env: #1b5e20;
     --tag-financial: #0d47a1;
     --tag-press: #37474f;
+    --tag-digital: #283593;
+    --tag-health: #00838f;
+    --tag-land: #6d4c41;
+    --tag-nationality: #ad1457;
+    --tag-security: #263238;
+    --tag-social: #00695c;
+    --tag-education: #6a1b9a;
+    --tag-pending: #8d6e63;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body {
@@ -160,8 +168,16 @@
   .tag.env { background: var(--tag-env); }
   .tag.financial { background: var(--tag-financial); }
   .tag.press { background: var(--tag-press); }
+  .tag.digital { background: var(--tag-digital); }
+  .tag.health { background: var(--tag-health); }
+  .tag.land { background: var(--tag-land); }
+  .tag.nationality { background: var(--tag-nationality); }
+  .tag.security { background: var(--tag-security); }
+  .tag.social { background: var(--tag-social); }
+  .tag.education { background: var(--tag-education); }
   .tag.superseded { background: #555; }
   .tag.amended { background: #5d4037; }
+  .tag.pending { background: var(--tag-pending); }
 
   .note-box {
     background: rgba(200,16,46,0.1);
@@ -198,7 +214,7 @@
   <div class="crescent">☪</div>
   <h1>Tunisian Laws — Comprehensive Legal Reference</h1>
   <p>A navigable compendium of the Republic of Tunisia's constitutions, codes, statutes, and regulations</p>
-  <p class="meta">Last updated: June 2026 &nbsp;|&nbsp; Sources: WIPO Lex, NYU GlobaLex, JurisiteTunisie, ConstitutionNet, ILO NATLEX</p>
+  <p class="meta">Last updated: July 2026 &nbsp;|&nbsp; Sources: WIPO Lex, NYU GlobaLex, JurisiteTunisie, ConstitutionNet, ILO NATLEX, JORT, Legislation-Securité.tn</p>
 </header>
 
 <nav id="toc">
@@ -236,7 +252,7 @@
 
 <main>
   <div class="stats-bar">
-    <div class="stat"><div class="num" id="totalCount">150+</div><div class="lbl">Laws Documented</div></div>
+    <div class="stat"><div class="num" id="totalCount">99</div><div class="lbl">Laws Documented</div></div>
     <div class="stat"><div class="num">23</div><div class="lbl">Legal Categories</div></div>
     <div class="stat"><div class="num">1906</div><div class="lbl">Earliest Code</div></div>
     <div class="stat"><div class="num">2022</div><div class="lbl">Latest Constitution</div></div>
@@ -245,6 +261,10 @@
 
   <div class="note-box">
     Tunisia's legal system is <strong>predominantly civil law-based</strong>, derived from the French legal tradition with elements of Islamic law (particularly in personal status). The unified secular judiciary was established in 1956 upon abolition of Shari'a courts. The current constitution is the <strong>2022 Constitution</strong> (adopted July 25, 2022 by referendum; published August 18, 2022), which supersedes the 1959 and 2014 constitutions. Official legal texts are published in the <em>Journal Officiel de la République Tunisienne</em> (JORT).
+  </div>
+
+  <div class="note-box">
+    <strong>Update log (v2.0, July 2026):</strong> Added the 2026 &amp; 2025 Finance Laws, the May 2025 labor-contract/subcontracting reform, the July 2025 Penal Code reform (Arts. 96 &amp; 98), the August 2024 bounced-cheques reform, the March 2023 local/regional/district elections decree-law and the resulting National Council of Regions and Districts, Tunisia's March 2025 withdrawal from the African Court's Article 34(6) declaration, the pending 2025–2026 personal data protection reform bill, and new entries for the Mining Code, Hydrocarbons Code, Road Traffic Code, and PPP Contracts Law. Existing entries on the judiciary, anti-corruption bodies, and investment incentives were refined for accuracy. See individual cards for details; items still at bill/draft stage are marked <span class="tag pending" style="font-size:0.7rem;">Pending</span>.
   </div>
 
   <!-- ═══════════════════════════════════════════════════════════ -->
@@ -314,6 +334,13 @@
         <div class="tags"><span class="tag constitutional">Constitutional</span><span class="tag superseded">Superseded</span></div>
       </div>
 
+      <div class="law-card" id="decree-2023-10">
+        <h3><span class="law-num">Decree-Law No. 2023-10 of March 8, 2023</span>Local, Regional &amp; District Council Elections</h3>
+        <div class="date">Enacted: March 8, 2023 | Published: JORT No. 2023-024 | Elections held: December 24, 2023 – April 2024</div>
+        <div class="desc">Regulates elections of local councils and the composition of the newly created regional councils and district councils under Chapter VII of the 2022 Constitution, implementing the "bottom-up" architecture of local governance. 44 articles across 6 chapters. Local council elections were held December 24, 2023; the resulting local councillors indirectly elected regional councils (March 2024), which in turn indirectly elected the 77-member <strong>National Council of Regions and Districts</strong> (72 members from 24 governorate-based regional councils + 5 from district councils per Decree No. 2023-589 of September 21, 2023), completing the bicameral parliament envisioned by the 2022 Constitution. Candidates ran as individuals rather than on party lists, and no gender-parity requirement applied (unlike the 2014-era electoral law).</div>
+        <div class="tags"><span class="tag constitutional">Constitutional</span><span class="tag admin">Administrative</span></div>
+      </div>
+
     </div>
   </section>
 
@@ -367,7 +394,7 @@
         <div class="tags"><span class="tag civil">Civil</span><span class="tag admin">Administrative</span></div>
       </div>
 
-      <div class="law-card" id="nationality">
+      <div class="law-card" id="nationality-code">
         <h3><span class="law-num">Nationality Code — Law No. 63-6 of February 28, 1963</span></h3>
         <div class="date">Enacted: February 28, 1963 | In force: 1963 | Amended: 1975, 2002, 2010</div>
         <div class="desc">Defines Tunisian nationality by birth, descent, naturalization, and reacquisition. Originally limited transmission of nationality through the paternal line; amended in 2010 to allow Tunisian mothers married to foreign nationals to transmit nationality to their children. Governs loss, renunciation, and deprivation of nationality.</div>
@@ -467,8 +494,8 @@
 
       <div class="law-card" id="penal-code">
         <h3><span class="law-num">Penal Code — Law of July 9, 1913 (as amended)</span>Majallat Al-Qanun Al-Jaza'i</h3>
-        <div class="date">Originally enacted: July 9, 1913 (French Protectorate) | Revised: 1964, 1968, 1987, 1993, 1999, 2004, 2010, 2017</div>
-        <div class="desc">Tunisia's criminal code. Enacted under the French Protectorate in 1913, substantially revised after independence. Classifies offenses into crimes (felonies), délits (misdemeanors), and contraventions (infractions). Organized in two books: general provisions and specific offenses. Notable provisions include criminalization of same-sex relations (Art. 230), blasphemy provisions, and offenses against state security. Amended significantly in 2017 following the Violence Against Women Law.</div>
+        <div class="date">Originally enacted: July 9, 1913 (French Protectorate) | Revised: 1964, 1968, 1987, 1993, 1999, 2004, 2010, 2017, 2025</div>
+        <div class="desc">Tunisia's criminal code. Enacted under the French Protectorate in 1913, substantially revised after independence. Classifies offenses into crimes (felonies), délits (misdemeanors), and contraventions (infractions). Organized in two books: general provisions and specific offenses. Notable provisions include criminalization of same-sex relations (Art. 230), blasphemy provisions, and offenses against state security. Amended significantly in 2017 following the Violence Against Women Law, and again in July 2025 (Law No. 2025-14) to narrow the "abuse of office" offense (Arts. 96 &amp; 98) — see dedicated entry below.</div>
         <details class="provisions">
           <summary>Key provisions</summary>
           <ul>
@@ -488,6 +515,13 @@
           </ul>
         </details>
         <div class="tags"><span class="tag criminal">Criminal</span><span class="tag amended">Amended</span></div>
+      </div>
+
+      <div class="law-card" id="penal-code-2025-reform">
+        <h3><span class="law-num">Law No. 2025-14 of July 28, 2025</span>Penal Code Reform — Abuse of Office (Arts. 96 &amp; 98)</h3>
+        <div class="date">Adopted by ARP: July 24, 2025 (92 for, 7 abstentions, 6 against) | Promulgated: July 28, 2025 | Published: JORT, July 29, 2025</div>
+        <div class="desc">Narrows Article 96 of the Penal Code, the "abuse of office" offense long used against civil servants and managers of state-owned enterprises. Converts the offense from a strict-liability (material) offense to one requiring proof of intentional wrongdoing, and reduces the maximum sentence to 6 years' imprisonment plus a fine equal to the damage caused. Amended Article 98 requires courts to order restitution of unduly acquired assets — including those transferred to relatives — unless lawful origin is proven. Framed by supporters as ending the "sword of Damocles" hanging over public administrators that had paralyzed decision-making; critics warned it could weaken anti-corruption enforcement.</div>
+        <div class="tags"><span class="tag criminal">Criminal</span><span class="tag admin">Administrative</span><span class="tag amended">Amended</span></div>
       </div>
 
       <div class="law-card" id="cpp">
@@ -534,7 +568,7 @@
       <div class="law-card" id="anti-corruption">
         <h3><span class="law-num">Organic Law No. 2017-10 of March 7, 2017</span>Declaration of Assets and Conflict of Interest</h3>
         <div class="date">Enacted: March 7, 2017 | In force: 2017</div>
-        <div class="desc">Requires elected officials, senior public servants, and government appointees to declare assets, income, and interests. Creates the National Anti-Corruption Authority (INLUCC — Instance Nationale de Lutte contre la Corruption). Whistleblower protections included.</div>
+        <div class="desc">Requires elected officials, senior public servants, and government appointees to declare assets, income, and interests, and provides whistleblower protections. Envisioned the National Authority for Good Governance and Anti-Corruption (IBOBHACC/IBGLCC) to replace the interim National Anti-Corruption Authority (INLUCC, created 2011). <strong>Institutional status:</strong> INLUCC was effectively shut down in August 2021 amid President Saied's exceptional measures and its successor authority has never been fully constituted, leaving Tunisia without a fully operational independent anti-corruption body as of 2026 — a gap noted by Transparency International and the Council of Europe. The July 2025 Penal Code reform (Law No. 2025-14, above) narrowing the "abuse of office" offense was also debated in this context.</div>
         <div class="tags"><span class="tag criminal">Criminal</span><span class="tag admin">Administrative</span></div>
       </div>
 
@@ -564,7 +598,7 @@
       <div class="law-card" id="decree-2022-54">
         <h3><span class="law-num">Decree No. 2022-54 of September 13, 2022</span>Combating Information Technology Offenses</h3>
         <div class="date">Enacted: September 13, 2022 | In force: September 2022</div>
-        <div class="desc">Criminalizes "false information" spread online that "harms third parties, public order, or national defense." Criticized by press freedom organizations for its vague language and potential to criminalize journalism and free speech. Passed by presidential decree without parliamentary scrutiny.</div>
+        <div class="desc">Criminalizes "false information" spread online that "harms third parties, public order, or national defense" (Art. 24), with penalties up to 10 years' imprisonment where the target is a public official. Criticized by press freedom organizations for its vague language and potential to criminalize journalism and free speech. Passed by presidential decree without parliamentary scrutiny. By late 2025, press-freedom monitors (CPJ and others) documented dozens of prosecutions of journalists, lawyers, and commentators under this decree-law, cementing its role as the primary legal tool used against critical media in Tunisia.</div>
         <div class="tags"><span class="tag criminal">Criminal</span><span class="tag digital">Digital</span><span class="tag press">Press</span></div>
       </div>
 
@@ -578,8 +612,8 @@
 
       <div class="law-card" id="commercial-code">
         <h3><span class="law-num">Commercial Code — Law No. 59-129 of October 5, 1959</span>Majallat Al-Tijara</h3>
-        <div class="date">Enacted: October 5, 1959 | In force: January 1, 1960 | Amended: multiple times (through 2007+)</div>
-        <div class="desc">Core statute governing commercial activities, traders, and commercial acts in Tunisia. Defines the status of traders (commerçants), regulates commercial registers, commercial agencies, and trade names. Covers bills of exchange, promissory notes, cheques, and commercial contracts. Has been substantially amended since 1960 to modernize commercial law.</div>
+        <div class="date">Enacted: October 5, 1959 | In force: January 1, 1960 | Amended: multiple times (through 2024)</div>
+        <div class="desc">Core statute governing commercial activities, traders, and commercial acts in Tunisia. Defines the status of traders (commerçants), regulates commercial registers, commercial agencies, and trade names. Covers bills of exchange, promissory notes, cheques, and commercial contracts. Has been substantially amended since 1960 to modernize commercial law, most recently by Law No. 2024-41 overhauling the cheques regime (Arts. 410 et seq. — see dedicated entry below).</div>
         <details class="provisions">
           <summary>Key provisions</summary>
           <ul>
@@ -588,11 +622,18 @@
             <li>Art. 57–90: Agency and commercial representation</li>
             <li>Art. 192–260: Bills of exchange (lettres de change)</li>
             <li>Art. 261–290: Promissory notes (billets à ordre)</li>
-            <li>Art. 291–325: Cheques — form, endorsement, payment, protest</li>
+            <li>Art. 291–325 &amp; 410+: Cheques — form, endorsement, payment, protest (reformed 2024)</li>
             <li>Art. 400+: Commercial leases (fonds de commerce)</li>
           </ul>
         </details>
         <div class="tags"><span class="tag commercial">Commercial</span><span class="tag amended">Amended</span></div>
+      </div>
+
+      <div class="law-card" id="cheques-reform-2024">
+        <h3><span class="law-num">Law No. 2024-41 of August 2, 2024</span>Bounced-Cheques Reform</h3>
+        <div class="date">Published: JORT No. 94, August 2, 2024 | Entered into force: within 6 months of publication (early 2025)</div>
+        <div class="desc">Major reform of Articles 410 et seq. of the Commercial Code addressing Tunisia's chronic bounced-cheque (chèques sans provision) problem. Banks must verify a customer's solvency and consult the Central Bank of Tunisia before issuing a chequebook. Chequebooks are capped in value, with a maximum of 30,000 dinars per leaf, and all cheques must be crossed (barrés) and carry a QR code for electronic verification via a new Central Bank-run centralized electronic cheque platform (PECC). Decriminalizes bounced cheques of 5,000 dinars or less; larger amounts remain criminal, but debtors already charged or detained can settle by paying 35% of the principal within one year, with fines and interest cancelled.</div>
+        <div class="tags"><span class="tag commercial">Commercial</span><span class="tag financial">Financial</span><span class="tag criminal">Criminal</span></div>
       </div>
 
       <div class="law-card" id="companies-code">
@@ -663,13 +704,14 @@
 
       <div class="law-card" id="labor-code">
         <h3><span class="law-num">Labor Code — Law No. 66-27 of April 30, 1966</span>Majallat Al-Shughl</h3>
-        <div class="date">Enacted: April 30, 1966 | In force: May 1966 | Amended: 1994, 1996, 2006, 2007, 2011, 2017</div>
-        <div class="desc">The primary statute governing employment relationships in Tunisia. Covers individual employment contracts, conditions of work, wages, termination, workplace safety, collective bargaining, and trade unions. Applies to the private sector; public servants are governed by the General Statute of Civil Servants. Implements ILO core labor conventions (Tunisia has ratified 62 ILO conventions).</div>
+        <div class="date">Enacted: April 30, 1966 | In force: May 1966 | Amended: 1994, 1996, 2006, 2007, 2011, 2017, 2025</div>
+        <div class="desc">The primary statute governing employment relationships in Tunisia. Covers individual employment contracts, conditions of work, wages, termination, workplace safety, collective bargaining, and trade unions. Applies to the private sector; public servants are governed by the General Statute of Civil Servants. Implements ILO core labor conventions (Tunisia has ratified 62 ILO conventions). Substantially reformed in May 2025 by Law No. 2025-9 on employment contracts and subcontracting — see dedicated entry below.</div>
         <details class="provisions">
           <summary>Key provisions</summary>
           <ul>
-            <li>Art. 6: Employment contract — types (fixed-term, indefinite-term, project-based)</li>
-            <li>Art. 14–22: Trial period (période d'essai)</li>
+            <li>Art. 6: Employment contract — indefinite-term (CDI) is now the default form (as amended 2025)</li>
+            <li>Art. 6 bis et seq.: Fixed-term contracts (CDD) strictly limited to enumerated cases (as amended 2025)</li>
+            <li>Art. 14–22: Trial period (période d'essai) — capped at 6 months, renewable once (as amended 2025)</li>
             <li>Art. 23–35: Obligations of employer and employee</li>
             <li>Art. 40: Minimum wage (SMIG/SMAG) — set by decree</li>
             <li>Art. 73–83: Annual paid leave — minimum 1 day per month (18 days/year)</li>
@@ -683,6 +725,13 @@
           </ul>
         </details>
         <div class="tags"><span class="tag labor">Labor</span><span class="tag amended">Amended</span></div>
+      </div>
+
+      <div class="law-card" id="labor-reform-2025">
+        <h3><span class="law-num">Law No. 2025-9 of May 21, 2025</span>Employment Contracts &amp; Prohibition of Subcontracting</h3>
+        <div class="date">Adopted by ARP: May 21, 2025 (near-unanimous) | Published: JORT, May 23, 2025 | Employer compliance deadline: 3 months from publication</div>
+        <div class="desc">Sweeping reform of the Labor Code aimed at ending precarious employment and labor subcontracting for an employer's core/continuous activities. Makes the open-ended contract (CDI) the standard form of employment; fixed-term contracts (CDD) are now permitted only in narrowly defined circumstances (temporary workload spikes, replacing an absent employee, seasonal work) and are automatically deemed converted to a CDI — with full seniority — if used outside those cases. Sets a maximum probationary period of 6 months, renewable once. Criminalizes labor subcontracting for continuous/core activities: employers who engage subcontractors for such work face a criminal fine of 10,000 dinars (~US$3,470). Employers had 3 months from publication to regularize existing contracts, integrate subcontracted workers directly, and reinstate eligible employees. Described as the most significant labor law reform since the 1990s.</div>
+        <div class="tags"><span class="tag labor">Labor</span><span class="tag criminal">Criminal</span><span class="tag amended">Amended</span></div>
       </div>
 
       <div class="law-card" id="civil-servants">
@@ -723,8 +772,8 @@
 
       <div class="law-card" id="local-government">
         <h3><span class="law-num">Local Government Code — Law No. 2018-29 of May 9, 2018</span>Majallat Al-Jama'aat Al-Mahaliyya</h3>
-        <div class="date">Enacted: May 9, 2018 | In force: May 2018 | Implements: 2014 Constitution Chapter VII</div>
-        <div class="desc">Comprehensive decentralization legislation replacing the previous municipalities law. Organizes three levels of local government: municipalities (balladiyyat), regions (wilayat), and districts (aqalim). Establishes directly-elected municipal councils with legislative powers in local matters. Introduces participatory budgeting and citizens' right to petition. Implemented after 2018 municipal elections.</div>
+        <div class="date">Enacted: May 9, 2018 | In force: May 2018 | Implements: 2014 Constitution Chapter VII (municipal tier); superstructure updated by Decree-Law No. 2023-10 (2022 Constitution)</div>
+        <div class="desc">Comprehensive decentralization legislation replacing the previous municipalities law. Organizes three levels of local government: municipalities (balladiyyat), regions (wilayat), and districts (aqalim). Establishes directly-elected municipal councils with legislative powers in local matters. Introduces participatory budgeting and citizens' right to petition. Implemented after 2018 municipal elections. The regional/district tier above the municipal level has since been re-architected under the 2022 Constitution's "bottom-up" model via Decree-Law No. 2023-10 (see Constitutional Law section), which discontinued party-list, gender-parity elections in favor of individual candidacies for indirectly-elected regional and district councils.</div>
         <details class="provisions">
           <summary>Key provisions</summary>
           <ul>
@@ -758,6 +807,13 @@
         <div class="date">Enacted: July 11, 2016 | In force: 2017</div>
         <div class="desc">Authorizes and regulates e-government services. Allows administrative procedures to be conducted electronically. Establishes standards for electronic authentication, digital archives, and online payment to the state. Part of Tunisia's e-government reform strategy.</div>
         <div class="tags"><span class="tag admin">Administrative</span><span class="tag digital">Digital</span></div>
+      </div>
+
+      <div class="law-card" id="traffic-code">
+        <h3><span class="law-num">Road Traffic Code — Law No. 99-71 of July 26, 1999</span>Code de la Route</h3>
+        <div class="date">Enacted: July 26, 1999 | In force: 6 months after publication (2000) | Amended: Law No. 2001-101 (Oct. 22, 2001), Law No. 2009-66 (Aug. 12, 2009), and subsequent decrees</div>
+        <div class="desc">Governs the rules of road use, vehicle registration, driver licensing, traffic offenses, and road safety on Tunisian public roads. Establishes a fine and points-based penalty regime for infractions, rules on vehicle roadworthiness inspections, and administrative sanctions (impoundment, license suspension). The 2009 amendment tightened penalties for the most dangerous violations (speeding, drunk driving, phone use while driving) amid persistently high road-fatality rates.</div>
+        <div class="tags"><span class="tag admin">Administrative</span><span class="tag criminal">Criminal</span></div>
       </div>
 
     </div>
@@ -812,6 +868,20 @@
         <div class="date">Enacted: February 3, 1997 | In force: 1997 | Amended: multiple times</div>
         <div class="desc">Regulates taxes and fees collected by municipalities including property taxes (TFP — taxe foncière sur les propriétés bâties et non bâties), tourism taxes, advertising taxes, and local business taxes (TCL — taxe sur les établissements à caractère industriel, commercial ou professionnel).</div>
         <div class="tags"><span class="tag tax">Tax</span><span class="tag admin">Administrative</span></div>
+      </div>
+
+      <div class="law-card" id="finance-law-2025">
+        <h3><span class="law-num">Finance Law for 2025 — Law No. 2024-48 of December 9, 2024</span>Loi de Finances 2025</h3>
+        <div class="date">Adopted: December 9, 2024 | In force: January 1, 2025</div>
+        <div class="desc">Annual budget law fixing revenue and expenditure for fiscal year 2025 and amending the Income Tax and VAT Codes. Extends the 4-year corporate/personal income-tax exemption for newly created enterprises that filed an investment declaration in 2024 or 2025 and commence operations within two years (excluding financial services, non-renewable energy, real estate development, and telecoms). Continues the framework of sector-specific investment funds referenced in government plans for 2025 investment "redynamization."</div>
+        <div class="tags"><span class="tag tax">Tax</span><span class="tag financial">Financial</span></div>
+      </div>
+
+      <div class="law-card" id="finance-law-2026">
+        <h3><span class="law-num">Finance Law for 2026 — Law No. 2025-17 of December 12, 2025</span>Loi de Finances 2026</h3>
+        <div class="date">Adopted by ARP: December 4, 2025 | Approved by National Council of Regions and Districts: December 7, 2025 | Published: JORT No. 148, December 12, 2025 | In force: January 1, 2026</div>
+        <div class="desc">Tunisia's latest annual budget law, projecting state revenues of 52.56 billion TND against expenditures of 63.575 billion TND for 2026. Raises the Social Solidarity Contribution (CSS) on company profits to 3% (2025 profits) and 4% (2026 profits), up from 1%. Makes the special 4% surtax on bank and financial-company profits permanent. Extends the progressive wealth tax (0.5% on real estate, personal, and financial assets valued between 3 and 5 million TND) to all asset classes. Raises the registration fee on real-estate donations between ascendants, descendants, and spouses from 100 to 200 TND. Exempts non-resident Tunisians from filing tax declarations where they hold a foreign tax-residency certificate. Includes measures to streamline administrative procedures for the Tunisian diaspora.</div>
+        <div class="tags"><span class="tag tax">Tax</span><span class="tag financial">Financial</span></div>
       </div>
 
     </div>
@@ -878,8 +948,8 @@
 
       <div class="law-card" id="investment-code">
         <h3><span class="law-num">Investment Law — Law No. 2016-71 of September 30, 2016</span></h3>
-        <div class="date">Enacted: September 30, 2016 | In force: April 2017 | Replaced: Investment Code of 1993</div>
-        <div class="desc">Tunisia's primary investment statute, replacing the 1993 Investment Code. Applies to both domestic and foreign investment. Guarantees freedom of investment, equal treatment of foreign and domestic investors, protection against expropriation (with compensation), and transfer of profits and capital. Establishes the Investment Authority (FIPA — Foreign Investment Promotion Agency) and the Investment Development Agency (IDI). Creates investment incentives including tax benefits for priority sectors and regions.</div>
+        <div class="date">Enacted: September 30, 2016 | In force: April 2017 | Replaced: Investment Code of 1993 | Incentives updated: Decree No. 2024-182 (April 4, 2024); Finance Laws 2024–2026</div>
+        <div class="desc">Tunisia's primary investment statute, replacing the 1993 Investment Code. Applies to both domestic and foreign investment. Guarantees freedom of investment, equal treatment of foreign and domestic investors, protection against expropriation (with compensation), and transfer of profits and capital. Establishes the Investment Authority (FIPA — Foreign Investment Promotion Agency) and the Investment Development Agency (IDI). Creates investment incentives including tax benefits for priority sectors and regions. Its implementing financial-incentives decree (Decree No. 2017-389) was amended by Decree No. 2024-182 of April 4, 2024, and successive annual Finance Laws (2024–2026) have layered additional temporary tax exemptions for newly created enterprises.</div>
         <details class="provisions">
           <summary>Key provisions</summary>
           <ul>
@@ -927,6 +997,13 @@
         <div class="date">Enacted: April 26, 1993 | In force: 1993</div>
         <div class="desc">Governs domestic and international commercial arbitration in Tunisia. Based on the UNCITRAL Model Law. Provides for arbitration agreements, constitution of tribunals, conduct of proceedings, and recognition and enforcement of awards. Tunisia ratified the New York Convention on the Recognition and Enforcement of Foreign Arbitral Awards in 1967.</div>
         <div class="tags"><span class="tag commercial">Commercial</span></div>
+      </div>
+
+      <div class="law-card" id="ppp-law">
+        <h3><span class="law-num">Public-Private Partnership Contracts Law — Law No. 2015-49 of November 27, 2015</span></h3>
+        <div class="date">Enacted: November 27, 2015 | In force: 2016</div>
+        <div class="desc">Establishes the general legal framework for public-private partnership (PPP) contracts, diversifying financing sources for infrastructure and public services beyond traditional public procurement and concessions. Defines a PPP contract as a fixed-term written agreement under which a public entity entrusts a private partner with a global mission covering design, construction, financing, operation, and/or maintenance of works or infrastructure needed for a public service. Implemented via the General Instance for Public-Private Partnership (IGPPP). As of 2025–2026, uptake — particularly at the municipal level — remains limited by administrative capacity and financing constraints, per government and press reporting.</div>
+        <div class="tags"><span class="tag commercial">Commercial</span><span class="tag admin">Administrative</span><span class="tag financial">Financial</span></div>
       </div>
 
     </div>
@@ -1016,6 +1093,20 @@
         <div class="tags"><span class="tag env">Environmental</span></div>
       </div>
 
+      <div class="law-card" id="hydrocarbons-code">
+        <h3><span class="law-num">Hydrocarbons Code — Law No. 99-93 of August 17, 1999</span>Code des Hydrocarbures</h3>
+        <div class="date">Enacted: August 17, 1999 | In force: 1999 | Amended: 2002, 2004, 2008, 2017</div>
+        <div class="desc">Governs prospection, exploration, and exploitation of oil and gas resources. Sets the concession/production-sharing regime, royalty and tax terms for petroleum operations, and the role of the state operator (ETAP — Entreprise Tunisienne d'Activités Pétrolières). The May 2017 amendment (implementing Article 13 of the 2014 Constitution on natural resource transparency) restructured licensing into a single "particular convention" combining prospection, research, and exploitation phases, and added a chapter on non-conventional resources (e.g., shale gas).</div>
+        <div class="tags"><span class="tag env">Environmental</span><span class="tag commercial">Commercial</span><span class="tag tax">Tax</span></div>
+      </div>
+
+      <div class="law-card" id="mining-code">
+        <h3><span class="law-num">Mining Code — Law No. 2003-30 of April 28, 2003</span>Code Minier</h3>
+        <div class="date">Enacted: April 28, 2003 | In force: 2003 | Amended: 2012</div>
+        <div class="desc">Governs prospection, exploration, and exploitation of mineral resources (phosphates, iron, lead, zinc, salt, construction materials, etc.) other than hydrocarbons. Classifies mines by category, sets permit and concession procedures, environmental restoration obligations for mine closure, and royalty/tax regimes. Phosphate mining (via the Gafsa Phosphate Company, CPG) remains one of Tunisia's most economically and socially significant — and contested — extractive sectors under this code.</div>
+        <div class="tags"><span class="tag env">Environmental</span><span class="tag commercial">Commercial</span></div>
+      </div>
+
     </div>
   </section>
 
@@ -1055,8 +1146,8 @@
 
       <div class="law-card" id="data-protection">
         <h3><span class="law-num">Personal Data Protection Law — Law No. 2004-63 of July 27, 2004</span></h3>
-        <div class="date">Enacted: July 27, 2004 | In force: 2004 | Amended: 2013</div>
-        <div class="desc">Tunisia's data protection statute — one of the first in Africa. Creates the National Authority for Personal Data Protection (INPDP — Instance Nationale de Protection des Données Personnelles). Requires prior authorization from INPDP before processing sensitive personal data. Establishes data subject rights (access, rectification, deletion) and obligations on data controllers.</div>
+        <div class="date">Enacted: July 27, 2004 | In force: 2004 | Amended: 2013 | Reform bill pending: 2025–2026</div>
+        <div class="desc">Tunisia's data protection statute — one of the first in Africa. Creates the National Authority for Personal Data Protection (INPDP — Instance Nationale de Protection des Données Personnelles). Requires prior authorization from INPDP before processing sensitive personal data. Establishes data subject rights (access, rectification, deletion) and obligations on data controllers. A draft organic law overhauling this framework has been advancing through Parliament since 2025 to align it with the EU GDPR and Council of Europe Convention 108+ — see the pending reform entry below.</div>
         <details class="provisions">
           <summary>Key provisions</summary>
           <ul>
@@ -1083,6 +1174,13 @@
         <div class="date">Enacted: January 15, 2001 | In force: 2001 | Amended: 2002, 2008, 2013</div>
         <div class="desc">Liberalizes the telecommunications sector and establishes the independent regulator (INT — Instance Nationale des Télécommunications). Governs licensing of operators, frequency management, interconnection, universal service obligations, and quality standards. Opened mobile and internet markets to competition.</div>
         <div class="tags"><span class="tag digital">Digital</span></div>
+      </div>
+
+      <div class="law-card" id="data-protection-reform-pending">
+        <h3><span class="law-num">Fundamental Bill on the Protection of Personal Data (draft, 2025–2026)</span></h3>
+        <div class="date">Under parliamentary review: 2025–2026 | Not yet enacted</div>
+        <div class="desc">A comprehensive draft organic law that would replace Law No. 2004-63, expanding data-subject rights (right to erasure/"to be forgotten," right to portability), strengthening the INPDP's investigatory powers over foreign platforms targeting the Tunisian market, introducing a structured cross-border data-transfer regime (adequacy findings, standard contractual clauses, binding corporate rules), and replacing today's largely symbolic penalties with turnover-based administrative fines modeled on the EU GDPR. Driven by the INPDP's own 2025 assessment that the current law has negligible deterrent sanctions, limited enforcement reach over foreign operators, and no international-transfer regime. <strong>Status: pending — not yet law; tracked here for completeness and will be updated on enactment.</strong></div>
+        <div class="tags"><span class="tag digital">Digital</span><span class="tag pending">Pending</span></div>
       </div>
 
     </div>
@@ -1303,7 +1401,7 @@
       <div class="law-card" id="judicial-org">
         <h3><span class="law-num">Judicial Organization Law — Law No. 2013-13 of April 2, 2013</span></h3>
         <div class="date">Enacted: April 2, 2013 | In force: 2013 | Amended: 2022</div>
-        <div class="desc">Organizes the court system of Tunisia. Courts of First Instance (Tribunaux de Première Instance) — one per governorate. Courts of Appeal — three (Tunis, Sousse, Sfax). Court of Cassation (Cour de Cassation) — apex civil and criminal court, based in Tunis. Administrative Court — apex administrative jurisdiction. Constitutional Court — established by 2022 Constitution. Cantonal courts handle minor civil and criminal matters.</div>
+        <div class="desc">Organizes the court system of Tunisia. Courts of First Instance (Tribunaux de Première Instance) — one per governorate. Courts of Appeal — three (Tunis, Sousse, Sfax). Court of Cassation (Cour de Cassation) — apex civil and criminal court, based in Tunis. Administrative Court — apex administrative jurisdiction. Constitutional Court — provided for by the 2022 Constitution but, as of 2026, still not operational (see note below). Cantonal courts handle minor civil and criminal matters.</div>
         <details class="provisions">
           <summary>Court structure</summary>
           <ul>
@@ -1313,7 +1411,7 @@
             <li>Court of Cassation (Tunis): reviews points of law only</li>
             <li>Administrative Court: all public law disputes</li>
             <li>Terrorism Chamber: specialized at TFI Tunis level</li>
-            <li>Constitutional Court: established under 2022 Constitution</li>
+            <li>Constitutional Court: provided for under the 2022 Constitution — not yet constituted as of 2026 (Tunisia has now failed twice to stand up this court, first under the 2014 Constitution and again under the 2022 Constitution)</li>
           </ul>
         </details>
         <div class="tags"><span class="tag admin">Administrative</span><span class="tag constitutional">Constitutional</span></div>
@@ -1322,7 +1420,7 @@
       <div class="law-card" id="judiciary-statute">
         <h3><span class="law-num">Judicial Statute — Law No. 67-29 of July 14, 1967</span>(as amended)</h3>
         <div class="date">Enacted: July 14, 1967 | In force: 1967 | Amended: 1997, 2013, 2022</div>
-        <div class="desc">Governs the appointment, promotion, transfer, discipline, and removal of judges. Establishes the Superior Council of the Judiciary (Conseil Supérieur de la Magistrature — CSM) as the body responsible for judicial governance. Post-2022, the CSM's composition was changed, reducing independence according to critics.</div>
+        <div class="desc">Governs the appointment, promotion, transfer, discipline, and removal of judges. Originally established the Superior Council of the Judiciary (Conseil Supérieur de la Magistrature — CSM), created in 2016 with members elected by the legal profession. Decree-Law No. 2022-11 of February 12, 2022 dissolved the elected CSM and replaced it with a provisional, largely presidentially-appointed "Provisional Supreme Judicial Council," which critics — including the African Court on Human and Peoples' Rights, which in 2024 ordered its repeal and the CSM's reinstatement within six months — say has significantly reduced judicial independence; as of 2026, Tunisia has not complied with that order.</div>
         <div class="tags"><span class="tag admin">Administrative</span><span class="tag constitutional">Constitutional</span></div>
       </div>
 
@@ -1383,6 +1481,13 @@
         <div class="tags"><span class="tag commercial">Commercial</span><span class="tag constitutional">Constitutional</span></div>
       </div>
 
+      <div class="law-card" id="african-court-withdrawal">
+        <h3><span class="law-num">Withdrawal from the African Court's Article 34(6) Declaration — March 2025</span></h3>
+        <div class="date">Declaration originally made: April 2017 | Withdrawal notified: March 3, 2025 (received by AU March 7, 2025) | Takes effect: March 7, 2026</div>
+        <div class="desc">Tunisia ratified the Protocol establishing the African Court on Human and Peoples' Rights and, in 2017, made the optional declaration under Article 34(6) allowing individuals and NGOs with observer status before the African Commission to bring cases directly against it. On March 7, 2025, Tunisia notified the African Union of its withdrawal of that declaration, becoming the fifth state to do so (after Rwanda, Tanzania, Côte d'Ivoire, and Benin). Per the Court's one-year notice rule, the withdrawal takes effect March 7, 2026; cases already filed by individuals/NGOs before that date continue unaffected. The state itself, and the African Commission, retain standing to bring cases regardless. Human rights organizations (HRW, Amnesty International) criticized the move as a setback for individual accountability, coming amid the African Court's own 2024 order that Tunisia establish an independent Constitutional Court and reinstate the elected Superior Council of the Judiciary.</div>
+        <div class="tags"><span class="tag constitutional">Constitutional</span><span class="tag admin">Administrative</span></div>
+      </div>
+
     </div>
   </section>
 
@@ -1391,7 +1496,7 @@
 <footer>
   <p>Compiled from: <a href="https://www.wipo.int/wipolex/en/" target="_blank">WIPO Lex</a> · <a href="https://www.nyulawglobal.org/globalex/Tunisia1.html" target="_blank">NYU GlobaLex</a> · <a href="https://jurisitetunisie.com" target="_blank">Jurisite Tunisie</a> · <a href="https://constitutionnet.org/country/tunisia" target="_blank">ConstitutionNet</a> · ILO NATLEX · Official JORT records</p>
   <p style="margin-top:8px;">This document is for informational purposes only. For authoritative legal advice, consult an authorized Tunisian legal professional or the official Journal Officiel de la République Tunisienne (JORT).</p>
-  <p style="margin-top:8px; color:#888;">Version 1.0 — June 2026 | Repository: <a href="https://github.com/henihaddad/all_tunisian_laws_progressive" target="_blank">henihaddad/all_tunisian_laws_progressive</a></p>
+  <p style="margin-top:8px; color:#888;">Version 2.0 — July 2026 | Repository: <a href="https://github.com/henihaddad/all_tunisian_laws_progressive" target="_blank">henihaddad/all_tunisian_laws_progressive</a></p>
 </footer>
 
 <script>
